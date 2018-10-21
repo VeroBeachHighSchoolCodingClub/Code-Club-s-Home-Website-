@@ -7,7 +7,7 @@ const Controller      = require('./controllers/controller.js');
 const hbs             = require('hbs');
 const fs              = require('fs');
 
-hbs.registerPartials(__dirname + '/public/views/partials')
+hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
 
 hbs.registerHelper('getCurrentYear', () => {
