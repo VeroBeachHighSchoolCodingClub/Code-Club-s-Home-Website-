@@ -10,13 +10,13 @@
 ---
 
 ### How to edit this file
-  -You do not need to be logged into this account
-  -Click the button that says `Fork`
-  -Once the file is in personal account, make changes
-  -Commit all changes and make sure repo is up to date
-  -Go back to GitHub and click `Add New Pull Request`
-  -Submit the pull request and wait while changes are reviewed
-  -Once the changes have been given the OK, the changes will be added to the master branch
+  - You do not need to be logged into this account
+  - Click the button that says `Fork`
+  - Once the file is in personal account, make changes
+  - Commit all changes and make sure repo is up to date
+  - Go back to GitHub and click `Add New Pull Request`
+  - Submit the pull request and wait while changes are reviewed
+  - Once the changes have been given the OK, the changes will be added to the master branch
 
 ---
 
