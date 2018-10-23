@@ -1,10 +1,10 @@
-# VBHS Coding Club
+# VBHS Coding Club Web Site
 
 ###### We strive to change the world, one line at a time.
 
 ## Introduction
 > The VBHS Coding Club is a group of High School students who enjoy coding and programming. One of our main 
-> focuses is to challenge our selves, in order to learn as much as we can and be the best we are able to be.
+> focuses is to challenge ourselves, in order to learn as much as we can and be the best we are able to be.
 > This project is our first collaborative project togother, but there will be many more to come.
 
 ---
