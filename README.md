@@ -11,13 +11,22 @@
 
 ### How to edit this file
   *You do not need to be logged into this account to make changes*
+  #### Getting local copy of the file
   1. Make sure you can see the project you want to make changes to
-  2. Click the button that says `Fork`, wait for it to copy to personal repository
-  3. Once the file is in personal repository, make changes
-  4. Commit all changes and make sure your repository is up to date
-  5. Go back to GitHub and click `Add New Pull Request`
-  6. Submit the pull request and wait while changes are reviewed
-  7. Once the changes have been given the OK, they will be added to the master branch
+  2. Click the button that says `Fork`, then wait for it to copy to a personal repository
+  3. Once the file is in personal repository, click the button that says `Clone or download` in your repository
+  4. Copy the URL to the clipboard, then go into the git bash
+  5. Type in the git bash `git clone ` followed by the URL
+  6. Once you navigate into the folder, make a new branch via `git checkout -b ` followed by the name of the new branch
+  7. Edit the file and make commits after each feature added
+  ---
+  #### Sending a Pull Request
+  1. Make sure a changes are saved and commited
+  2. In the git bash type `git push origin ` followed by the name of the branch
+  3. On GitHub, navigate to the location of the project, then press the button that says *New Pull Request*
+  4. Click the button that says *Create pull request*
+  4. Type in the box a brief summary of all the changes you made
+  6. Click the button that says *Create pull request* to submit your request
 
 ---
 
