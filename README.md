@@ -27,18 +27,19 @@
   4. Type in the box a brief summary of all the changes you made
   6. Click the button that says *Create pull request* to submit your request
 
----
 ## How to test this project on your local computer
  *Make sure Node.js is installed on your computer first*
+ #### Running the file
  1. Once the file is on your local computer, open the command line and navigate into the directory
  2. Type `npm install` to install the node_modules needed to run the file
  3. After they have downloaded, type in `nodemon app.js` and press enter
  4. On your browser (chrome is recommended), go to the domain *localhost:3000* to access the webpage
  
- >#### Note: Nodemon allows you to change the code without having to restart the server, but if the changes
- >  do not appear on the webpage, type `rs` into the command line to restart the server. If you need to stop the server
- >  press *Ctrl + c*.
-
+ #### Note: 
+   > Nodemon allows you to change the code without having to restart the server, but if the changes
+   > do not appear on the webpage, type `rs` into the command line to restart the server. If you need to stop the server
+   > press *Ctrl + c*.
+---
 ## Note to Coding Club members
   Once you have made a pull request and it has been accepted, try to add more features to your part of the website,
   once a pull request has been made, it doesn't mean it's all over. Add more features, or try to streamline some of 
