@@ -35,12 +35,12 @@
  3. After they have downloaded, type in `nodemon app.js` and press enter
  4. On your browser (chrome is recommended), go to the domain *localhost:3000* to access the webpage
  
- #### Note: 
-    Nodemon allows you to change the code without having to restart the server, but if the changes
-    do not appear on the webpage, type `rs` into the command line to restart the server. If you need to stop the server
-    press *Ctrl + c*.
+ #### Restarting/stopping the server 
+   > Nodemon allows you to change the code without having to restart the server, but if the changes
+   > do not appear on the webpage, type `rs` into the command line to restart the server. If you need to stop
+   > the server press *Ctrl + c*.
 
 ## Note to Coding Club members
-    Once you have made a pull request and it has been accepted, try to add more features to your part of the website,
-    once a pull request has been made, it doesn't mean it's all over. Add more features, or try to streamline some of 
-    the styles to make it cleaner. *There is always a way to make a project better.*
+   > Once you have made a pull request and it has been accepted, try to add more features to your part of the website,
+   > once a pull request has been made, it doesn't mean it's all over. Add more features, or try to streamline some of 
+   > the styles to make it cleaner. *There is always a way to make a project better.*
