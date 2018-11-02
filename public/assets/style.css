@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Bar Styles */
+
+
+#name {
+  font-family: 'Kodchasan', sans-serif;
+  position: relative;
+  float: left;
+  padding: 2vw;
+  margin-right: 5vw;
+  font-size: 1.8vw;
+
+}
+
+#modo {
+  font-family: 'PT Sans Narrow', sans-serif;
+  float: right;
+  position: relative;
+  padding: 2vw;
+  margin-right: 5vw;
+  font-size: 1.8vw;
+
+}
+
+
+/* nav styles */
+
+.navBar {
+  clear: left;
+  padding: 10px;
+  background-color: rgba(53, 157, 227, 1);
+  overflow: hidden;
+  width: 100%;
+  margin-left: 0vw;
+  margin-right: 0vw;
+}
+
+.indNav {
+  display: block;
+  color: white;
+  float: left;
+  font-size: 1.7vw;
+  padding-right: 8.3vw;
+  padding-left: 8.3vw;
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(204, 219, 229, 0.89) !important;
+  text-decoration: none !important;
+}
+
+/* body things */
+
+p {
+  clear: left;
+}
+
+/* footer */
+
+.footer {
+  clear: left;
+}
+
+
+
+
+
+/* bottom */

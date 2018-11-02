@@ -1,3 +1,4 @@
+
 # VBHS Coding Club Web Site
 
 ###### We strive to change the world, one line at a time.
@@ -44,3 +45,4 @@
    > Once you have made a pull request and it has been accepted, try to add more features to your part of the website,
    > once a pull request has been made, it doesn't mean it's all over. Add more features, or try to streamline some of 
    > the styles to make it cleaner. *There is always a way to make a project better.*
+

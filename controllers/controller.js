@@ -6,7 +6,7 @@ module.exports = (app) => {
   })
 
   app.get('/about', (req, res) => {
-    res.render('about', {location: 'About Us'})
+    res.render('about', {location: 'About'})
   })
 
   app.get('/projects', (req, res) => {
