@@ -47,6 +47,7 @@ body {
   padding-right: 8.3vw;
   padding-left: 8.3vw;
   text-decoration: none;
+  text-align: center;
 }
 
 a:hover {
@@ -65,6 +66,44 @@ p {
 .footer {
   clear: left;
 }
+
+/* projects */
+
+#pTitle {
+  text-align: center;
+}
+
+.pics {
+  width: 420px;
+  border: 10px solid rgba(0, 204, 184, 1);
+  border-radius: 15%;
+  padding-top: 45px;
+  padding-bottom: 45px;
+  margin: 100px;
+}
+
+#p1{
+  float: left;
+  clear: right;
+}
+
+#p2{
+  float: right;
+  clear: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
