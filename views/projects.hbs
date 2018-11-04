@@ -4,14 +4,15 @@
   <body>
     {{> top}}
     {{> nav}}
-    <header>
-      <h1 class="col-sm-12" id="pTitle">Our Projects<h1>
-    </header>
+    <div class="col-sm-12 jumbotron pJumbo">
+      <h1 id="pTitle">Completed Club Projects<h1>
+      <h2 id="pSub"class="small">The following is a list of completed group projects</h2>
+    </div>
     <dl>
       <img id="p1" class="pics" src="/pics/python.jpg" alt="python picture">
       <img id="p2" class="pics" src="/pics/python.jpg" alt="python picture">
 
     </dl>
-
+    {{> jsConnect}}
   </body>
 </html>
