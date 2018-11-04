@@ -4,14 +4,34 @@
   <body>
     {{> top}}
     {{> nav}}
-    <header>
-      <h1>Our Projects<h1>
-    </header>
-    <dl>
-      <dt>Project 1</dt>
-      <dd>- yeehaw</dd>
-      <dt>Project 2</dt>
-      <dd>- waheey</dd>
-    </dl>
+    <div class="col-sm-12 jumbotron pJumbo">
+      <h1 id="pTitle">Completed Club Projects<h1>
+      <h2 id="pSub"class="small">The following is a list of completed group projects</h2>
+    </div>
+    <div>
+      <!-- <div class="p1 pics1">
+
+        <img id="ip1" class="" src="/pics/python.jpg" alt="python picture">
+        <div id="p1Content" class="pContent">
+          This is some content
+        </div>
+      </div> -->
+
+      <div class="p1 pics1">
+        <img id="ip1" class="" src="/pics/python.jpg" alt="python picture">
+        <div id="p1Content" class="clearE">
+          This is some content
+        </div>
+      </div>
+
+      <div class="p2 pics2">
+        <img id="ip2" class="" src="/pics/python.jpg" alt="python picture">
+        <div id="p2Content" class="clearE">
+          This is some content
+        </div>
+      </div>
+
+    </div>
+    {{> jsConnect}}
   </body>
 </html>
