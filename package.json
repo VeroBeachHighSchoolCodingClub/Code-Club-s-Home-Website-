@@ -1,0 +1,25 @@
+{
+  "name": "code-site",
+  "version": "1.0.0",
+  "description": "> The VBHS Coding Club is a group of High School students who enjoy coding and programming. One of our main \r > focuses is to challenge ourselves, in order to learn as much as we can and be the best we are able to be.\r > This project is our first collaborative project togother, but there will be many more to come.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IkeHunter/Code-Club-s-Home-Website-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IkeHunter/Code-Club-s-Home-Website-/issues"
+  },
+  "homepage": "https://github.com/IkeHunter/Code-Club-s-Home-Website-#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "hbs": "^4.0.1"
+  }
+}
