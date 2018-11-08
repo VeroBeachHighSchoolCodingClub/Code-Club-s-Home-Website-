@@ -109,6 +109,12 @@ p {
   color: rgb(112, 122, 127);
   text-align: center;
 }
+
+.pContact{
+  float: left;
+  clear: right;
+}
+
   /** Pics 1 **/
     .pics1 {
       border: 1vw solid rgba(0, 204, 184, 1);
