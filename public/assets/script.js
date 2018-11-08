@@ -3,10 +3,16 @@ $(document).ready(function(){
 
   var pic1 = $('#ePics1');
   var pic2 = $('#ePics2');
+  var pic3 = $('#ePics3');
+  var pic4 = $('#ePics4');
   var indPic1 = $('#ip1');
   var indPic2 = $('#ip2');
+  var indPic3 = $('#ip3');
+  var indPic4 = $('#ip4');
   var p1Content = $('#p1Content');
   var p2Content = $('#p2Content');
+  var p3Content = $('#p3Content');
+  var p4Content = $('#p4Content');
   var tp1 = 'tps1';
   var tp2 = 'tps2';
   var cE = 'clearE';
@@ -14,6 +20,8 @@ $(document).ready(function(){
   var p2Con = 'p2Content';
   var p1s = 'pics1';
   var p2s = 'pics2';
+  var nav = document.getElementById("navBar");
+  var navStick = nav.offsetTop;
 
   pic1.on('mouseover click', function() {
     pic1.removeClass(p1s);
@@ -48,5 +56,56 @@ $(document).ready(function(){
     indPic2.removeClass('tip2');
     indPic2.addClass('ip2')
   });
+
+  pic3.on('mouseover click', function() {
+    pic3.removeClass(p1s);
+    pic3.addClass(tp1);
+    p3Content.removeClass(cE);
+    p3Content.addClass(p1Con);
+    indPic3.removeClass('ip1');
+    indPic3.addClass('tip1')
+  });
+  pic3.on('mouseout dblclick', function() {
+    pic3.removeClass(tp1);
+    pic3.addClass(p1s);
+    p3Content.removeClass(p1Con);
+    p3Content.addClass(cE);
+    indPic3.removeClass('tip1');
+    indPic3.addClass('ip1')
+  });
+
+  pic4.on('mouseover click', function() {
+    pic4.removeClass(p2s);
+    pic4.addClass(tp2);
+    p4Content.removeClass(cE);
+    p4Content.addClass(p2Con);
+    indPic4.removeClass('ip2');
+    indPic4.addClass('tip2')
+  });
+  pic4.on('mouseout dblclick', function() {
+    pic4.removeClass(tp2);
+    pic4.addClass(p2s);
+    p4Content.removeClass(p2Con);
+    p4Content.addClass(cE);
+    indPic4.removeClass('tip2');
+    indPic4.addClass('ip2')
+  });
+
+
+
+  window.onscroll = function() {stickyNav()};
+
+  function stickyNav() {
+    if (window.pageYOffset >= navStick) {
+      nav.classList.add("stickyNav")
+      console.log('hes down under!');
+      // nav.addClass('stickyNav');
+    } else {
+      nav.classList.remove("stickyNav");
+      console.log('Ur good.');
+      // nav.removeClass('stickyNav');
+    }
+  }
+
 
 });
