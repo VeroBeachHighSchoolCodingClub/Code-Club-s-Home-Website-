@@ -58,4 +58,5 @@
   - `git add upstream [GitHub link]` *adds a remote repo (not personal repo)*
   - `git fetch upstream` *fetches the data from remote upstream repo (on someone else's GitHub)*
   - `git merge upstream/master` *merges the data from the remote upstream repo*
+  - `git pull [remote name]` *fetches code from remote repo and merges it to current branch*
   - `git push origin [branch name]` *pushes the code to personal remote repo*
