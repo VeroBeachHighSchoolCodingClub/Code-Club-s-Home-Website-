@@ -9,6 +9,18 @@ body {
   width: 10.8vw;
   float: left;
 }
+/** carousel **/
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 45%;
+
+    margin: auto;
+}
+
+.container{
+
+}
+/** carousel **/
 
 #name {
   font-family: 'Kodchasan', sans-serif;
