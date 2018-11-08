@@ -88,39 +88,88 @@ p {
   color: rgb(112, 122, 127);
   text-align: center;
 }
+  /** Pics 1 **/
+    .pics1 {
+      border: 1vw solid rgba(0, 204, 184, 1);
+      border-radius: 15%;
+      margin: 9vw;
+      margin-top: 5vw;
+      float: left;
+    }
 
-/* .pics1 {
+    .tps1{
+      border: 1vw solid rgba(0, 204, 184, 1);
+      border-radius: 15%;
+      margin: 9vw;
+      margin-top: 5vw;
+      float: left;
+      padding: 3vw 1.5vw 3vw 1.5vw;
+      display: inline-block;
+    }
 
-  border: 1vw solid rgba(0, 204, 184, 1);
-  border-radius: 15%;
-  margin: 12vw;
-  margin-top: 5vw;
-  float: left;
-  padding-right: 10vw;
-} */
+    .ip1{
+      float: left;
+      width: 25vw;
+      padding: 4vw 2vw 4vw 2vw;
+    }
 
-.pics1 {
-  border: 1vw solid rgba(0, 204, 184, 1);
-  border-radius: 15%;
-  margin: 12vw;
-  margin-top: 5vw;
-  float: left;
+    .tip1{
+      float: left;
+      width: 10.5vw;
+      padding: 4vw 1vw 4vw 1vw;
+    }
+
+    .p1Content {
+      font-family: 'Hind Madurai', sans-serif;
+      color: rgb(112, 122, 127);
+      float: right;
+      padding: 0vw 1vw 1vw 4vw ;
+      /* text-align: center; */
+    }
+
+  /** Pics 2 **/
+    .pics2 {
+      border: 1vw solid rgba(0, 204, 184, 1);
+      border-radius: 15%;
+      margin: 9vw;
+      margin-top: 5vw;
+      float: right;
+    }
+
+    .tps2{
+      border: 1vw solid rgba(0, 204, 184, 1);
+      border-radius: 15%;
+      margin: 9vw;
+      margin-top: 5vw;
+      float: right;
+      padding: 3vw 1.5vw 3vw 1.5vw;
+      display: inline-block;
+    }
+
+    .ip2 {
+      float: right;
+      width: 25vw;
+      padding: 4vw 2vw 4vw 2vw;
+    }
+    .tip2{
+      float: right;
+      width: 10.5vw;
+      padding: 4vw 1vw 4vw 1vw;
+    }
+
+    .p2Content {
+      font-family: 'Hind Madurai', sans-serif;
+      color: rgb(112, 122, 127);
+      float: left;
+      padding: 0vw 1vw 1vw 4vw ;
+    }
+
+  /** Global **/
+.iTitle {
+  font-size: 1.7vw;
 }
-
-.tempPicStyle{
-  border: 1vw solid rgba(0, 204, 184, 1);
-  border-radius: 15%;
-  margin: 12vw;
-  margin-top: 5vw;
-  float: left;
-  padding: 2vw 1vw 4vw 2vw;
-}
-
-#ip1{
-  float: left;
-  width: 25vw;
-  padding: 4vw 2vw 4vw 2vw;
-
+.iContent {
+  font-size: 1vw;
 }
 
 .pContent {
@@ -131,12 +180,6 @@ p {
   /* text-align: center; */
 }
 
-.iTitle {
-  font-size: 2vw;
-}
-.iContent {
-  font-size: 1vw;
-}
 
 .clearE {
   display: none;
