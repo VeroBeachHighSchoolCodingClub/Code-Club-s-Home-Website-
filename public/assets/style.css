@@ -12,9 +12,15 @@ body {
 /** carousel **/
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 70%;
+    width: 45%;
+
     margin: auto;
 }
+
+.container{
+
+}
+/** carousel **/
 
 #name {
   font-family: 'Kodchasan', sans-serif;
