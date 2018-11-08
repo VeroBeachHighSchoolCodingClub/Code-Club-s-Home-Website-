@@ -90,77 +90,52 @@ p {
 }
 
 /* .pics1 {
-    /* width: 420px; */
-    /* width: 25vw; */
-  /* border: 1vw solid rgba(0, 204, 184, 1);
-  border-radius: 15%; */
-    /* padding-top: 4vw;
-    padding-bottom: 4vw; */
-    /* padding: 15vw; */
-  /* margin: 12vw;
+
+  border: 1vw solid rgba(0, 204, 184, 1);
+  border-radius: 15%;
+  margin: 12vw;
   margin-top: 5vw;
-  float: left; */
-    /* padding: inherit; */
-    /* padding-right: 6vw; */
-/*} */
+  float: left;
+  padding-right: 10vw;
+} */
 
 .pics1 {
-  /* width: 420px; */
-  width: 25vw;
   border: 1vw solid rgba(0, 204, 184, 1);
   border-radius: 15%;
-  /* padding-top: 4vw;
-  padding-bottom: 4vw; */
-  /* padding: 15vw; */
   margin: 12vw;
   margin-top: 5vw;
   float: left;
-
 }
 
-.pics2 {
-  /* width: 420px; */
-  width: 25vw;
+.tempPicStyle{
   border: 1vw solid rgba(0, 204, 184, 1);
   border-radius: 15%;
-  /* padding-top: 4vw;
-  padding-bottom: 4vw; */
-  /* padding: 15vw; */
   margin: 12vw;
   margin-top: 5vw;
   float: left;
-
+  padding: 2vw 1vw 4vw 2vw;
 }
-
-
-/* #ip1{
-  float: left;
-  clear: right;
-  width: 25vw;
-
-  padding: 4vw 2vw 4vw 2vw;
-
-} */
 
 #ip1{
   float: left;
   width: 25vw;
   padding: 4vw 2vw 4vw 2vw;
-}
 
-#ip2{
-  float: left;
-  width: 25vw;
-  padding: 4vw 2vw 4vw 2vw;
 }
 
 .pContent {
   font-family: 'Hind Madurai', sans-serif;
   color: rgb(112, 122, 127);
+  float: right;
+  padding: 0vw 1vw 1vw 4vw ;
   /* text-align: center; */
-  float: left;
-  padding: 1vw;
-  /* clear: left; */
+}
+
+.iTitle {
+  font-size: 2vw;
+}
+.iContent {
+  font-size: 1vw;
 }
 
 .clearE {
