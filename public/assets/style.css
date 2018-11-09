@@ -136,6 +136,7 @@ p {
       padding: 3vw 1.5vw 3vw 1.5vw;
       display: inline-block;
       position: initial;
+      transition: padding 1s;
     }
 
     .ip1{
@@ -178,7 +179,7 @@ p {
       clear: right;
       padding: 3vw 1.5vw 3vw 1.5vw;
       display: inline-block;
-
+      transition: padding 1s;
 
     }
 
@@ -186,6 +187,7 @@ p {
       float: right;
       width: 25vw;
       padding: 4vw 2vw 4vw 2vw;
+
     }
     .tip2{
       float: right;
