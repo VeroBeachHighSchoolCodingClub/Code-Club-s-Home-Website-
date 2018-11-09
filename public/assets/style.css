@@ -122,7 +122,8 @@ p {
       margin: 9vw;
       margin-top: 5vw;
       float: left;
-      clear: left;
+      clear: both;
+
     }
 
     .tps1{
@@ -134,17 +135,19 @@ p {
       clear: left;
       padding: 3vw 1.5vw 3vw 1.5vw;
       display: inline-block;
+      position: initial;
+      transition: padding 1s;
     }
 
     .ip1{
       float: left;
-      width: 25vw;
+      width: 30vw;
       padding: 4vw 2vw 4vw 2vw;
     }
 
     .tip1{
       float: left;
-      width: 10.5vw;
+      width: 13vw;
       padding: 4vw 1vw 4vw 1vw;
     }
 
@@ -152,7 +155,7 @@ p {
       font-family: 'Hind Madurai', sans-serif;
       color: rgb(112, 122, 127);
       float: right;
-      padding: 0vw 1vw 1vw 4vw ;
+      padding: 0vw 1vw 1vw 1vw ;
       /* text-align: center; */
     }
 
@@ -164,6 +167,7 @@ p {
       margin-top: 5vw;
       float: right;
       clear: right;
+
     }
 
     .tps2{
@@ -175,6 +179,7 @@ p {
       clear: right;
       padding: 3vw 1.5vw 3vw 1.5vw;
       display: inline-block;
+      transition: padding 1s;
 
     }
 
@@ -182,6 +187,7 @@ p {
       float: right;
       width: 25vw;
       padding: 4vw 2vw 4vw 2vw;
+
     }
     .tip2{
       float: right;
@@ -198,10 +204,12 @@ p {
 
   /** Global **/
 .iTitle {
-  font-size: 1.7vw;
+  font-size: 2vw;
+  font-family: 'Quicksand', sans-serif;
 }
 .iContent {
-  font-size: 1vw;
+  font-size: 1.3vw;
+  font-family: 'KoHo', sans-serif;
 }
 
 .pContent {
