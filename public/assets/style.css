@@ -122,7 +122,8 @@ p {
       margin: 9vw;
       margin-top: 5vw;
       float: left;
-      clear: left;
+      clear: both;
+
     }
 
     .tps1{
@@ -134,6 +135,7 @@ p {
       clear: left;
       padding: 3vw 1.5vw 3vw 1.5vw;
       display: inline-block;
+      position: initial;
     }
 
     .ip1{
@@ -164,6 +166,7 @@ p {
       margin-top: 5vw;
       float: right;
       clear: right;
+
     }
 
     .tps2{
@@ -175,6 +178,7 @@ p {
       clear: right;
       padding: 3vw 1.5vw 3vw 1.5vw;
       display: inline-block;
+
 
     }
 
