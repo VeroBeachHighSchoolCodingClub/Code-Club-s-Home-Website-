@@ -6,9 +6,7 @@ body {
 
 /** carousel **/
 .picCar {
-  /* clear: right; */
   margin: 0vw 7vw 0vw 7vw;
-  border: 0.25vw solid rgba(200, 163, 163, 0.5);
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
@@ -51,7 +49,7 @@ body {
   clear: left;
   /* padding: 10px; */
   padding: 0.7vw;
-  background-color: rgba(251, 81, 81, 1);
+  background-color: rgba(251, 81, 81, 0.9);
   overflow: hidden;
   width: 100%;
   margin-left: 0vw;
