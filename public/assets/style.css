@@ -5,10 +5,14 @@ body {
 
 
 /** carousel **/
-
+.picCar {
+  /* clear: right; */
+  margin: 0vw 7vw 0vw 7vw;
+  border: 0.25vw solid rgba(200, 163, 163, 0.5);
+}
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 40%;
+    width: 55%;
 
     margin: auto;
 }
@@ -47,7 +51,7 @@ body {
   clear: left;
   /* padding: 10px; */
   padding: 0.7vw;
-  background-color: rgba(53, 157, 227, 1);
+  background-color: rgba(251, 81, 81, 1);
   overflow: hidden;
   width: 100%;
   margin-left: 0vw;
@@ -95,13 +99,15 @@ p {
 
 /* projects */
 .pJumbo {
-  margin-bottom: 100vw;
+  padding: 3vw 0vw 3vw 0vw;
+  background-color: rgba(239, 161, 161, 0.5) !important;
 }
 #pTitle {
   text-align: center;
   font-family: 'Comfortaa', cursive;
   color: rgb(112, 122, 127);
   margin-top: 2vw;
+  font-size: 3vw;
 }
 
 #pSub {
