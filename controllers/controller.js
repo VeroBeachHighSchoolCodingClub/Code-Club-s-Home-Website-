@@ -13,6 +13,11 @@ module.exports = (app) => {
     res.render('projects', {location: 'Our Projects'})
   })
 
+  app.get('/email', (req, res) => {
+    res.render('email', {location: 'Request Project'})
+  })
+
+
   app.get('*', (req, res) => {
     res.status(404).send("404 -- Sorry, we couldn't find your request.");
   })

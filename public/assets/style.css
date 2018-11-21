@@ -3,6 +3,14 @@ body {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+a :visited {
+  text-decoration: line-through;
+}
+
 /** carousel **/
 .picCar {
   margin: 0vw 7vw 0vw 7vw;
