@@ -3,7 +3,6 @@ body {
   padding: 0;
 }
 
-
 /** carousel **/
 .picCar {
   margin: 0vw 7vw 0vw 7vw;
@@ -91,10 +90,28 @@ p {
 
 /* footer */
 
-.footer {
+.fE {
+  clear: left;
+  margin: 5vw 10vw 0vw 10vw;
+  border-top: 0.1vw solid rgba(255, 135, 135, 0.8);
+  /* position: absolute; */
+}
+.fList {
+  /* list-style: none; */
+  text-align: center;
+  margin-left: -4vw;
+}
+.fList2 {
+  list-style: none;
+  float: right;
   clear: left;
 }
-
+.fItem {
+  display: inline-block;
+  font-size: 0.8vw;
+  padding: 2vw 2vw 1vw 2vw;
+  color: rgba(129, 129, 129, 1);
+}
 /* projects */
 .pJumbo {
   padding: 3vw 0vw 3vw 0vw;
