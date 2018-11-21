@@ -271,7 +271,8 @@ p {
 .boxName1 {
   font-size: 2.5vw;
   float: left;
-  padding: 1vw 14vw 0vw 1vw;
+  padding: 1vw 12vw 0vw 1vw;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .boxQuote {
