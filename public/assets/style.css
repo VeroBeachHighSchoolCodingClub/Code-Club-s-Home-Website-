@@ -254,9 +254,29 @@ p {
   display: none;
 }
 
+/** About Page **/
 
+.box {
+  padding: 1.5vw;
+  border: 0.2vw solid rgba(206, 201, 194, 1);
+  border-radius: 2vw;
+  margin: 3vw 0vw 3vw 5vw;
+}
 
+.boxPic1 {
+  width: 10vw;
+  border: 0.2vw solid rgb(0,0,0);
+}
 
+.boxName1 {
+  font-size: 2.5vw;
+  float: left;
+  padding: 1vw 14vw 0vw 1vw;
+}
+
+.boxQuote {
+  padding: 1vw 0vw 0vw 0vw;
+}
 
 
 
