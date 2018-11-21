@@ -127,7 +127,7 @@ p {
       margin-top: 5vw;
       float: left;
       clear: both;
-
+      transition: padding 1s;
     }
 
     .tps1{
