@@ -270,26 +270,56 @@ p {
   padding: 1.5vw;
   border: 0.2vw solid rgba(206, 201, 194, 1);
   border-radius: 2vw;
-  margin: 3vw 0vw 3vw 5vw;
+  margin: 3vw 0vw 3vw 3vw;
+  background-color: white;
 }
 
 .boxPic1 {
-  width: 10vw;
+  width: 12vw;
   border: 0.2vw solid rgb(0,0,0);
+  border-radius: 1vw;
 }
 
 .boxName1 {
-  font-size: 2.5vw;
+  font-size: 3vw;
   float: left;
-  padding: 1vw 12vw 0vw 1vw;
+  padding: 0.4vw 11vw 0vw 1vw;
   font-family: 'Montserrat', sans-serif;
+}
+
+.boxSmall {
+  font-size: 0.9vw; 
+  clear: right; 
+  position: absolute;
+  padding-top: 0.3vw;
 }
 
 .boxQuote {
   padding: 1vw 0vw 0vw 0vw;
+  font-family: 'Open Sans', sans-serif;
+  /* font-weight: 1000; */
+  letter-spacing: 0.1ch;
+  font-size: 1vw;
 }
 
+.boxCareer {
+  padding: 1vw;
+}
 
+.boxCareerT {
+  font-size: 1.3vw;
+  font-family: 'Sintony', sans-serif;
+  float: left;
+  /* position: absolute; */
+}
+
+.boxCareerE {
+  font-size: 1.3vw;
+  font-family: 'Tajawal', sans-serif;
+  float: left;
+  position: relative;
+  padding: 0vw 0vw 0vw 1vw;
+}
 
 
 

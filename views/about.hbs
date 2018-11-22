@@ -5,32 +5,39 @@
     {{> top}}
     {{> nav}}
 
-<br>
+<div class="container-fluid bg-light">
 
-<div class="row">
-  <div class="col-xs-6">
-    <div id="box1" class="box1 box">
-      <div class="boxPic boxE">
-        <img src="/pics/python.jpg" alt="Chania" class="boxPic1" >
-        <div class="boxName1 boxE">
-          John Doe
+  <br>
+
+  <div class="row">
+    <div class="col-xs-6">
+      <div id="box1" class="box1 box">
+        <div class="boxTop1 boxE">
+          
+          <h1 class="boxName1 boxE">
+            John Doe
+            <small class="boxSmall">Officer of Aeronautics</small>
+          </h1>
+          <img src="/pics/python.jpg" alt="Chania" class="boxPic1" >
+          
         </div>
-      </div>
-      <div class="boxQuote boxE">
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      </div>
-      <br>
-      <div class="boxCareer boxE" style="">
-        <p>Future Career - World Class Astronaut</p>
+        <div class="boxQuote boxE font-italic">
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        </div>
+        <br>
+        <div class="boxCareer">
+          <div class="boxCareerT">Future Career/Major - </div><div class="boxCareerE">World Class Astronaut</div>
+        </div>
+        
       </div>
     </div>
+
   </div>
 
+
+
+      {{> footer}}
 </div>
-
-
-
-    {{> footer}}
     {{> jsConnect}}
   </body>
 </html>
