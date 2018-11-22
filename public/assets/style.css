@@ -27,6 +27,7 @@ a :visited {
 .logo{
   width: 10.8vw;
   float: left;
+  color: rgb(94, 94, 94);
 }
 
 #name {
@@ -36,7 +37,7 @@ a :visited {
   padding: 2vw 2vw 2vw 1vw;
   margin-right: 2vw;
   font-size: 1.8vw;
-
+  color: rgb(94, 94, 94);
 }
 
 #modo {
@@ -46,7 +47,7 @@ a :visited {
   padding: 2vw;
   margin-right: 5vw;
   font-size: 1.8vw;
-
+  color: rgb(94, 94, 94);
 }
 
 
@@ -96,6 +97,20 @@ a:hover {
   margin-top: 2vw; 
   border-radius: 1vw;
   padding: 2vw;
+}
+
+.hTitle {
+  text-align: center;
+  font-family: 'Comfortaa', cursive;
+  color: rgb(94, 94, 94);
+  margin-top: 2vw;
+  font-size: 3vw;
+}
+
+.hSub {
+  font-family: 'Hind Madurai', sans-serif;
+  color: rgb(94, 94, 94);
+  text-align: center;
 }
 
 
@@ -270,56 +285,112 @@ p {
   padding: 1.5vw;
   border: 0.2vw solid rgba(206, 201, 194, 1);
   border-radius: 2vw;
-  margin: 3vw 0vw 3vw 3vw;
+  margin: 3vw 2vw 3vw 2vw;
   background-color: white;
 }
 
-.boxPic1 {
-  width: 12vw;
-  border: 0.2vw solid rgb(0,0,0);
-  border-radius: 1vw;
-}
+  /* box1 */
 
-.boxName1 {
-  font-size: 3vw;
-  float: left;
-  padding: 0.4vw 11vw 0vw 1vw;
-  font-family: 'Montserrat', sans-serif;
-}
+  .boxPic1 {
+    width: 12vw;
+    border: 0.15vw solid rgba(206, 201, 194, 1);
+    border-radius: 1vw;
+  }
 
-.boxSmall {
-  font-size: 0.9vw; 
-  clear: right; 
-  position: absolute;
-  padding-top: 0.3vw;
-}
+  .boxName1 {
+    font-size: 3vw;
+    float: left;
+    padding: 0.4vw 11vw 0vw 1vw;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(76, 76, 76);
+  }
 
-.boxQuote {
-  padding: 1vw 0vw 0vw 0vw;
-  font-family: 'Open Sans', sans-serif;
-  /* font-weight: 1000; */
-  letter-spacing: 0.1ch;
-  font-size: 1vw;
-}
+  .boxSmall1 {
+    font-size: 0.9vw; 
+    clear: right; 
+    position: absolute;
+    padding-top: 0.3vw;
+  }
 
-.boxCareer {
-  padding: 1vw;
-}
+  .boxQuote1 {
+    padding: 1vw 0vw 0vw 0vw;
+    font-family: 'Open Sans', sans-serif;
+    /* font-weight: 1000; */
+    letter-spacing: 0.1ch;
+    font-size: 1vw;
+    color: rgb(76, 76, 76);
+  }
 
-.boxCareerT {
-  font-size: 1.3vw;
-  font-family: 'Sintony', sans-serif;
-  float: left;
-  /* position: absolute; */
-}
+  .boxCareer1 {
+    padding: 1vw;
+    color: rgb(76, 76, 76);
+  }
 
-.boxCareerE {
-  font-size: 1.3vw;
-  font-family: 'Tajawal', sans-serif;
-  float: left;
-  position: relative;
-  padding: 0vw 0vw 0vw 1vw;
-}
+  .boxCareerT1 {
+    font-size: 1.1vw;
+    font-family: 'Sintony', sans-serif;
+    float: left;
+    /* position: absolute; */
+  }
+
+  .boxCareerE1 {
+    font-size: 1.1vw;
+    font-family: 'Tajawal', sans-serif;
+    float: left;
+    position: relative;
+    padding: 0vw 0vw 0vw 1vw;
+  }
+
+  /* box2 */
+  .boxPic2 {
+    width: 12vw;
+    border: 0.15vw solid rgba(206, 201, 194, 1);
+    border-radius: 1vw;
+  }
+  
+  .boxName2 {
+    font-size: 3vw;
+    float: left;
+    padding: 0.4vw 11vw 0vw 1vw;
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(76, 76, 76);
+  }
+  
+  .boxSmall2 {
+    font-size: 0.9vw; 
+    clear: right; 
+    position: absolute;
+    padding-top: 0.3vw;
+  }
+  
+  .boxQuote2 {
+    padding: 1vw 0vw 0vw 0vw;
+    font-family: 'Open Sans', sans-serif;
+    /* font-weight: 1000; */
+    letter-spacing: 0.1ch;
+    font-size: 1vw;
+    color: rgb(76, 76, 76);
+  }
+  
+  .boxCareer2 {
+    padding: 1vw;
+    color: rgb(76, 76, 76);
+  }
+  
+  .boxCareerT2 {
+    font-size: 1.1vw;
+    font-family: 'Sintony', sans-serif;
+    float: left;
+    /* position: absolute; */
+  }
+  
+  .boxCareerE2 {
+    font-size: 1.1vw;
+    font-family: 'Tajawal', sans-serif;
+    float: left;
+    position: relative;
+    padding: 0vw 0vw 0vw 1vw;
+  }
 
 
 
