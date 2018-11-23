@@ -19,12 +19,13 @@ module.exports = (app) => {
     res.render('email', {location: 'Request Project'})
   })
 
-  app.post('/data', (req, res) => {
-    var Jane = new Member({
-        name: 'Jane'
+  app.post('/data/:name', (req, res) => {
+    nameVal = req.params.name;
+    var mem = new Member({
+        name: nameVal
     });
     
-    Jane.save().then((doc) => {
+    mem.save().then((doc) => {
       res.send(doc);
     }, (e) => {
       res.status(400).send(e);

@@ -9,6 +9,9 @@ const fs              = require('fs');
 
 var {mongoose} = require('./db/mongoose');
 
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
 
@@ -21,7 +24,6 @@ const port = process.env.PORT;
 app.use(express.static('./public'));
 
 Controller(app);
-require('./db/dbController');
 
 app.listen(port, () => {
   console.log(`Starting on port ${port}`);
