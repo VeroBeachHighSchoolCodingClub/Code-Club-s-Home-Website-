@@ -28,6 +28,15 @@ var Member = mongoose.model('member', {
         trim: false,
         required: true,
         maxlength: 30
+    },
+    margin: {
+        type: String,
+        required: false
+    },
+    picture: {
+        type: String,
+        trim: true,
+        required: false
     }
 });
 
