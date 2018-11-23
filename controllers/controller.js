@@ -1,7 +1,11 @@
 const {Member} = require('../db/models/members');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const _ = require('lodash');
 
 module.exports = (app) => {
+
+  app.use(bodyParser.json());
 
   app.get('/', (req, res) => {
     res.render('home', {location: 'Home'});
@@ -19,17 +23,17 @@ module.exports = (app) => {
     res.render('email', {location: 'Request Project'})
   })
 
-  app.post('/data/:name', (req, res) => {
-    nameVal = req.params.name;
-    var mem = new Member({
-        name: nameVal
-    });
-    
-    mem.save().then((doc) => {
-      res.send(doc);
-    }, (e) => {
+  app.post('/data', async (req, res) => {
+    const body = _.pick(req.body, ['name', 'rank', 'quote', 'isMajor', 'career']);
+    var mem = new Member(body);
+
+    try {
+      await mem.save()
+      res.send('It saved')
+    } catch (e) {
       res.status(400).send(e);
-    });
+    }
+  
   })
 
   app.get('*', (req, res) => {
