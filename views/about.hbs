@@ -9,66 +9,55 @@
 
   <br>
 
-  <div class="row">
+  <div class="">
+    {{# each members}}
     <div class="col-xs-6">
       <div id="box1" class="box1 box">
         <div class="boxTop1 boxE">
           
           <h1 class="boxName1 boxE">
-            John Doe
-            <small class="boxSmall1">Officer of Aeronautics</small>
+            {{this.name}}
+            <small class="boxSmall1">{{this.rank}}</small>
           </h1>
           <img src="/pics/python.jpg" alt="Chania" class="boxPic1" >
           
         </div>
         <div class="boxQuote1 boxE font-italic">
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "{{this.quote}}"
         </div>
         <br>
         <div class="boxCareer1">
-          <div class="boxCareerT1">Future Career/Major - </div><div class="boxCareerE1">World Class Astronaut</div>
+          <div class="boxCareerT1">Future Career/Major - </div><div class="boxCareerE1">{{this.career}}</div>
         </div>
         
       </div>
     </div>
-
+    {{/each}}
+    {{# each members2}}
     <div class="col-xs-6">
       <div id="box2" class="box2 box">
         <div class="boxTop2 boxE">
           
           <h1 class="boxName2 boxE">
-            Jane Doe
-            <small class="boxSmall2">Officer of Astrophysics</small>
+            {{this.name}}
+            <small class="boxSmall2">{{this.rank}}</small>
           </h1>
-          <img src="/pics/python.jpg" alt="Chania" class="boxPic1" >
+          <img src="/pics/python.jpg" alt="Chania" class="boxPic2" >
           
         </div>
         <div class="boxQuote2 boxE font-italic">
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+          "{{this.quote}}"
         </div>
         <br>
         <div class="boxCareer2">
-          <div class="boxCareerT2">Future Career/Major - </div><div class="boxCareerE2">PHD in Astrophysics, Doctorate in Molecular Biology</div>
+          <div class="boxCareerT2">Future Career/Major - </div><div class="boxCareerE2">{{this.career}}</div>
         </div>
         
       </div>
     </div>
 
   </div>
-
-  
-  {{# each members}}
-
-    <h3>{{this.name}}</h3>
-
   {{/each}}
-
-  {{# each members2}}
-
-    <h3>{{this.name}}</h3>
-
-  {{/each}}
-
 
       {{> footer}}
 </div>
