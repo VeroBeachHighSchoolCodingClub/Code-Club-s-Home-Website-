@@ -1,0 +1,49 @@
+const mongoose = require('mongoose');
+
+var Project = mongoose.model('projects', {
+    name: {
+        type: String,
+        trim: true,
+        required: true,
+        maxlength: 15
+    },
+    year: {
+        type: String,
+        maxlength: 4,
+        required: true,
+        trim: true
+    },
+    url: {
+        type: String,
+        trim: false,
+        required: true,
+        maxlength: 50
+    },
+    dis: {
+        type: String,
+        trim: false,
+        required: true,
+        maxlength: 200 
+    },
+    source: {
+        type: String,
+        required: true,
+        maxlength: 50
+    },
+    picture: {
+        type: String,
+        trim: false,
+        required: true,
+        maxlength: 30
+    },
+    margin: {
+        type: Number,
+        required: true
+    },
+    id: {
+        type: Number,
+        required: true
+    }
+});
+
+module.exports = {Project};

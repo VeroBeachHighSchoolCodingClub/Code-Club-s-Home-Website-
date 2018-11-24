@@ -1,5 +1,6 @@
 const {Member} = require('../db/models/members');
 const {Mission} = require('../db/models/mission');
+const {Project} = require('../db/models/projects');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
@@ -11,7 +12,7 @@ module.exports = (app) => {
   app.get('/', (req, res) => {
     Mission.find({}, (err, mis) => {
       res.render('home', {location: 'Home', mission: mis});
-    })
+    });
   });
 
   app.get('/about', (req, res) => {
@@ -21,7 +22,9 @@ module.exports = (app) => {
   });
 
   app.get('/projects', (req, res) => {
-    res.render('projects', {location: 'Our Projects'})
+    Project.find({}, (err, pro) => {
+      res.render('projects', {location: 'Our Projects', projects: pro})
+    });
   });
 
   app.get('/email', (req, res) => {
@@ -54,6 +57,19 @@ module.exports = (app) => {
   
   });
 
+  app.post('/project', async (req, res) => {
+    const body = _.pick(req.body, ['name', 'year', 'url', 'dis', 'source', 'picture', 'margin', 'id']);
+    var pro = new Project(body);
+
+    try {
+      await pro.save()
+      res.send(pro);
+    } catch (e) {
+      res.status(400).send(e);
+    }
+  
+  });
+
   app.get('/data', (req, res) => {
     Member.find({}, (err, members) => {
       res.send(members);
@@ -66,6 +82,11 @@ module.exports = (app) => {
     });
   });
 
+  app.get('/project', (req, res) => {
+    Project.find({}, (err, pro) => {
+      res.send(pro);
+    });
+  });
 
   app.get('*', (req, res) => {
     res.status(404).send("404 -- Sorry, we couldn't find your request.");

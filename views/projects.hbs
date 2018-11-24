@@ -7,7 +7,7 @@
   
     <div class="bg-light">
       <br>
-      <div class="pics1 pics" id="ePics1">
+      {{!-- <div class="pics1 pics" id="ePics1">
         <img id="ip1" class="ip1" src="/pics/logo.png" alt="club logo">
         <div id="p1Content" class="clearE">
           <h3 id="p1title" class="iTitle"><a href="/">vbhscode.com 2018</a></h3>
@@ -45,8 +45,20 @@
           <br>
           <h5 class="iContent"><a href="/projects" target="_blank">Source Code</a></h5>
         </div>
-      </div>
+      </div> --}}
 
+  {{#each projects}}
+      <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
+        <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="club logo">
+        <div id="p{{this.id}}Content" class="clearE">
+          <h3 id="p1title" class="iTitle"><a href="{{this.url}}">{{this.name}} {{this.year}}</a></h3>
+          <h5 class="iContent">{{this.dis}}</h5>
+          <br>
+          <h5 class="iContent"><a href="{{this.source}}" target="_blank">Source Code</a></h5>
+        </div>
+      </div>
+  {{/each}} 
+    </div>
     {{> footer}}
     {{> jsConnect}}
   </body>
