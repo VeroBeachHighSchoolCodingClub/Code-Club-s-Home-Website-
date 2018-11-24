@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var Member = mongoose.model('member', {
+var Member1 = mongoose.model('member1', {
     name: {
         type: String,
         trim: false,
@@ -29,10 +29,6 @@ var Member = mongoose.model('member', {
         required: true,
         maxlength: 30
     },
-    margin: {
-        type: String,
-        required: false
-    },
     picture: {
         type: String,
         trim: true,
@@ -40,4 +36,4 @@ var Member = mongoose.model('member', {
     }
 });
 
-module.exports = {Member};
+module.exports = {Member1};
