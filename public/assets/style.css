@@ -284,11 +284,15 @@ p {
 
 /** About Page **/
 
+.MemT {
+  text-align: center;
+}
+
 .box {
   padding: 1.5vw;
   border: 0.2vw solid rgba(206, 201, 194, 1);
   border-radius: 2vw;
-  margin: 3vw 1vw 1vw 1vw;
+  margin: 3vw 1vw 1vw 3vw;
   background-color: white;
 }
 
