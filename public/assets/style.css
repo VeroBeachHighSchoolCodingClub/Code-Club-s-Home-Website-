@@ -288,22 +288,28 @@ p {
   padding: 1.5vw;
   border: 0.2vw solid rgba(206, 201, 194, 1);
   border-radius: 2vw;
-  margin: 3vw 1vw 0vw 1vw;
+  margin: 3vw 1vw 1vw 1vw;
   background-color: white;
 }
 
   /* box1 */
 
+  .box1 {
+    float: left;
+    width: 40vw;
+  }
+
   .boxPic1 {
     width: 12vw;
     border: 0.15vw solid rgba(206, 201, 194, 1);
     border-radius: 1vw;
+    float: right;
   }
 
   .boxName1 {
     font-size: 3vw;
     float: left;
-    padding: 0.4vw 11vw 0vw 1vw;
+    padding: 0.4vw 0vw 0vw 1vw;
     font-family: 'Montserrat', sans-serif;
     color: rgb(76, 76, 76);
   }
@@ -312,28 +318,31 @@ p {
     font-size: 0.9vw; 
     clear: right; 
     position: absolute;
-    padding-top: 0.3vw;
+    padding: 0.3vw 0vw 0vw 0.5vw;
+    float: left;
   }
 
   .boxQuote1 {
-    padding: 1vw 0vw 0vw 0vw;
+    padding: 1vw 0vw 0vw 2vw;
     font-family: 'Open Sans', sans-serif;
-    /* font-weight: 1000; */
     letter-spacing: 0.1ch;
     font-size: 1vw;
     color: rgb(76, 76, 76);
+    float: left;
+    clear: right; 
   }
 
   .boxCareer1 {
-    padding: 1vw;
+    padding: 1vw 1vw 1vw 1.5vw;
     color: rgb(76, 76, 76);
+    float: left;
+    clear: both; 
   }
 
   .boxCareerT1 {
     font-size: 1.1vw;
     font-family: 'Sintony', sans-serif;
     float: left;
-    /* position: absolute; */
   }
 
   .boxCareerE1 {
@@ -345,10 +354,17 @@ p {
   }
 
   /* box2 */
+
+  .box2 {
+    /* float: right; */
+    /* position: relative; */
+  }
+
   .boxPic2 {
     width: 12vw;
     border: 0.15vw solid rgba(206, 201, 194, 1);
     border-radius: 1vw;
+    /* float: right;  */
   }
   
   .boxName2 {
