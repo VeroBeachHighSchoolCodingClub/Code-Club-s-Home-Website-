@@ -36,6 +36,11 @@ var Project = mongoose.model('projects', {
         required: true,
         maxlength: 30
     },
+    alt: {
+        type: String,
+        required: false,
+        maxlength: 15
+    },
     margin: {
         type: Number,
         required: true

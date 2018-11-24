@@ -58,7 +58,7 @@ module.exports = (app) => {
   });
 
   app.post('/project', async (req, res) => {
-    const body = _.pick(req.body, ['name', 'year', 'url', 'dis', 'source', 'picture', 'margin', 'id']);
+    const body = _.pick(req.body, ['name', 'year', 'url', 'dis', 'source', 'picture','alt', 'margin', 'id']);
     var pro = new Project(body);
 
     try {
