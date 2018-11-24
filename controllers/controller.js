@@ -29,7 +29,7 @@ module.exports = (app) => {
   });
 
   app.post('/data', async (req, res) => {
-    const body = _.pick(req.body, ['name', 'rank', 'quote', 'isMajor', 'career', 'picture']);
+    const body = _.pick(req.body, ['name', 'rank', 'quote', 'type', 'career', 'picture']);
     var mem = new Member(body);
 
     try {

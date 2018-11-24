@@ -19,9 +19,10 @@ var Member = mongoose.model('member', {
         required: true,
         maxlength: 200 
     },
-    isMajor: {
+    type: {
         type: String,
-        required: true
+        required: true,
+        maxlength: 10
     },
     career: {
         type: String,
