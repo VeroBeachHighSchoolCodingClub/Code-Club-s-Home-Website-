@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var Member1 = mongoose.model('member1', {
+var Member = mongoose.model('member', {
     name: {
         type: String,
         trim: false,
@@ -36,4 +36,4 @@ var Member1 = mongoose.model('member1', {
     }
 });
 
-module.exports = {Member1};
+module.exports = {Member};

@@ -1,5 +1,4 @@
-const {Member1} = require('../db/models/members_1');
-const {Member2} = require('../db/models/members_2');
+const {Member} = require('../db/models/members');
 const {Mission} = require('../db/models/mission');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -16,10 +15,8 @@ module.exports = (app) => {
   });
 
   app.get('/about', (req, res) => {
-    Member1.find({}, (err, members) => {
-      Member2.find({}, (err, members2) => {
-        res.render('about', {location: 'About', members: members, members2: members2})
-      })
+    Member.find({}, (err, members) => {
+      res.render('about', {location: 'About', members: members})
     });
   });
 
@@ -33,24 +30,11 @@ module.exports = (app) => {
 
   app.post('/data', async (req, res) => {
     const body = _.pick(req.body, ['name', 'rank', 'quote', 'isMajor', 'career', 'picture']);
-    var mem = new Member1(body);
+    var mem = new Member(body);
 
     try {
       await mem.save()
       res.send(mem)
-    } catch (e) {
-      res.status(400).send(e);
-    }
-  
-  });
-
-  app.post('/data2', async (req, res) => {
-    const body = _.pick(req.body, ['name', 'rank', 'quote', 'isMajor', 'career', 'picture']);
-    var mem = new Member2(body);
-
-    try {
-      await mem.save()
-      res.send(mem);
     } catch (e) {
       res.status(400).send(e);
     }
@@ -71,13 +55,7 @@ module.exports = (app) => {
   });
 
   app.get('/data', (req, res) => {
-    Member1.find({}, (err, members) => {
-      res.send(members);
-    });
-  });
-
-  app.get('/data2', (req, res) => {
-    Member2.find({}, (err, members) => {
+    Member.find({}, (err, members) => {
       res.send(members);
     });
   });
