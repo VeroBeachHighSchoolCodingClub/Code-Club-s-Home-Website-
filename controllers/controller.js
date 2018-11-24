@@ -1,5 +1,6 @@
 const {Member1} = require('../db/models/members_1');
 const {Member2} = require('../db/models/members_2');
+const {Mission} = require('../db/models/mission');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
@@ -9,7 +10,9 @@ module.exports = (app) => {
   app.use(bodyParser.json());
 
   app.get('/', (req, res) => {
-    res.render('home', {location: 'Home'});
+    Mission.find({}, (err, mis) => {
+      res.render('home', {location: 'Home', mission: mis});
+    })
   });
 
   app.get('/about', (req, res) => {
@@ -34,7 +37,7 @@ module.exports = (app) => {
 
     try {
       await mem.save()
-      res.send('It saved')
+      res.send(mem)
     } catch (e) {
       res.status(400).send(e);
     }
@@ -54,6 +57,19 @@ module.exports = (app) => {
   
   });
 
+  app.post('/mission', async (req, res) => {
+    const body = _.pick(req.body, ['content']);
+    var mis = new Mission(body);
+
+    try {
+      await mis.save()
+      res.send(mis);
+    } catch (e) {
+      res.status(400).send(e);
+    }
+  
+  });
+
   app.get('/data', (req, res) => {
     Member1.find({}, (err, members) => {
       res.send(members);
@@ -65,6 +81,13 @@ module.exports = (app) => {
       res.send(members);
     });
   });
+
+  app.get('/mission', (req, res) => {
+    Mission.find({}, (err, mis) => {
+      res.send(mis);
+    });
+  });
+
 
   app.get('*', (req, res) => {
     res.status(404).send("404 -- Sorry, we couldn't find your request.");
