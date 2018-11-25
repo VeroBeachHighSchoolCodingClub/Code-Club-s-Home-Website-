@@ -1,6 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+}
+
+.container-fluid {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 10vw;
 }
 
 a {
@@ -124,10 +131,12 @@ p {
 /* footer */
 
 .fE {
-  clear: left;
-  margin: 5vw 10vw 0vw 10vw;
+  /* clear: left; */
+  margin: 0vw 0vw 0vw 0vw;
   border-top: 0.1vw solid rgba(255, 135, 135, 0.8);
-  /* position: absolute; */
+  position: absolute;
+  text-align: center;
+  width: 100%
 }
 .fList {
   /* list-style: none; */
@@ -142,7 +151,7 @@ p {
 .fItem {
   display: inline-block;
   font-size: 0.8vw;
-  padding: 2vw 2vw 1vw 2vw;
+  padding: 2vw 5vw 1vw 5vw;
   color: rgba(129, 129, 129, 1);
 }
 /* projects */
