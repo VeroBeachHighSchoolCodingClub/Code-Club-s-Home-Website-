@@ -4,7 +4,7 @@
   "description": "> The VBHS Coding Club is a group of High School students who enjoy coding and programming. One of our main \r > focuses is to challenge ourselves, in order to learn as much as we can and be the best we are able to be.\r > This project is our first collaborative project togother, but there will be many more to come.",
   "main": "app.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node app.js",
     "test": "export NODE_ENV=test || SET \"NODE_ENV=test\" && mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
