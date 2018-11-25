@@ -19,16 +19,28 @@ var Project = mongoose.model('projects', {
         required: true,
         maxlength: 50
     },
-    dis: {
+    dis1: {
         type: String,
         trim: false,
         required: true,
         maxlength: 200 
     },
+    dis2: {
+        type: String,
+        trim: false,
+        required: false,
+        maxlength: 200 
+    },
+    dis3: {
+        type: String,
+        trim: false,
+        required: false,
+        maxlength: 200 
+    },
     source: {
         type: String,
         required: true,
-        maxlength: 50
+        maxlength: 100
     },
     picture: {
         type: String,
