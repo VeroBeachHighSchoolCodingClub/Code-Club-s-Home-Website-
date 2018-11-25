@@ -1,6 +1,8 @@
 const {Member} = require('../db/models/members');
 const {Mission} = require('../db/models/mission');
 const {Project} = require('../db/models/projects');
+const {MeetTime} = require('../db/models/meetTime');
+const {ContactH} = require('../db/models/hContact');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
@@ -11,7 +13,11 @@ module.exports = (app) => {
 
   app.get('/', (req, res) => {
     Mission.find({}, (err, mis) => {
-      res.render('home', {location: 'Home', mission: mis});
+      MeetTime.find({}, (err, mt) => {
+        ContactH.find({}, (err, hc) => {
+          res.render('home', {location: 'Home', mission: mis, mt: mt, hc: hc});
+        });
+      });
     });
   });
 
@@ -70,6 +76,33 @@ module.exports = (app) => {
   
   });
 
+  app.post('/mtime', async (req, res) => {
+    const body = _.pick(req.body, ['content']);
+    var mt = new MeetTime(body);
+
+    try {
+      await mt.save()
+      res.send(mt);
+    } catch (e) {
+      res.status(400).send(e);
+    }
+  
+  });
+
+  app.post('/hcontact', async (req, res) => {
+    const body = _.pick(req.body, ['content']);
+    var hc = new ContactH(body);
+
+    try {
+      await hc.save()
+      res.send(hc);
+    } catch (e) {
+      res.status(400).send(e);
+    }
+  
+  });
+
+
   app.get('/data', (req, res) => {
     Member.find({}, (err, members) => {
       res.send(members);
@@ -85,6 +118,18 @@ module.exports = (app) => {
   app.get('/project', (req, res) => {
     Project.find({}, (err, pro) => {
       res.send(pro);
+    });
+  });
+
+  app.get('/mtime', (req, res) => {
+    MeetTime.find({}, (err, mt) => {
+      res.send(mt);
+    });
+  });
+
+  app.get('/hcontact', (req, res) => {
+    ContactH.find({}, (err, hc) => {
+      res.send(hc);
     });
   });
 

@@ -75,7 +75,9 @@
     Meeting Times
   </h3>
         <p class="hSub">
-              Thursdays from 2:15-3:00 in the Biotech Room.
+              {{#each mt}}
+                {{this.content}}
+              {{/each}}
         </p>
   </div>
 
@@ -97,7 +99,9 @@
     </h3>
 
         <p class="hSub">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          {{# each hc}}
+          {{this.content}}
+          {{/each}}
         </p>
   </div>
   {{> footer}}
