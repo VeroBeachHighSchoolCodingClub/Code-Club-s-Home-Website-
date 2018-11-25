@@ -14,11 +14,7 @@ a {
   text-decoration: none;
 }
 
-a :visited {
-  text-decoration: line-through;
-}
-
-/** carousel **/
+/** Carousel **/
 .picCar {
   margin: 0vw 7vw 0vw 7vw;
 }
@@ -58,17 +54,15 @@ a :visited {
 }
 
 
-/* nav styles */
+/* Nav Bar */
 
 .navBar {
   clear: left;
-  /* padding: 10px; */
   padding: 0.7vw;
   background-color: rgba(251, 81, 81, 0.9);
   overflow: hidden;
   width: 100%;
   margin-left: 0vw;
-  margin-right: -1vw;
   z-index: 99 !important;
 }
 
@@ -77,8 +71,6 @@ a :visited {
   color: white;
   float: left;
   font-size: 1.7vw;
-  /* padding-right: 8.3vw;
-  padding-left: 8.3vw; */
   text-decoration: none;
   text-align: center;
 }
@@ -99,6 +91,7 @@ a:hover {
 }
 
 /* Home Page */
+
 .mEl {
   background-color: white; 
   margin-top: 2vw; 
@@ -120,18 +113,9 @@ a:hover {
   text-align: center;
 }
 
-
-
-/* body things */
-
-p {
-  clear: left;
-}
-
-/* footer */
+/** Footer **/
 
 .fE {
-  /* clear: left; */
   margin: 0vw 0vw 0vw 0vw;
   border-top: 0.1vw solid rgba(255, 135, 135, 0.8);
   position: absolute;
@@ -139,7 +123,6 @@ p {
   width: 100%
 }
 .fList {
-  /* list-style: none; */
   text-align: center;
   margin-left: -4vw;
 }
@@ -154,7 +137,9 @@ p {
   padding: 2vw 5vw 1vw 5vw;
   color: rgba(129, 129, 129, 1);
 }
-/* projects */
+
+/** Projects Page **/
+
 .pJumbo {
   padding: 3vw 0vw 3vw 0vw;
   background-color: rgba(239, 161, 161, 0.5) !important;
@@ -181,7 +166,8 @@ p {
 .pics {
   background-color: white;
 }
-  /** Pics 1 **/
+
+  /* Pics 1 */
     .pics1 {
       border: 1vw solid rgba(181, 181, 181, 1);
       border-radius: 15%;
@@ -197,7 +183,6 @@ p {
       margin: 5vw 6vw 6vw 6vw;
       float: left;
       padding: 3vw 1.5vw 3vw 1.5vw;
-      display: inline-block;
       position: initial;
       transition: padding 1s;
       clear: both;
@@ -220,17 +205,14 @@ p {
       color: rgb(112, 122, 127);
       float: right;
       padding: 0vw 1vw 1vw 1vw ;
-      /* text-align: center; */
     }
 
-  /** Pics 2 **/
-    
+  /* Pics 2 */
     .pics2 {
       border: 1vw solid rgba(181, 181, 181, 1);
       border-radius: 15%;
       margin: 5vw 6vw 6vw 6vw;
       float: right;
-      /* clear: both; */
       transition: padding 1s;
     }
 
@@ -240,7 +222,6 @@ p {
       margin: 5vw 6vw 6vw 6vw;
       float: right;
       padding: 3vw 1.5vw 3vw 1.5vw;
-      display: inline-block;
       position: initial;
       transition: padding 1s;
       
@@ -263,11 +244,8 @@ p {
       color: rgb(112, 122, 127);
       float: left;
       padding: 0vw 1vw 1vw 1vw ;
-      /* text-align: center; */
     }
 
-
-  /** Global **/
 .iTitle {
   font-size: 2vw;
   font-family: 'Quicksand', sans-serif;
@@ -282,9 +260,7 @@ p {
   color: rgb(112, 122, 127);
   float: right;
   padding: 0vw 1vw 1vw 4vw ;
-  /* text-align: center; */
 }
-
 
 .clearE {
   display: none;
@@ -292,136 +268,69 @@ p {
 
 /** About Page **/
 
-.MemT {
-  text-align: center;
-}
-
 .box {
   padding: 1.5vw;
   border: 0.2vw solid rgba(206, 201, 194, 1);
   border-radius: 2vw;
   margin: 3vw 1vw 1vw 3vw;
   background-color: white;
+  float: left;
+  width: 40vw;
+}  
+
+.boxPic {
+  width: 12vw;
+  border: 0.15vw solid rgba(206, 201, 194, 1);
+  border-radius: 1vw;
+  float: right;
 }
 
-  /* box1 */
+.boxName {
+  font-size: 3vw;
+  float: left;
+  padding: 0.4vw 0vw 0vw 1vw;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(76, 76, 76);
+}
 
-  .box1 {
-    float: left;
-    width: 40vw;
-  }
+.boxSmall {
+  font-size: 0.9vw; 
+  clear: right; 
+  position: absolute;
+  padding: 0.3vw 0vw 0vw 0.5vw;
+  float: left;
+}
 
-  .boxPic1 {
-    width: 12vw;
-    border: 0.15vw solid rgba(206, 201, 194, 1);
-    border-radius: 1vw;
-    float: right;
-  }
+.boxQuote {
+  padding: 1vw 0vw 0vw 2vw;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.1ch;
+  font-size: 1vw;
+  color: rgb(76, 76, 76);
+  float: left;
+  clear: right; 
+}
 
-  .boxName1 {
-    font-size: 3vw;
-    float: left;
-    padding: 0.4vw 0vw 0vw 1vw;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(76, 76, 76);
-  }
+.boxCareer {
+  padding: 1vw 1vw 1vw 1.5vw;
+  color: rgb(76, 76, 76);
+  float: left;
+  clear: both; 
+}
 
-  .boxSmall1 {
-    font-size: 0.9vw; 
-    clear: right; 
-    position: absolute;
-    padding: 0.3vw 0vw 0vw 0.5vw;
-    float: left;
-  }
+.boxCareerT {
+  font-size: 1.1vw;
+  font-family: 'Sintony', sans-serif;
+  float: left;
+}
 
-  .boxQuote1 {
-    padding: 1vw 0vw 0vw 2vw;
-    font-family: 'Open Sans', sans-serif;
-    letter-spacing: 0.1ch;
-    font-size: 1vw;
-    color: rgb(76, 76, 76);
-    float: left;
-    clear: right; 
-  }
-
-  .boxCareer1 {
-    padding: 1vw 1vw 1vw 1.5vw;
-    color: rgb(76, 76, 76);
-    float: left;
-    clear: both; 
-  }
-
-  .boxCareerT1 {
-    font-size: 1.1vw;
-    font-family: 'Sintony', sans-serif;
-    float: left;
-  }
-
-  .boxCareerE1 {
-    font-size: 1.1vw;
-    font-family: 'Tajawal', sans-serif;
-    float: left;
-    position: relative;
-    padding: 0vw 0vw 0vw 1vw;
-  }
-
-  /* box2 */
-
-  .box2 {
-    /* float: right; */
-    /* position: relative; */
-  }
-
-  .boxPic2 {
-    width: 12vw;
-    border: 0.15vw solid rgba(206, 201, 194, 1);
-    border-radius: 1vw;
-    /* float: right;  */
-  }
-  
-  .boxName2 {
-    font-size: 3vw;
-    float: left;
-    padding: 0.4vw 11vw 0vw 1vw;
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(76, 76, 76);
-  }
-  
-  .boxSmall2 {
-    font-size: 0.9vw; 
-    clear: right; 
-    position: absolute;
-    padding-top: 0.3vw;
-  }
-  
-  .boxQuote2 {
-    padding: 1vw 0vw 0vw 0vw;
-    font-family: 'Open Sans', sans-serif;
-    /* font-weight: 1000; */
-    letter-spacing: 0.1ch;
-    font-size: 1vw;
-    color: rgb(76, 76, 76);
-  }
-  
-  .boxCareer2 {
-    padding: 1vw;
-    color: rgb(76, 76, 76);
-  }
-  
-  .boxCareerT2 {
-    font-size: 1.1vw;
-    font-family: 'Sintony', sans-serif;
-    float: left;
-    /* position: absolute; */
-  }
-  
-  .boxCareerE2 {
-    font-size: 1.1vw;
-    font-family: 'Tajawal', sans-serif;
-    float: left;
-    position: relative;
-    padding: 0vw 0vw 0vw 1vw;
-  }
+.boxCareerE {
+  font-size: 1.1vw;
+  font-family: 'Tajawal', sans-serif;
+  float: left;
+  position: relative;
+  padding: 0vw 0vw 0vw 1vw;
+}
 
 
 
@@ -433,4 +342,4 @@ p {
 
 
 
-/* bottom */
+/*** bottom ***/

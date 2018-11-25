@@ -1,5 +1,4 @@
 $(document).ready(function(){
-  console.log('javascript connected');
 
 class Pic1 {
   constructor(n) {
@@ -91,25 +90,23 @@ pic4.out2(pic4);
 
 
 
-// var nav = document.getElementById("navBar");
-// var navStick = nav.offsetTop;
+var nav = document.getElementById("navBar");
+var navStick = nav.offsetTop;
 
 
-//   window.onscroll = function() {stickyNav()};
+  window.onscroll = function() {stickyNav()};
 
-//   function stickyNav() {
-//     if (window.pageYOffset >= navStick) {
-//       nav.classList.add("stickyNav")
-//       console.log('hes down under!');
-//       // nav.addClass('stickyNav');
-//     } else {
-//       nav.classList.remove("stickyNav");
-//       console.log('Ur good.');
-//       // nav.removeClass('stickyNav');
-//     }
-//   }
-
-//   stickyNav();
+  function stickyNav() {
+    if (window.pageYOffset >= navStick) {
+      nav.classList.add("stickyNav")
+      console.log('hes down under!');
+      // nav.addClass('stickyNav');
+    } else {
+      nav.classList.remove("stickyNav");
+      console.log('Ur good.');
+      // nav.removeClass('stickyNav');
+    }
+  }
 
 
 });
