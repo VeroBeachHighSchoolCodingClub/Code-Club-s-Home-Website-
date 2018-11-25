@@ -20,7 +20,6 @@ class Pic1 {
         t.pContent.addClass(t.pCon);
         t.indPic.removeClass('ip1');
         t.indPic.addClass('tip1');
-        console.log($("#ePics1").css("paddingTop"));
       }, 350)
     });
   }
@@ -58,7 +57,6 @@ class Pic2 {
         t.pContent.addClass(t.pCon);
         t.indPic.removeClass('ip2');
         t.indPic.addClass('tip2');
-        console.log($("#ePics2").css("paddingTop"));
       }, 350)
     });
   }
