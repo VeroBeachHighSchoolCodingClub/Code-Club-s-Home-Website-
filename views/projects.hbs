@@ -4,44 +4,26 @@
   <body>
     {{> top}}
     {{> nav}}
-    <br>
-    <div>
+  
+    <div class="">
+      <br>
 
-      <div class="pics1" id="ePics1">
-        <img id="ip1" class="ip1" src="/pics/logo.png" alt="club logo">
-        <div id="p1Content" class="clearE">
-          <h3 id="p1title" class="iTitle"><a href="/">vbhscode.com 2018</a></h3>
-          <h5 class="iContent">Our home website was our <br>first collaboration project</h5>
-          <br>
-          <h5 class="iContent"><a href="https://github.com/VeroBeachHighSchoolCodingClub/Code-Club-s-Home-Website-" target="_blank">Source Code</a></h5>
+      {{#each projects}}
+        <div class="bg-light">
+          <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
+            <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
+            <div id="p{{this.id}}Content" class="clearE">
+              <h3 id="p1title" class="iTitle"><a href="{{this.url}}">{{this.name}} {{this.year}}</a></h3>
+              <h5 class="iContent">{{this.dis1}} <br> {{this.dis2}} <br> {{this.dis3}} </h5>
+              <br>
+              <h5 class="iContent"><a href="{{this.source}}" target="_blank">Source Code</a></h5>
+            </div>
+          </div>
         </div>
-      </div>
+      {{/each}} 
 
-      <!-- <div class="pics2" id="ePics2">
-        <img id="ip2" class="ip2" src="/pics/python.jpg" alt="python picture">
-        <div id="p2Content" class="clearE">
-          <h3 id="p2title" class="iTitle">Python Project 2019</h3>
-          <h5 class="iContent">Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit, <br>sed do eiusmod tempor </h5>
-        </div>
-      </div>
-
-      <div class="pics1" id="ePics3">
-        <img id="ip3" class="ip1" src="/pics/python.jpg" alt="python picture">
-        <div id="p3Content" class="clearE">
-          <h3 id="p3title" class="iTitle">Python Project 2018</h3>
-          <h5 class="iContent">Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit, <br>sed do eiusmod tempor </h5>
-        </div>
-      </div>
-
-      <div class="pics2" id="ePics4">
-        <img id="ip4" class="ip2" src="/pics/python.jpg" alt="python picture">
-        <div id="p4Content" class="clearE">
-          <h3 id="p2title" class="iTitle">Python Project 2019</h3>
-          <h5 class="iContent">Lorem ipsum dolor sit amet, <br>consectetur adipisicing elit, <br>sed do eiusmod tempor </h5>
-        </div>
-      </div>
-    </div> -->
-
+    </div>
+    {{> footer}}
     {{> jsConnect}}
   </body>
 </html>

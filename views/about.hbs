@@ -3,13 +3,41 @@
   {{> head}}
   <body>
     {{> top}}
-
     {{> nav}}
 
-    <div>
+<div class="container-fluid bg-light">
 
-    {{> footer}}
+  <br>
+  <h1 class="hTitle">Club Members</h1>
 
+  <div class="">
+    {{# each members}}
+    <div class="col-xs-6">
+      <div id="box1" class="box1 box">
+        <div class="boxTop1 boxE">
+          
+          <h1 class="boxName1 boxE">
+            {{this.name}}
+            <small class="boxSmall1">{{this.rank}}</small>
+          </h1>
+          <img src="/pics/python.jpg" alt="Chania" class="boxPic1" >
+          
+        </div>
+        <div class="boxQuote1 boxE font-italic">
+          "{{this.quote}}"
+        </div>
+        <br>
+        <div class="boxCareer1">
+          <div class="boxCareerT1">Future {{this.type}} - </div><div class="boxCareerE1">{{this.career}}</div>
+        </div>
+        
+      </div>
+    </div>
+    {{/each}}
+    
+
+      {{> footer}}
+</div>
     {{> jsConnect}}
   </body>
 </html>
