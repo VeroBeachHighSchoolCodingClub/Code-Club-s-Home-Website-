@@ -99,12 +99,8 @@ var navStick = nav.offsetTop;
   function stickyNav() {
     if (window.pageYOffset >= navStick) {
       nav.classList.add("stickyNav")
-      console.log('hes down under!');
-      // nav.addClass('stickyNav');
     } else {
       nav.classList.remove("stickyNav");
-      console.log('Ur good.');
-      // nav.removeClass('stickyNav');
     }
   }
 
