@@ -8,7 +8,7 @@ const hbs             = require('hbs');
 const fs              = require('fs');
 const _               = require('lodash');
 
-var {mongoose} = require('./db/mongoose');
+var {mongoose} = require('./db/mongodb');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
