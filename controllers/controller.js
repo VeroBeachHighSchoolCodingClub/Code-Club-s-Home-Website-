@@ -3,6 +3,7 @@ const {Mission} = require('../db/models/mission');
 const {Project} = require('../db/models/projects');
 const {MeetTime} = require('../db/models/meetTime');
 const {ContactH} = require('../db/models/hContact');
+const {About} = require('../db/models/aAbout');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
@@ -23,7 +24,9 @@ module.exports = (app) => {
 
   app.get('/about', (req, res) => {
     Member.find({}, (err, members) => {
-      res.render('about', {location: 'About', members: members})
+      About.find({}, (err, ab) => {
+        res.render('about', {location: 'About', members: members, about: ab})
+      })
     });
   });
 
