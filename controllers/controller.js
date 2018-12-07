@@ -4,6 +4,7 @@ const {Project} = require('../db/models/projects');
 const {MeetTime} = require('../db/models/meetTime');
 const {ContactH} = require('../db/models/hContact');
 const {About} = require('../db/models/aAbout');
+const {Picture} = require('../db/models/cPicture');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
@@ -16,7 +17,9 @@ module.exports = (app) => {
     Mission.find({}, (err, mis) => {
       MeetTime.find({}, (err, mt) => {
         ContactH.find({}, (err, hc) => {
-          res.render('home', {location: 'Home', mission: mis, mt: mt, hc: hc});
+          Picture.find({}, (err, pic) => {
+            res.render('home', {location: 'Home', mission: mis, mt: mt, hc: hc, pic: pic});
+          })
         });
       });
     });
