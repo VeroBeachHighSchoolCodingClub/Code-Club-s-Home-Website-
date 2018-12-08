@@ -43,7 +43,7 @@
     </div>
   </div>
 
-  <div class="container mEl">
+  {{!-- <div class="container mEl">
     <h3 class="hTitle">
     Meeting Times
   </h3>
@@ -74,8 +74,20 @@
           {{this.content}}
           {{/each}}
         </p>
+  </div> --}}
+
+{{# each cont}}
+  <div class="container mEl" style="margin-bottom: 2vw;">
+    <h3 class="hTitle">
+      {{this.title}}
+    </h3>
+
+        <p class="hSub">
+          {{this.content}}
+        </p>
   </div>
-  
+{{/each}}
+
 </div>
     {{> footer}}
     {{> jsConnect}}

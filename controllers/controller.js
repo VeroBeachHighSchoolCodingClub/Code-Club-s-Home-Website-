@@ -1,8 +1,6 @@
 const {Member} = require('../db/models/members');
-const {Mission} = require('../db/models/mission');
 const {Project} = require('../db/models/projects');
-const {MeetTime} = require('../db/models/meetTime');
-const {ContactH} = require('../db/models/hContact');
+const {ContentH} = require('../db/models/hContent');
 const {About} = require('../db/models/aAbout');
 const {Picture} = require('../db/models/cPicture');
 const mongoose = require('mongoose');
@@ -14,14 +12,10 @@ module.exports = (app) => {
   app.use(bodyParser.json());
 
   app.get('/', (req, res) => {
-    Mission.find({}, (err, mis) => {
-      MeetTime.find({}, (err, mt) => {
-        ContactH.find({}, (err, hc) => {
-          Picture.find({}, (err, pic) => {
-            res.render('home', {location: 'Home', mission: mis, mt: mt, hc: hc, pic: pic});
-          })
-        });
-      });
+    ContentH.find({}, (err, content) => {
+      Picture.find({}, (err, pic) => {
+        res.render('home', {location: 'Home', cont: content, pic: pic})
+      })
     });
   });
 
