@@ -37,6 +37,20 @@ module.exports = (app) => {
     res.render('email', {location: 'Request Project'})
   });
 
+  app.post('/hcontent', async (req, res) => {
+    const body = _.pick(req.body, ['title', 'content']);
+    var cont = new ContentH(body);
+
+    try {
+      await cont.save()
+      res.send(cont);
+    } catch (e) {
+      res.status(400).send(e);
+    }
+  
+  });
+
+
   app.get('*', (req, res) => {
     res.status(404).send("404 -- Sorry, we couldn't find your request.");
   });
