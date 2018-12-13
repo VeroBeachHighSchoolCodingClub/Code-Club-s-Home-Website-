@@ -10,47 +10,25 @@
   <br>
   <div class="picCar container">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      
+    
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-        <li data-target="#myCarousel" data-slide-to="3"></li>
+        {{# each pic}}
+          <li data-target="#myCarousel" data-slide-to="{{this.num}}" class="{{this.active}}"></li>
+        {{/each}}
       </ol>
-
       <div class="carousel-inner" role="listbox">
 
-        <div class="item active">
-          <img src="/pics/python.jpg" alt="Chania" width="460" height="345">
+      {{# each pic}}
+
+        <div class="item {{this.active}}">
+          <img src="{{this.picture}}" alt="{{this.alt}}" width="{{this.width}}" height="{{this.height}}">
           <div class="carousel-caption">
-            <h3>Pic 1</h3>
-            <p>Simply Amazing</p>
+            <h3>{{this.h3}}</h3>
+            <p>{{this.p}}</p>
           </div>
         </div>
 
-        <div class="item">
-          <img src="/pics/python.jpg" alt="Chania" width="460" height="345">
-          <div class="carousel-caption">
-            <h3>Pic 2</h3>
-            <p>Pretty Amazing</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="/pics/python.jpg" alt="Flower" width="460" height="345">
-          <div class="carousel-caption">
-            <h3>Pic 3</h3>
-            <p>Really Amazing</p>
-          </div>
-        </div>
-
-        <div class="item">
-          <img src="/pics/python.jpg" alt="Flower" width="460" height="345">
-          <div class="carousel-caption">
-            <h3>Pic 4</h3>
-            <p>Bruhhhhhh</p>
-          </div>
-        </div>
+      {{/each}}
 
       </div>
 
@@ -65,7 +43,7 @@
     </div>
   </div>
 
-  <div class="container mEl">
+  {{!-- <div class="container mEl">
     <h3 class="hTitle">
     Meeting Times
   </h3>
@@ -96,8 +74,20 @@
           {{this.content}}
           {{/each}}
         </p>
+  </div> --}}
+
+{{# each cont}}
+  <div class="container mEl" style="margin-bottom: 2vw;">
+    <h3 class="hTitle">
+      {{this.title}}
+    </h3>
+
+        <p class="hSub">
+          {{this.content}}
+        </p>
   </div>
-  
+{{/each}}
+
 </div>
     {{> footer}}
     {{> jsConnect}}

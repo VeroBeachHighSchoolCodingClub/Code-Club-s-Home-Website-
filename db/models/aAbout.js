@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var ContactH = mongoose.model('hcontact', {
+var About = mongoose.model('aboutus', {
     content: {
         type: String,
         trim: false,
@@ -8,4 +8,4 @@ var ContactH = mongoose.model('hcontact', {
     }
 });
 
-module.exports = {ContactH};
+module.exports = {About};

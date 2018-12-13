@@ -8,7 +8,18 @@
 <div class="container-fluid bg-light">
 
   <br>
-  <h1 class="hTitle">Club Members</h1>
+
+<div class="container mEl">
+    <h3 class="hTitle" href="/about">About Us</h3>
+
+        <p class="hSub">
+          {{# each about}}
+          {{this.content}}
+          {{/each}}
+        </p>
+  </div>
+
+  <h1 class="hTitle">Club Leaders</h1>
 
   <div class="">
     {{# each members}}
@@ -20,7 +31,7 @@
             {{this.name}}
             <small class="boxSmall">{{this.rank}}</small>
           </h1>
-          <img src="/pics/python.jpg" alt="Chania" class="boxPic" >
+          <img src="{{this.picture}}" alt="Chania" class="boxPic" >
           
         </div>
         <div class="boxQuote boxE font-italic">
