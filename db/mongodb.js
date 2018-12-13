@@ -1,12 +1,17 @@
 const mongoose = require('mongoose');
 
-mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://admin:Crab5Overlord10@ds155150.mlab.com:55150/home-site', { useNewUrlParser: true });
+var env = process.env;
 
-// mongoose.connection.once('open', function(){
-//     console.log('Database is connected!');
-// }).on('error', function(error){
-//     console.log('Connection Err: ', error);
-// });
+mongoose.Promise = global.Promise;
+mongoose.connect(env.MONGODB_URI || env.MONGO_PRO, { useNewUrlParser: true });
+
+if (env.PORT == 3000) {
+    mongoose.connection.once('open', function(){
+        console.log('Database is connected!');
+    }).on('error', function(error){
+        console.log('Connection Err: ', error);
+    }); 
+}
+
 
 module.exports = {mongoose};
