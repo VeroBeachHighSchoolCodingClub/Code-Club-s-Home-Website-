@@ -39,18 +39,20 @@ a {
   float: left;
   padding: 29px 30px 30px 20px;
   margin-right: 30px;
-  font-size: 24px;
+  font-size: 22px;
   color: rgb(94, 94, 94);
+  
 }
 
 #modo {
   font-family: 'PT Sans Narrow', sans-serif;
-  float: right;
+  float: left;
   position: relative;
   padding: 30px;
-  margin-right: 67px;
+  margin-left: 60px;
   font-size: 24px;
   color: rgb(94, 94, 94);
+  text-align: center;
 }
 
 
