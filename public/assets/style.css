@@ -143,38 +143,55 @@ a:hover {
 
 .pics {
   background-color: white;
+  
+}
+
+.bigBox {
+  max-height: 450px;
+  max-height: 450px;
+  margin: 70px 80px 80px 80px;
+  position: relative;
+  display: inline-block;
 }
 
   /* Pics 1 */
     .pics1 {
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
-      margin: 70px 80px 80px 80px;
+      /* margin: 70px 80px 80px 80px; */
       float: left;
       clear: both;
       transition: padding 1s;
+      max-width: 450px;
+      max-height: 450px;
+      z-index: 1;
     }
 
     .tps1{
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
-      margin: 70px 80px 80px 80px;
+      /* margin: 70px 80px 80px 80px; */
       float: left;
       padding: 40px 20px 40px 20px;
       position: initial;
       transition: padding 1s;
       clear: both;
+      z-index: 80;
     }
 
     .ip1{
       float: left;
       width: 400px;
-      padding: 50px 30px 50px 30px;
+      max-width: 400px;
+      height: 400px;
+      max-height: 400px;
+      padding: 20px 20px 20px 20px;
     }
 
     .tip1{
       float: left;
       width: 160px;
+      max-width: 160px;
       padding: 50px 10px 50px 10px;
     }
 
@@ -189,31 +206,37 @@ a:hover {
     .pics2 {
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
-      margin: 70px 80px 80px 80px;
+      /* margin: 70px 80px 80px 80px; */
       float: right;
       transition: padding 1s;
+      z-index: 1;
     }
 
     .tps2{
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
-      margin: 70px 80px 80px 80px;
+      /* margin: 70px 80px 80px 80px; */
       float: right;
       padding: 40px 20px 40px 20px;
       position: initial;
       transition: padding 1s;
-      
+      z-index: 100;
+      position: absolute;
     }
 
     .ip2{
       float: right;
       width: 400px;
-      padding: 50px 30px 50px 30px;
+      max-width: 400px;
+      height: 400px;
+      max-height: 400px;
+      padding: 20px 20px 20px 20px;
     }
 
     .tip2{
       float: right;
       width: 160px;
+      max-width: 160px;
       padding: 50px 10px 50px 10px;
     }
 
