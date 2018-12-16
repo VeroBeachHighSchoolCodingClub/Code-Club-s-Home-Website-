@@ -8,9 +8,10 @@
     <div class="container-fluid bg-light">
       <br>
       <h1 class="hTitle">Completed Club Projects</h1>
-
+      
+<div class="row bigbigbox">
       {{#each projects}}
-        <div class="bg-light">
+        <div class="bg-light bigBox co-lg-6">
           <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
             <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
             <div id="p{{this.id}}Content" class="clearE">
@@ -21,8 +22,8 @@
             </div>
           </div>
         </div>
-      {{/each}} 
-
+      {{/each}}
+</div>
     
     </div>
     {{> footer}}
