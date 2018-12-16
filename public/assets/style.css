@@ -160,6 +160,7 @@ a:hover {
   /* position: absolute; */
   clear: right;
   float: left;
+  z-index: 50;
 }
 
   /* Pics 1 */
@@ -169,16 +170,16 @@ a:hover {
       /* margin: 70px 80px 80px 80px; */
       float: left;
       clear: both;
-      /* transition: width 2s; */
-      transition-property: width;
-      transition-duration: 5s;
+      transition: width 2s;
+      /* transition-property: width;
+      transition-duration: 5s; */
+      transition: width 2s;
       height: 350px;
       width: 350px;
       max-width: 350px;
       max-height: 350px;
       padding: auto;
       margin: auto;
-      
       /* margin-bottom: 100px; */
     }
 
@@ -191,14 +192,15 @@ a:hover {
       width: 500px;
       height: 250px;
       position: initial;
-      /* transition: width 2s; */
-      transition-property: width;
-      transition-duration: 5s;
+      transition: width 2s;
+      /* transition-property: width;
+      transition-duration: 5s; */
       clear: both;
       padding: auto;
       margin: auto;
       /* max-width: 450px;
       max-height: 450px; */
+      z-index: 50;
     }
 
     .ip1{
@@ -215,6 +217,10 @@ a:hover {
       width: 130px;
       max-width: 130px;
       padding: 50px 10px 50px 10px;
+      position: absolute;
+      z-index: 0;
+      background-color: white;
+      border-radius: 50px;
     }
 
     .p1Content {
@@ -222,6 +228,11 @@ a:hover {
       color: rgb(112, 122, 127);
       float: right;
       padding: 0px 10px 10px 10px;
+      font-size: 20px;
+      background-color: white;
+      z-index: 10;
+      border-radius: 50px;
+      /* transition: font-size 2s; */
     }
 
   /* Pics 2 */
@@ -283,12 +294,13 @@ a:hover {
   font-size: 30px;
   font-family: 'Quicksand', sans-serif;
 }
-.iContent {
+/* .iContent {
   font-size: 17px;
   font-family: 'KoHo', sans-serif;
-}
+} */
 
 .clearE {
+  font-size: 0px;
   display: none;
 }
 
