@@ -149,9 +149,14 @@ a:hover {
 .bigBox {
   max-height: 450px;
   max-height: 450px;
-  margin: 70px 80px 80px 80px;
-  position: relative;
-  display: inline-block;
+  margin: 70px 100px 80px 80px;
+  /* margin: auto; */
+  /* position: ; */
+  /* display: inline-block; */
+  /* overflow: auto;  */
+  /* position: absolute; */
+  clear: right;
+  float: left;
 }
 
   /* Pics 1 */
@@ -162,9 +167,12 @@ a:hover {
       float: left;
       clear: both;
       transition: padding 1s;
-      max-width: 450px;
-      max-height: 450px;
-      z-index: 1;
+      max-width: 350px;
+      max-height: 350px;
+      padding: auto;
+      margin: auto;
+      
+      /* margin-bottom: 100px; */
     }
 
     .tps1{
@@ -176,15 +184,16 @@ a:hover {
       position: initial;
       transition: padding 1s;
       clear: both;
-      z-index: 80;
+      /* padding: auto; */
+      margin: auto;
     }
 
     .ip1{
       float: left;
-      width: 400px;
-      max-width: 400px;
-      height: 400px;
-      max-height: 400px;
+      width: 300px;
+      max-width: 300px;
+      height: 300px;
+      max-height: 300px;
       padding: 20px 20px 20px 20px;
     }
 
@@ -207,9 +216,12 @@ a:hover {
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
       /* margin: 70px 80px 80px 80px; */
+      max-width: 350px;
+      max-height: 350px;
       float: right;
       transition: padding 1s;
-      z-index: 1;
+      padding: auto;
+      margin: auto;
     }
 
     .tps2{
@@ -220,16 +232,15 @@ a:hover {
       padding: 40px 20px 40px 20px;
       position: initial;
       transition: padding 1s;
-      z-index: 100;
-      position: absolute;
+      margin: auto;
     }
 
     .ip2{
       float: right;
-      width: 400px;
-      max-width: 400px;
-      height: 400px;
-      max-height: 400px;
+      width: 300px;
+      max-width: 300px;
+      height: 300px;
+      max-height: 300px;
       padding: 20px 20px 20px 20px;
     }
 

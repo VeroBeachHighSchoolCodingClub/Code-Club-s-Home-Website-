@@ -8,10 +8,11 @@
     <div class="container-fluid bg-light">
       <br>
       <h1 class="hTitle">Completed Club Projects</h1>
-
+      
+<div class="row bigbigbox">
+    <div class="bg-light bigBox1 co-lg-6">
       {{#each projects}}
-        <div class="bg-light bigBox">
-          <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
+          <div class="pics1 pics" id="ePics{{this.id}}">
             <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
             <div id="p{{this.id}}Content" class="clearE">
               <h3 id="p1title" class="iTitle"><a href="{{this.url}}" target="_blank">{{this.name}} {{this.year}}</a></h3>
@@ -20,9 +21,22 @@
               <h5 class="iContent"><a href="{{this.source}}" target="_blank">Source Code</a></h5>
             </div>
           </div>
-        </div>
-      {{/each}} 
-
+      {{/each}}
+    </div> 
+    <div class="bg-light bigBox2 co-lg-6">
+      {{#each projects}}
+          <div class="pics2 pics" id="ePics{{this.id}}">
+            <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
+            <div id="p{{this.id}}Content" class="clearE">
+              <h3 id="p1title" class="iTitle"><a href="{{this.url}}" target="_blank">{{this.name}} {{this.year}}</a></h3>
+              <h5 class="iContent">{{this.dis1}} <br> {{this.dis2}} <br> {{this.dis3}} </h5>
+              <br>
+              <h5 class="iContent"><a href="{{this.source}}" target="_blank">Source Code</a></h5>
+            </div>
+          </div>
+      {{/each}}
+      </div> 
+</div>
     
     </div>
     {{> footer}}
