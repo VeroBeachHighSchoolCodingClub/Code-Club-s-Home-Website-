@@ -170,16 +170,16 @@ a:hover {
       /* margin: 70px 80px 80px 80px; */
       float: left;
       clear: both;
-      transition: width 2s;
+      transition: width 2s, height 0.2s;
       /* transition-property: width;
       transition-duration: 5s; */
-      transition: width 2s;
       height: 350px;
       width: 350px;
       max-width: 350px;
       max-height: 350px;
       padding: auto;
       margin: auto;
+      z-index: 2;
       /* margin-bottom: 100px; */
     }
 
@@ -191,8 +191,8 @@ a:hover {
       /* padding: 40px 20px 40px 20px; */
       width: 500px;
       height: 250px;
-      position: initial;
-      transition: width 2s;
+      position: absolute;
+      transition: width 2s, height 1s;
       /* transition-property: width;
       transition-duration: 5s; */
       clear: both;
@@ -200,22 +200,26 @@ a:hover {
       margin: auto;
       /* max-width: 450px;
       max-height: 450px; */
-      z-index: 50;
+      z-index: 2;
     }
 
     .ip1{
       float: left;
       width: 300px;
       max-width: 300px;
+      transition: width 0.5s;
       height: 300px;
       max-height: 300px;
       padding: 20px 20px 20px 20px;
+      z-index: 1;
+      position: relative;
     }
 
     .tip1{
       float: left;
       width: 130px;
       max-width: 130px;
+      transition: width 0.5s;
       padding: 50px 10px 50px 10px;
       position: absolute;
       z-index: 0;
@@ -240,12 +244,14 @@ a:hover {
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
       /* margin: 70px 80px 80px 80px; */
+      float: right;
+      transition: width 2s, height 0.2s;
+      padding: auto; 
+      margin: auto;
+      height: 350px;
+      width: 350px;
       max-width: 350px;
       max-height: 350px;
-      float: right;
-      transition: padding 1s;
-      padding: auto;
-      margin: auto;
     }
 
     .tps2{
@@ -257,20 +263,23 @@ a:hover {
       width: 500px;
       height: 250px;
       position: initial;
-      /* transition: width 2s; */
-      transition-property: width;
-      transition-duration: 5s;
+      transition: width 2s, height 1s;
+      /* transition-property: width;
+      transition-duration: 5s; */
       clear: both;
       padding: auto;
       margin: auto;
+      z-index: 50;
       /* max-width: 450px;
       max-height: 450px; */
+      
     }
 
     .ip2{
       float: right;
       width: 300px;
       max-width: 300px;
+      transition: width 0.5s;
       height: 300px;
       max-height: 300px;
       padding: 20px 20px 20px 20px;
@@ -278,9 +287,16 @@ a:hover {
 
     .tip2{
       float: right;
+      clear: both;
       width: 130px;
       max-width: 130px;
       padding: 50px 10px 50px 10px;
+      transition: width 0.5s;
+      /* margin-left: 300px; */
+      position: relative;
+      z-index: 1;
+      background-color: white;
+      border-radius: 50px;
     }
 
     .p2Content {
@@ -288,6 +304,11 @@ a:hover {
       color: rgb(112, 122, 127);
       float: left;
       padding: 0px 10px 10px 10px;
+      font-size: 20px;
+      background-color: white;
+      z-index: 0;
+      border-radius: 50px;
+      position: absolute;
     }
 
 .iTitle {
