@@ -147,12 +147,15 @@ a:hover {
 }
 
 .bigBox {
-  max-height: 450px;
-  max-height: 450px;
-  margin: 70px 100px 80px 80px;
+  max-height: 650px;
+  max-width: 650px;
+  width: 500px;
+  height: 400px;
+  margin: 70px 75px 50px 75px;
+  /* margin: auto; */
   /* margin: auto; */
   /* position: ; */
-  /* display: inline-block; */
+  /* display: block; */
   /* overflow: auto;  */
   /* position: absolute; */
   clear: right;
@@ -166,7 +169,11 @@ a:hover {
       /* margin: 70px 80px 80px 80px; */
       float: left;
       clear: both;
-      transition: padding 1s;
+      /* transition: width 2s; */
+      transition-property: width;
+      transition-duration: 5s;
+      height: 350px;
+      width: 350px;
       max-width: 350px;
       max-height: 350px;
       padding: auto;
@@ -180,12 +187,18 @@ a:hover {
       border-radius: 50px;
       /* margin: 70px 80px 80px 80px; */
       float: left;
-      padding: 40px 20px 40px 20px;
+      /* padding: 40px 20px 40px 20px; */
+      width: 500px;
+      height: 250px;
       position: initial;
-      transition: padding 1s;
+      /* transition: width 2s; */
+      transition-property: width;
+      transition-duration: 5s;
       clear: both;
-      /* padding: auto; */
+      padding: auto;
       margin: auto;
+      /* max-width: 450px;
+      max-height: 450px; */
     }
 
     .ip1{
@@ -199,8 +212,8 @@ a:hover {
 
     .tip1{
       float: left;
-      width: 160px;
-      max-width: 160px;
+      width: 130px;
+      max-width: 130px;
       padding: 50px 10px 50px 10px;
     }
 
@@ -229,10 +242,18 @@ a:hover {
       border-radius: 50px;
       /* margin: 70px 80px 80px 80px; */
       float: right;
-      padding: 40px 20px 40px 20px;
+      /* padding: 40px 20px 40px 20px; */
+      width: 500px;
+      height: 250px;
       position: initial;
-      transition: padding 1s;
+      /* transition: width 2s; */
+      transition-property: width;
+      transition-duration: 5s;
+      clear: both;
+      padding: auto;
       margin: auto;
+      /* max-width: 450px;
+      max-height: 450px; */
     }
 
     .ip2{
@@ -246,8 +267,8 @@ a:hover {
 
     .tip2{
       float: right;
-      width: 160px;
-      max-width: 160px;
+      width: 130px;
+      max-width: 130px;
       padding: 50px 10px 50px 10px;
     }
 
