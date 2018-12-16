@@ -189,19 +189,21 @@ a:hover {
 
     .ip1{
       float: left;
+      border-radius: 25px;
       width: 300px;
       max-width: 300px;
       transition: width 0.5s;
       height: 300px;
       max-height: 300px;
-      padding: 20px 20px 20px 20px;
-      z-index: 1;
-      position: relative;
+      padding: 5px;
+      position: absolute;
+      margin: 11px;
     }
 
     .tip1{
       float: left;
       width: 130px;
+      border-radius: 25px;
       max-width: 130px;
       transition: width 0.5s;
       padding: 50px 10px 50px 10px;
@@ -228,7 +230,6 @@ a:hover {
       border-radius: 50px;
       float: right;
       transition: width 2s, height 0.2s;
-      padding: auto; 
       margin: auto;
       height: 350px;
       width: 350px;
@@ -252,17 +253,21 @@ a:hover {
 
     .ip2{
       float: right;
+      border-radius: 25px;
       width: 300px;
       max-width: 300px;
       transition: width 0.5s;
       height: 300px;
       max-height: 300px;
-      padding: 20px 20px 20px 20px;
+      padding: 5px;
+      position: absolute;
+      margin: 11px;
     }
 
     .tip2{
       float: right;
       clear: both;
+      border-radius: 25px;
       width: 130px;
       max-width: 130px;
       padding: 50px 10px 50px 10px;
