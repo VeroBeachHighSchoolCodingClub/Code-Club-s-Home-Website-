@@ -152,12 +152,6 @@ a:hover {
   width: 500px;
   height: 400px;
   margin: 70px 75px 50px 75px;
-  /* margin: auto; */
-  /* margin: auto; */
-  /* position: ; */
-  /* display: block; */
-  /* overflow: auto;  */
-  /* position: absolute; */
   clear: right;
   float: left;
   z-index: 50;
@@ -167,12 +161,9 @@ a:hover {
     .pics1 {
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
-      /* margin: 70px 80px 80px 80px; */
       float: left;
       clear: both;
       transition: width 2s, height 0.2s;
-      /* transition-property: width;
-      transition-duration: 5s; */
       height: 350px;
       width: 350px;
       max-width: 350px;
@@ -180,26 +171,19 @@ a:hover {
       padding: auto;
       margin: auto;
       z-index: 2;
-      /* margin-bottom: 100px; */
     }
 
     .tps1{
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
-      /* margin: 70px 80px 80px 80px; */
       float: left;
-      /* padding: 40px 20px 40px 20px; */
       width: 500px;
       height: 250px;
       position: absolute;
       transition: width 2s, height 1s;
-      /* transition-property: width;
-      transition-duration: 5s; */
       clear: both;
       padding: auto;
       margin: auto;
-      /* max-width: 450px;
-      max-height: 450px; */
       z-index: 2;
     }
 
@@ -236,14 +220,12 @@ a:hover {
       background-color: white;
       z-index: 10;
       border-radius: 50px;
-      /* transition: font-size 2s; */
     }
 
   /* Pics 2 */
     .pics2 {
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
-      /* margin: 70px 80px 80px 80px; */
       float: right;
       transition: width 2s, height 0.2s;
       padding: auto; 
@@ -257,22 +239,15 @@ a:hover {
     .tps2{
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
-      /* margin: 70px 80px 80px 80px; */
       float: right;
-      /* padding: 40px 20px 40px 20px; */
       width: 500px;
       height: 250px;
       position: initial;
       transition: width 2s, height 1s;
-      /* transition-property: width;
-      transition-duration: 5s; */
       clear: both;
       padding: auto;
       margin: auto;
       z-index: 50;
-      /* max-width: 450px;
-      max-height: 450px; */
-      
     }
 
     .ip2{
@@ -292,7 +267,6 @@ a:hover {
       max-width: 130px;
       padding: 50px 10px 50px 10px;
       transition: width 0.5s;
-      /* margin-left: 300px; */
       position: relative;
       z-index: 1;
       background-color: white;
