@@ -60,7 +60,7 @@ a {
 
 .navBar {
   clear: left;
-  padding: 10px;
+  /* padding: 0px 10px 10px 10px; */
   background-color: rgba(251, 81, 81, 0.9);
   overflow: hidden;
   width: 100%;
@@ -75,6 +75,7 @@ a {
   font-size: 24px;
   text-decoration: none;
   text-align: center;
+  padding: 10px;
 }
 
 a:hover {
