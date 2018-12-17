@@ -317,21 +317,25 @@ a:hover {
   margin: 40px 10px 10px 40px;
   background-color: white;
   float: left;
-  width: 540px;
+  /* width: 540px;
   max-width: 540px;
   height: 280px;
-  max-height: 280px;
+  max-height: 280px; */
+  width: 95%;
+  height: 250px;
   position: relative;
 }  
 
 .boxPic {
-  width: 160px;
-  height: 160px;
   border: 2px solid rgba(206, 201, 194, 1);
   border-radius: 15px;
   float: right;
+  /* width: 160px;
+  height: 160px;
   max-width: 160px;
-  max-height: 160px;
+  max-height: 160px; */
+  width: 30%;
+  
 }
 
 .boxName {
@@ -361,8 +365,9 @@ a:hover {
   margin: 110px 0px 0px 0px;
   display: inline-box;
   position: absolute;
-  width: 340px;
-  max-height: 100px;
+  overflow: hidden;
+  width: 63%;
+  height: 28%;
 }
 
 .boxCareer {
@@ -370,6 +375,8 @@ a:hover {
   color: rgb(76, 76, 76);
   float: left;
   clear: both; 
+  position: absolute;
+  margin-top: 150px;
 }
 
 .boxCareerT {
