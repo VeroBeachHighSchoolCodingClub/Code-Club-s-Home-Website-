@@ -390,7 +390,7 @@ a:hover {
 /** mobile **/
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575px) {
     .navBar {
     clear: left;
     margin: auto;
@@ -411,6 +411,10 @@ a:hover {
     text-align: center;
     padding: 5px;
   }
+
+  .picCar {
+    display: none;
+  }
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -420,17 +424,18 @@ a:hover {
 
 @media only screen and (max-width: 992px) {
   #name {
-    display: none;
+    float: right;
+    font-size: 10%;
   }
   #modo {
     display: none;
   }
   .logo{
-    width: 50%;
+    width: 30%;
     /* color: rgb(94, 94, 94); */
     display: block;
     float: left;
-    margin-left: 26%;
+    margin-left: 20%;
   }
 }
 
