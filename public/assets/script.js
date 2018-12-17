@@ -90,19 +90,19 @@ pic4.out2(pic4);
 
 
 
-var nav = document.getElementById("navBar");
-var navStick = nav.offsetTop;
+// var nav = document.getElementById("navBar");
+// var navStick = nav.offsetTop;
 
 
-  window.onscroll = function() {stickyNav()};
+//   window.onscroll = function() {stickyNav()};
 
-  function stickyNav() {
-    if (window.pageYOffset >= navStick) {
-      nav.classList.add("stickyNav")
-    } else {
-      nav.classList.remove("stickyNav");
-    }
-  }
+//   function stickyNav() {
+//     if (window.pageYOffset >= navStick) {
+//       nav.classList.add("stickyNav")
+//     } else {
+//       nav.classList.remove("stickyNav");
+//     }
+//   }
 
 
 });
