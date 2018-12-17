@@ -390,17 +390,15 @@ a:hover {
 /** mobile **/
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 575px) {
-    .navBar {
-    clear: left;
-    margin: auto;
+@media screen and (max-width: 575px) {
+  .navBar {
+    clear: right;
+    padding: auto;
+    position: relative;
     border-radius: 10px;
-    /* padding: 0px 10px 10px 10px; */
     background-color: rgba(251, 81, 81, 0.9);
-    overflow: hidden;
-    width: 70%;
-    margin-left: 16%;
-    z-index: 99 !important;
+    width: 45%;
+    margin-top: 5%;
   }
   .indNav {
     display: block;
@@ -409,12 +407,26 @@ a:hover {
     font-size: 30px;
     text-decoration: none;
     text-align: center;
-    padding: 5px;
+    padding: 10px;
   }
 
   .picCar {
     display: none;
   }
+
+  #name{
+    display: none;
+  }
+
+  #logo {
+    width: 35%;
+    /* color: rgb(94, 94, 94); */
+    display: block;
+    float: left;
+    margin-left: 5%;
+    margin-right: 12%;
+  }
+
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -422,10 +434,10 @@ a:hover {
 
 } 
 
-@media only screen and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   #name {
     float: right;
-    font-size: 10%;
+    font-size: 170%;
   }
   #modo {
     display: none;
@@ -435,7 +447,7 @@ a:hover {
     /* color: rgb(94, 94, 94); */
     display: block;
     float: left;
-    margin-left: 20%;
+    margin-left: 15%;
   }
 }
 
