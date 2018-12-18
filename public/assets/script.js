@@ -95,16 +95,16 @@ var navStick = nav.offsetTop;
 
 // Nav Bar function
 
-  if (windowWidth > 575) {
-    window.onscroll = function() {stickyNav()};
+  // if (windowWidth > 575) {
+  //   window.onscroll = function() {stickyNav()};
 
-    function stickyNav() {
-      if (window.pageYOffset >= navStick) {
-        nav.classList.add("stickyNav")
-      } else {
-        nav.classList.remove("stickyNav");
-      }
-    }
-  }
+  //   function stickyNav() {
+  //     if (window.pageYOffset > navStick) {
+  //       nav.classList.add("stickyNav")
+  //     } else {
+  //       nav.classList.remove("stickyNav");
+  //     }
+  //   }
+  // }
 
 });
