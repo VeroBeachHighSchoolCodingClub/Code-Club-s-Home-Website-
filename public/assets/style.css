@@ -151,11 +151,9 @@ a:hover {
 }
 
 .bigBox {
-  max-height: 650px;
-  max-width: 650px;
-  width: 500px;
-  height: 400px;
-  margin: 70px 75px 50px 75px;
+  width: 40%;
+  height: 30%;
+  margin: 6% 2% 2% 6%; 
   clear: right;
   float: left;
   z-index: 50;
@@ -167,7 +165,6 @@ a:hover {
       border-radius: 50px;
       float: left;
       clear: both;
-      transition: width 2s, height 0.2s;
       height: 350px;
       width: 350px;
       max-width: 350px;
@@ -233,7 +230,6 @@ a:hover {
       border: 14px solid rgba(181, 181, 181, 1);
       border-radius: 50px;
       float: right;
-      transition: width 2s, height 0.2s;
       margin: auto;
       height: 350px;
       width: 350px;
@@ -437,7 +433,53 @@ a:hover {
 } 
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 850px) {
+
+  .bigBox {
+    width: 40%;
+    height: 30%;
+    margin: 6% 0 2% 32%; 
+    clear: both;
+    float: left;
+    z-index: 50;
+  }
+
+  .pics1, .pics2 {
+    border: 14px solid rgba(181, 181, 181, 1);
+    border-radius: 20%;
+    float: left;
+    clear: both;
+    /* height: 350px;
+    width: 350px;
+    max-width: 350px;
+    max-height: 350px; */
+    width: 85%;
+    height: 85%;
+    /* height: 30vw; */
+    /* height: auto; */
+    padding: auto;
+    margin: auto;
+    /* z-index: 2; */
+    position: relative;
+  }
+
+  .ip1, .ip2{
+    /* float: left; */
+    border-radius: 25px;
+    /* width: 300px;
+    max-width: 300px;
+    height: 300px;
+    max-height: 300px; */
+    width: 100%;
+    height: 50%;
+    padding: 5%;
+    position: static;
+    margin: auto;
+  }
+
+  .iContent {
+    display: none;
+  }
 
 } 
 
