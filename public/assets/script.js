@@ -1,6 +1,10 @@
 $(document).ready(function(){
 
 var windowWidth = $(window).width();
+var nav = document.getElementById("navBar");
+var navStick = nav.offsetTop;
+
+// Projects functions
 
   class Pic1 {
     constructor(n) {
@@ -89,21 +93,18 @@ var windowWidth = $(window).width();
   pic4.over2(pic4);
   pic4.out2(pic4);
 
+// Nav Bar function
 
+  if (windowWidth > 575) {
+    window.onscroll = function() {stickyNav()};
 
-// var nav = document.getElementById("navBar");
-// var navStick = nav.offsetTop;
-
-
-  // window.onscroll = function() {stickyNav()};
-
-  // function stickyNav() {
-  //   if (window.pageYOffset >= navStick) {
-  //     nav.classList.add("stickyNav")
-  //   } else {
-  //     nav.classList.remove("stickyNav");
-  //   }
-  // }
-
+    function stickyNav() {
+      if (window.pageYOffset >= navStick) {
+        nav.classList.add("stickyNav")
+      } else {
+        nav.classList.remove("stickyNav");
+      }
+    }
+  }
 
 });
