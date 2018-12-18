@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 var windowWidth = $(window).width();
-console.log(windowWidth);
 
   class Pic1 {
     constructor(n) {
@@ -96,15 +95,15 @@ console.log(windowWidth);
 // var navStick = nav.offsetTop;
 
 
-//   window.onscroll = function() {stickyNav()};
+  // window.onscroll = function() {stickyNav()};
 
-//   function stickyNav() {
-//     if (window.pageYOffset >= navStick) {
-//       nav.classList.add("stickyNav")
-//     } else {
-//       nav.classList.remove("stickyNav");
-//     }
-//   }
+  // function stickyNav() {
+  //   if (window.pageYOffset >= navStick) {
+  //     nav.classList.add("stickyNav")
+  //   } else {
+  //     nav.classList.remove("stickyNav");
+  //   }
+  // }
 
 
 });
