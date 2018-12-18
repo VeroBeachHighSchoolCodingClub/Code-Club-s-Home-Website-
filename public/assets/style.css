@@ -449,27 +449,15 @@ a:hover {
     border-radius: 20%;
     float: left;
     clear: both;
-    /* height: 350px;
-    width: 350px;
-    max-width: 350px;
-    max-height: 350px; */
     width: 85%;
     height: 85%;
-    /* height: 30vw; */
-    /* height: auto; */
     padding: auto;
     margin: auto;
-    /* z-index: 2; */
     position: relative;
   }
 
   .ip1, .ip2{
-    /* float: left; */
     border-radius: 25px;
-    /* width: 300px;
-    max-width: 300px;
-    height: 300px;
-    max-height: 300px; */
     width: 100%;
     height: 50%;
     padding: 5%;
@@ -478,6 +466,31 @@ a:hover {
   }
 
   .iContent {
+    display: none;
+  }
+
+  .tps1, .tps2{
+    border: 14px solid rgba(181, 181, 181, 1);
+    border-radius: 20%;
+    float: left;
+    clear: both;
+    width: 85%;
+    height: 85%;
+    padding: auto;
+    margin: auto;
+    position: relative;
+  }
+
+  .tip1, .tip2{
+    border-radius: 25px;
+    width: 100%;
+    height: 50%;
+    padding: 5%;
+    position: static;
+    margin: auto;
+  }
+
+  .p1Content, .p2Content {
     display: none;
   }
 
