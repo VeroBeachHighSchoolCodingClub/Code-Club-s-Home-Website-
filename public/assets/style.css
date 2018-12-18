@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100px;
   height: 100%;
+  background-color: #f8f9fa;
 }
 
 .container-fluid {
@@ -121,11 +123,12 @@ a:hover {
 /** Footer **/
 
 .fE {
-  margin: 0px;
+  margin: 0px 0px 0px 0px;
   border-top: 2px solid rgba(255, 135, 135, 0.8);
   position: absolute;
   text-align: center;
-  width: 100%
+  z-index: 10;
+  width: 100%;
 }
 .fList {
   text-align: center;
@@ -179,7 +182,7 @@ a:hover {
       float: left;
       width: 500px;
       height: 250px;
-      position: absolute;
+      position: relative;
       transition: width 2s, height 1s;
       clear: both;
       padding: auto;
