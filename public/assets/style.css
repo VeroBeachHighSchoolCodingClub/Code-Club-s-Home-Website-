@@ -159,6 +159,7 @@ a:hover {
   clear: right;
   float: left;
   z-index: 50;
+  min-height: 350px;
 }
 
   /* Pics 1 */
