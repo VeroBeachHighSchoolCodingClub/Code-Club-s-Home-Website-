@@ -3,9 +3,6 @@ $(document).ready(function(){
 var windowWidth = $(window).width();
 console.log(windowWidth);
 
-
-if (windowWidth > 1060) {
-
   class Pic1 {
     constructor(n) {
       this.el = $('#ePics' + n);
@@ -92,8 +89,6 @@ if (windowWidth > 1060) {
   var pic4 = new Pic2(4);
   pic4.over2(pic4);
   pic4.out2(pic4);
-
-}
 
 
 
