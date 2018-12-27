@@ -3,6 +3,9 @@ $(document).ready(function(){
 var windowWidth = $(window).width();
 var nav = document.getElementById("navBar");
 var navStick = nav.offsetTop;
+var pic = $('.box');
+var height = window.innerHeight;
+var width = window.innerWidth;
 
 // Projects functions
 
@@ -92,6 +95,14 @@ var navStick = nav.offsetTop;
   var pic4 = new Pic2(4);
   pic4.over2(pic4);
   pic4.out2(pic4);
+
+
+  if (width > 1800) {
+    pic.addClass('col-xs-3');
+  } else {
+    pic.addClass('col-xs-5');
+  }
+
 
 // Nav Bar function
 
