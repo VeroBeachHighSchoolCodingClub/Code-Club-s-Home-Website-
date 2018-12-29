@@ -30,12 +30,50 @@ a {
 
 /** Top Bar Styles **/
 
-.logo{
-  width: 135px;
-  float: left;
-  color: rgb(94, 94, 94);
+.topBar {
+  background-color: rgba(251, 81, 81, 1); 
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  color: white;
 }
 
+#clubName {
+  float: left;
+  clear: right;
+  padding: 10px;
+  margin-left: 120px;
+}
+
+.topRight {
+  /* float: left; */
+  position: relative;
+}
+
+#contact {
+  padding: 10px;
+  position: relative;
+  float: right;
+}
+
+#memberLogin {
+  padding: 10px;
+  position: relative;
+  float: right;
+}
+
+ .logo{
+  width: 115px;
+  float: left;
+  color: rgb(94, 94, 94);
+  position: absolute;
+  z-index: 100;
+  background-color: white;
+  border-radius: 15%;
+  border: 3px solid #e62d05;
+}
+
+/*
 #name {
   font-family: 'Kodchasan', sans-serif;
   position: relative;
@@ -55,7 +93,7 @@ a {
   font-size: 24px;
   color: rgb(94, 94, 94);
   text-align: center;
-}
+} */
 
 
 /** Nav Bar **/
@@ -66,21 +104,28 @@ a {
 
 .navBar {
   clear: left;
-  background-color: rgba(251, 81, 81, 0.9);
+  background-color: rgba(251, 81, 81, 0.5);
   overflow: hidden;
   width: 100%;
   margin-left: 0px;
   z-index: 99 !important;
+  position: absolute;
+  margin-top: 40px;
+}
+
+.navTxt {
+  margin-left: 10%;
 }
 
 .indNav {
   display: block;
   color: white;
   float: left;
-  font-size: 24px;
+  font-size: 35px;
   text-decoration: none;
   text-align: center;
   padding: 10px;
+  margin: 5px 0 0 11%;
 }
 
 a:hover {
