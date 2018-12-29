@@ -47,7 +47,7 @@
 
 <br>
 
-{{# each cont}}
+{{!-- {{# each cont}}
   <div class="container mEl" style="margin-bottom: 2vw;">
     <h3 class="hTitle">
       {{this.title}}
@@ -57,6 +57,19 @@
           {{this.content}}
         </p>
   </div>
+{{/each}} --}}
+{{# each cont}}
+  {{# if_eq title 'Some Title'}}
+    <div class="container mEl" style="margin-bottom: 2vw;">
+    <h3 class="hTitle">
+      {{this.title}}
+    </h3>
+
+        <p class="hSub">
+          {{this.content}}
+        </p>
+  </div>
+  {{/if_eq}}
 {{/each}}
 
 </div>
