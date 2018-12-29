@@ -10,7 +10,7 @@
 
 <div class="container-fluid bg-light" style="position: relative;">
   <br>
-  <div class="picCar container">
+  <div class="picCar container" style="padding-top:100px;">
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="8000">
     
       <ol class="carousel-indicators">
@@ -22,8 +22,8 @@
 
       {{# each pic}}
 
-        <div class="item {{this.active}}" style="min-height: 400px; max-height: 400px; max-width: 100%">
-          <img src="{{this.picture}}" alt="{{this.alt}}" width="{{this.width}}" height="{{this.height}}">
+        <div class="item {{this.active}}" style="">
+          <img src="{{this.picture}}" alt="{{this.alt}}" class="w-100 img-fluid">
           <div class="carousel-caption">
             <h3>{{this.h3}}</h3>
             <p>{{this.p}}</p>

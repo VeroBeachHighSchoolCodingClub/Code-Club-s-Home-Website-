@@ -20,12 +20,15 @@ a {
 /** Carousel **/
 .picCar {
   margin: 0px 70px 0px 70px;
+  /* height: 500px !important;  */
+  width:70% !important;
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    width: 55%;
-
+    /* width: 55%; */
     margin: auto;
+    min-height: 550px;
+    max-height: 550px;
 }
 
 /** Top Bar Styles **/
