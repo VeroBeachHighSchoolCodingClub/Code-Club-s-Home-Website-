@@ -5,27 +5,27 @@
     {{> top}}
     {{> nav}}
   
-    <div class="container-fluid bg-light">
-      <br>
-      <h1 class="hTitle">Club Projects</h1>
-      
-<div class="row bigbigbox">
-      {{#each projects}}
-        <div class="bg-light bigBox co-lg-6">
-          <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
-            <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
-            <div id="p{{this.id}}Content" class="clearE">
-              <h3 id="p1title" class="iTitle"><a href="{{this.url}}" target="_blank">{{this.name}} {{this.year}}</a></h3>
-              <h5 class="iContent">{{this.dis1}} <br> {{this.dis2}} <br> {{this.dis3}} </h5>
-              <br>
-              <h5 class="iContent"><a href="{{this.source}}" target="_blank">Source Code</a></h5>
+  <div class="container-fluid bg-light big-container">
+        <br>
+        <h1 class="hTitle">Club Projects</h1>
+        
+    <div class="row bigbigbox">
+          {{#each projects}}
+            <div class="bg-light bigBox co-lg-6">
+              <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
+                <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
+                <div id="p{{this.id}}Content" class="clearE">
+                  <h3 id="p1title" class="iTitle"><a href="{{this.url}}" target="_blank">{{this.name}} {{this.year}}</a></h3>
+                  <h5 class="iContent">{{this.dis1}} <br> {{this.dis2}} <br> {{this.dis3}} </h5>
+                  <br>
+                  <h5 class="iContent"><a href="{{this.source}}" target="_blank">Source Code</a></h5>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      {{/each}}
-</div>
-    
+          {{/each}}
     </div>
+      
+  </div>
     {{> footer}}
     {{> jsConnect}}
   </body>

@@ -8,7 +8,7 @@
     
     {{> menu}}
 
-<div class="container-fluid bg-light" style="position: relative;">
+<div class="container-fluid bg-light big-container" style="position: relative; padding: 0 !important;">
   <br>
   <div class="picCar container" style="padding-top:100px;">
     <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="8000">
@@ -47,30 +47,16 @@
 
 <br>
 
-{{!-- {{# each cont}}
-  <div class="container mEl" style="margin-bottom: 2vw;">
-    <h3 class="hTitle">
-      {{this.title}}
-    </h3>
-
-        <p class="hSub">
-          {{this.content}}
-        </p>
+<div class="container-fluid bg-white h-about">
+  <img class="logo" src="/pics/logo.png" alt="Our Logo">
+  <div class="au-time">
+    Lorem ipsum dolor sit amet consectetur adipisicing.
   </div>
-{{/each}} --}}
-{{# each cont}}
-  {{# if_eq title 'Some Title'}}
-    <div class="container mEl" style="margin-bottom: 2vw;">
-    <h3 class="hTitle">
-      {{this.title}}
-    </h3>
-
-        <p class="hSub">
-          {{this.content}}
-        </p>
+  <div class="au-box">
+    <div class="au-title">About Us</div>
+    <div class="au-cont">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat omnis, reprehenderit, molestiae impedit saepe autem recusandae voluptas commodi quasi quae ea ut porro at aperiam praesentium fugiat architecto quis voluptates?</div>
   </div>
-  {{/if_eq}}
-{{/each}}
+</div>
 
 </div>
     {{> footer}}
