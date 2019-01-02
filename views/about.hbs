@@ -5,60 +5,17 @@
     {{> top}}
     {{> nav}}
 
-<div class="container-fluid bg-light">
-
+<div class="container-fluid bg-light big-container">
   <br>
-
-<div class="container mEl">
-    <h3 class="hTitle" href="/about">About Us</h3>
-
-        <p class="hSub">
-          {{# each about}}
-          {{this.content}}
-          {{/each}}
-        </p>
-  </div>
-
-  <h1 class="hTitle">Club Leaders</h1>
-
-  <div class="big-container">
-    {{# each members}}
-    <div class="">
-      <div id="box" class="box box">
-        <div class="boxTop boxE">
-          
-          <h1 class="boxName boxE">
-            {{this.name}}
-            <small class="boxSmall">{{this.rank}}</small>
-          </h1>
-          <img src="{{this.picture}}" alt="Chania" class="boxPic" >
-          
-        </div>
-        <div class="boxQuote boxE font-italic">
-          "{{this.quote}}"
-        </div>
-        <br>
-        <div class="boxCareer">
-          <div class="boxCareerT">Future {{this.type}} - </div><div class="boxCareerE">{{this.career}}</div>
-        </div>
-        
-      </div>
-    </div>
-    {{/each}}
-
-  <div class="">
-    {{# each members}}
-    <div class="">
-      <div class="momem">
-        <img src="{{this.picture}}" alt="Chania" class="mopic" >
-        <p class="mocaption">{{this.name}} - {{this.rank}}</p>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-
+  <div class="container-fluid a-title">
+    <div class="ti-grad">
+      <h1>About the VBHS Coding Club</h1>
     </div>
   </div>
+  <div class="a-over">
+    <h1>What is the VBHS Coding Club?</h1>
+  </div>
+</div>
     {{> footer}}
     {{> jsConnect}}
   </body>
