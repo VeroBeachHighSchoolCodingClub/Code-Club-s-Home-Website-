@@ -18,6 +18,10 @@ a {
 }
 
 /** Carousel **/
+.car-bg {
+  background-image: url("/pics/code-img-white.jpg");
+  background-attachment: fixed;
+}
 .picCar {
   margin: 0px 70px 0px 70px;
   /* height: 500px !important;  */
@@ -75,9 +79,18 @@ a {
   display: none;
 }
 
+.logo-slim {
+  position: absolute;
+  width: 15%;
+  margin: 0 0 0 15px;
+  /* background-color: rgba(255, 225, 225, 0.55); */
+  border-radius: 15px;
+  height: 100%;
+}
+
 .navBar {
   clear: left;
-  background-color: rgba(251, 81, 81, 0.3);
+  background-color: rgba(255, 169, 169, 0.68);;
   overflow: hidden;
   width: 100%;
   z-index: 99 !important;
@@ -88,7 +101,7 @@ a {
 }
 
 .navTxt {
-  margin-left: 5%;
+  margin-left: 7%;
 }
 
 .indNav {
@@ -99,7 +112,7 @@ a {
   text-decoration: none;
   text-align: center;
   padding: 10px;
-  margin: 0px 0 0 11%;
+  margin: 0px 0 0 13%;
 }
 
 a:hover {
@@ -120,7 +133,7 @@ a:hover {
 /** Home Page **/
 
 .h-about {
-  margin: 30px 0 2vw 0;
+  margin: 0;
   width: 100%;
   /* padding: 50px; */
 }
@@ -130,7 +143,6 @@ a:hover {
   padding-bottom: 30px;
   font-size: 35px;
 }
-
 .au-box {
   float: right;
   position: relative;
@@ -140,21 +152,59 @@ a:hover {
 
 .au-time {
   position: relative;
-  margin: 170px 0 0 25px;
-  display: inline-block;
+  display: block;
+  text-align: center;
 }
 
 .logo {
-  width: 20%;
-  float: left;
+  width: 45%;
   color: rgb(94, 94, 94);
-  position: absolute;
   z-index: 100;
-  /* background-color: white; */
+  position: relative;
   border-radius: 15%;
-  padding: 0 0 0 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.h-lead {
+  position: relative;
+  display: block;
+  font-size: 35px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgba(251, 81, 81, 1);
+  color: white;
+}
+.lead-box {
+  position: relative;
+}
+.lead-p {
+  position: relative;
+  display: inline-block;
+  padding: 15px;
+}
+.lead-pic {
+  position: relative;
+  width: 250px;
+  display: block;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.lead-name {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px 0 0 0;
+}
+.lead-rank {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 15px;
+}
 
 
 .mEl {
@@ -459,10 +509,6 @@ a:hover {
     text-decoration: none;
     text-align: center;
     padding: 10px;
-  }
-
-  .picCar {
-    display: none;
   }
 
   #name{
