@@ -548,6 +548,37 @@ a:hover {
   padding-top: 30px;
 }
 
+.a-web {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding-top: 50px;
+}
+.a-web h1 {
+  position: relative;
+  display: block;
+  text-align: left;
+  font-size: 40px;
+  border-bottom: 2px solid grey;
+  width: 50%;
+}
+.a-web img {
+  position: relative;
+  width: 200px;
+  margin: 45px;
+  display: block;
+}
+.web-cont {
+  position: relative;
+  font-size: 20px;
+  width: 80%;
+  margin-left: 15px;
+}
+.web-box {
+  float: right !important;
+}
+
+
 
 .box {
   padding: 20px 20px 0px 20px;
