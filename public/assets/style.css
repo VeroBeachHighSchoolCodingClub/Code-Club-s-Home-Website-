@@ -369,9 +369,18 @@ a:hover {
 .box-container {
   background-color: white;
   z-index: 2;
+  margin: 0 !important;
+  padding-bottom: 70px;
 }
 .p-title {
   position: relative;
+  display: block;
+  z-index: 2;
+  background-color: white;
+  margin: 0;
+  padding: 70px 0 0 0;
+  text-align: center;
+  font-size: 40px;
 }
 
   /* Pics 1 */
