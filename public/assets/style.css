@@ -332,11 +332,31 @@ a:hover {
 
 /** Projects Page **/
 
-.pics {
+.p-intro {
+  position: relative;
+  z-index: 2;
   background-color: white;
-  
+  padding-top: 25px;
+}
+.p-intro h1 {
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+.int-cont {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 80%;
+  margin: 15px auto;
+  font-size: 20px; 
 }
 
+.pics {
+  background-color: white;
+}
 .bigBox {
   width: 40%;
   height: 30%;
@@ -345,6 +365,13 @@ a:hover {
   float: left;
   z-index: 50;
   min-height: 350px;
+}
+.box-container {
+  background-color: white;
+  z-index: 2;
+}
+.p-title {
+  position: relative;
 }
 
   /* Pics 1 */

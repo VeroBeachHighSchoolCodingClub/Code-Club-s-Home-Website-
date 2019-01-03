@@ -6,23 +6,28 @@
     {{> nav}}
   
   <div class="container-fluid bg-light big-container">
-        <br>
-        {{> title}}
-        
-    <div class="row bigbigbox">
-          {{#each projects}}
-            <div class="bg-light bigBox co-lg-6">
-              <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
-                <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
-                <div id="p{{this.id}}Content" class="clearE">
-                  <h3 id="p1title" class="iTitle"><a href="{{this.url}}" target="_blank">{{this.name}} {{this.year}}</a></h3>
-                  <h5 class="iContent">{{this.dis1}} <br> {{this.dis2}} <br> {{this.dis3}} </h5>
-                  <br>
-                  <h5 class="iContent"><a href="{{this.source}}" target="_blank">Source Code</a></h5>
-                </div>
-              </div>
+    <br>
+    {{> title}}
+    <div class="p-intro container-fluid">
+      <h1>What are club projects?</h1>
+      <div class="lb" style="width: 25%"></div>
+      <div class="int-cont">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nulla, nesciunt aperiam quos similique, soluta aliquam, animi eos ipsa quo veritatis nemo magni vel adipisci ratione debitis voluptate exercitationem! Inventore, temporibus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam doloremque officiis aspernatur maiores culpa aut odio perferendis ratione explicabo sint voluptas possimus dicta fugiat magnam porro rem, corporis ut delectus!</div>
+    </div>    
+    <h1 class="p-title">Completed Projects</h1>
+    <div class="row box-container container-fluid">
+      {{#each projects}}
+        <div class="bg-light bigBox co-lg-6">
+          <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
+            <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
+            <div id="p{{this.id}}Content" class="clearE">
+              <h3 id="p1title" class="iTitle"><a href="{{this.url}}" target="_blank">{{this.name}} {{this.year}}</a></h3>
+              <h5 class="iContent">{{this.dis1}} <br> {{this.dis2}} <br> {{this.dis3}} </h5>
+              <br>
+              <h5 class="iContent"><a href="{{this.source}}" target="_blank">Source Code</a></h5>
             </div>
-          {{/each}}
+          </div>
+        </div>
+      {{/each}}
     </div>
       
   </div>
