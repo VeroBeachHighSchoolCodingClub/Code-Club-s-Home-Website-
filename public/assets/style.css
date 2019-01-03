@@ -491,8 +491,9 @@ a:hover {
   padding: 0 !important;
 }
 .a-title h1 {
-  position: relative;
+  position: fixed;
   margin-top: 180px;
+  z-index: 1;
   color: #ffffff;
   /* background-color: rgba(171, 163, 163, 0.65); */
   display: inline-block;
@@ -525,6 +526,8 @@ a:hover {
 }
 .a-over {
   position: relative;
+  z-index: 2;
+  background-color: white;
   display: block;
   padding: 25px 0 0 0;
 }
