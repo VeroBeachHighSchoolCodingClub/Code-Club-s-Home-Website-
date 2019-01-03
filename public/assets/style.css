@@ -10,8 +10,7 @@ body {
   min-height: 100% !important;
   height: 100% !important;
   position: relative !important;
-  padding-bottom: 100px !important;
-  padding: 0 0 100px 0 !important;
+  padding: 0 0 0 0 !important;
 }
 
 a {
@@ -610,8 +609,51 @@ a:hover {
   float: left !important;
 }
 
-
-
+.a-mem {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+.a-mem h1 {
+  position: relative;
+  display: block;
+  text-align: center;
+  padding: 20px;
+  font-size: 40px;
+}
+.mem-box {
+  display: block;
+}
+.mem-ind {
+  padding: 20px;
+  max-height: 350px;
+  height: 350px;
+}
+.mem-ind img {
+  position: relative;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+.mem-ind img:hover {
+  width: 205px;
+}
+.mem-ind h2 {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 8px 0 0 0;
+  font-size: 25px;
+}
+.mem-ind h3 {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin: 5px 0 0 0;
+  font-size: 17px;
+}
 
 
 .box {
