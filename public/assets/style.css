@@ -563,6 +563,12 @@ a:hover {
   height: 350px;
   max-height: 350px;
 }
+.a-web button {
+  position: absolute;
+  margin: 200px 0 0 30px;
+  font-size: 10px;
+  padding: 5px;
+}
 .a-web h1 {
   position: relative;
   display: block;
@@ -570,12 +576,13 @@ a:hover {
   font-size: 40px;
   border-bottom: 2px solid grey;
   width: 50%;
+  margin-left: 30px;
 }
 .a-web img {
   position: relative;
   width: 200px;
-  margin: 45px;
   display: block;
+  margin: 45px auto 0 auto;
 }
 .a-web img:hover {
   width: 205px;
@@ -589,6 +596,12 @@ a:hover {
 .web-box {
   float: right !important;
 }
+.web-caption {
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 5px;
+}
 
 .a-hard {
   position: relative;
@@ -598,30 +611,40 @@ a:hover {
   height: 350px;
   max-height: 350px;
 }
+.a-hard button {
+  position: absolute;
+  float: right;
+  margin: 200px 0 0 85%;
+  font-size: 10px;
+  padding: 5px;
+}
 .a-hard h1 {
   position: relative;
   display: block;
-  text-align: left;
+  text-align: right;
   font-size: 40px;
   border-bottom: 2px solid grey;
   width: 60%;
-  margin-left: 25px;
+  margin-right: 175px;
+  float: right;
+}
+.hard-pic {
+  float: right !important;
 }
 .a-hard img {
   position: relative;
-  width: 130px;
-  margin: 0 150px 20px 0;
+  width: 95px;
+  margin: 0 auto 20px auto;
   display: block;
-  float: right;
 }
 .a-hard img:hover {
-  width: 135px;
+  width: 100px;
 }
 .hard-cont {
   position: relative;
   font-size: 20px;
   width: 80%;
-  margin-left: 15px;
+  float: right;
 }
 .hard-box {
   float: left !important;
@@ -671,81 +694,6 @@ a:hover {
   text-align: center;
   margin: 5px 0 0 0;
   font-size: 17px;
-}
-
-
-.box {
-  padding: 20px 20px 0px 20px;
-  border: 4px solid rgba(206, 201, 194, 1);
-  border-radius: 30px;
-  margin: 40px 10px 10px 5%;
-  background-color: white;
-  float: left;
-  width: 95%;
-  height: 250px;
-  position: relative;
-}  
-
-.boxPic {
-  border: 2px solid rgba(206, 201, 194, 1);
-  border-radius: 15px;
-  float: right;
-  width: 30%;
-}
-
-.boxName {
-  font-size: 41px;
-  float: left;
-  padding: 5px 0px 0px 12px;
-  font-family: 'Montserrat', sans-serif;
-  color: rgb(76, 76, 76);
-}
-
-.boxSmall {
-  font-size: 12.5px; 
-  clear: right; 
-  position: absolute;
-  padding: 5px 0px 0px 7px;
-  float: left;
-}
-
-.boxQuote {
-  padding: 0px 0px 0px 25px;
-  font-family: 'Open Sans', sans-serif;
-  letter-spacing: 0.1ch;
-  font-size: 14px;
-  color: rgb(76, 76, 76);
-  float: left;
-  clear: right; 
-  margin: 110px 0px 0px 0px;
-  display: inline-box;
-  position: absolute;
-  overflow: hidden;
-  width: 63%;
-  height: 28%;
-}
-
-.boxCareer {
-  padding: 14px 14px 0px 20px;
-  color: rgb(76, 76, 76);
-  float: left;
-  clear: both; 
-  position: absolute;
-  margin-top: 150px;
-}
-
-.boxCareerT {
-  font-size: 15px;
-  font-family: 'Sintony', sans-serif;
-  float: left;
-}
-
-.boxCareerE {
-  font-size: 15px;
-  font-family: 'Tajawal', sans-serif;
-  float: left;
-  position: relative;
-  padding: 0px 0px 0px 14px;
 }
 
 
