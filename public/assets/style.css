@@ -578,6 +578,40 @@ a:hover {
   float: right !important;
 }
 
+.a-hard {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  padding-top: 80px;
+}
+.a-hard h1 {
+  position: relative;
+  display: block;
+  text-align: left;
+  font-size: 40px;
+  border-bottom: 2px solid grey;
+  width: 60%;
+  margin-left: 25px;
+}
+.a-hard img {
+  position: relative;
+  width: 160px;
+  margin: 0 150px 20px 0;
+  display: block;
+  float: right;
+}
+.hard-cont {
+  position: relative;
+  font-size: 20px;
+  width: 80%;
+  margin-left: 15px;
+}
+.hard-box {
+  float: left !important;
+}
+
+
+
 
 
 .box {
