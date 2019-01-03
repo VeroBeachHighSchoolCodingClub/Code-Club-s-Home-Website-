@@ -22,14 +22,14 @@ module.exports = (app) => {
   app.get('/about', (req, res) => {
     Member.find({}, (err, members) => {
       About.find({}, (err, ab) => {
-        res.render('about', {location: 'About', members: members, about: ab})
+        res.render('about', {location: 'About', members: members, about: ab, tag: 'About the VBHS Coding Club'})
       })
     });
   });
 
   app.get('/projects', (req, res) => {
     Project.find({}, (err, pro) => {
-      res.render('projects', {location: 'Our Projects', projects: pro})
+      res.render('projects', {location: 'Our Projects', projects: pro, tag: 'Club Projects'})
     });
   });
 
