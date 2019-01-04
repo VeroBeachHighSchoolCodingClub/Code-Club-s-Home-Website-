@@ -89,12 +89,8 @@ a {
 }
 
 .logo-slim {
-  position: absolute;
-  width: 15%;
-  margin: 0 0 0 15px;
-  /* background-color: rgba(255, 225, 225, 0.55); */
+  width: 100%;
   border-radius: 15px;
-  height: 100%;
 }
 
 .navBar {
@@ -106,6 +102,7 @@ a {
   position: absolute;
   margin-top: 44px;
   transition: background-color 1s;
+  position: absolute !important;
   /* margin-left: 116px; */
   /* border-radius: 5px 0 0 5px; */
 }
@@ -126,6 +123,23 @@ a {
   font-family: 'Oxygen', sans-serif;
   transition: color 1s;
 }
+.indNav a {
+  color: white;
+}
+.nav-link {
+  font-size: 20px;
+  color: #f1f1f1 !important;
+  transition: color 1s;
+}
+
+.navbar {
+  margin-top: 40px;
+  position: absolute !important;
+  z-index: 10;
+  width: 100%;
+  background-color: rgba(74, 62, 62, 0.83);
+  transition: background-color 1s;
+}
 
 .stickyInd {
   color: #717171;
@@ -138,7 +152,7 @@ a:hover {
 }
 
 .stickyNav {
-  position: fixed;
+  position: fixed !important;
   top: 0;
   width: 100%;
   margin-top: 0;
@@ -711,37 +725,7 @@ a:hover {
 /** mobile **/
 
 @media screen and (max-width: 575px) {
-  .navBar {
-    clear: right;
-    padding: auto;
-    position: relative;
-    border-radius: 10px;
-    background-color: rgba(251, 81, 81, 0.9);
-    width: 45%;
-    margin-top: 5%;
-  }
-  .indNav {
-    display: block;
-    color: white;
-    float: left;
-    font-size: 30px;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px;
-  }
-
-  #name{
-    display: none;
-  }
-
-  #logo {
-    background-color: #f8f9fa;
-    width: 35%;
-    display: block;
-    float: left;
-    margin-left: 5%;
-    margin-right: 12%;
-  }
+  
 
 } 
 
