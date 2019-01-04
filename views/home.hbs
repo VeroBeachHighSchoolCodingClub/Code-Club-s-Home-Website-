@@ -2,50 +2,9 @@
 <html lang="en" dir="ltr">
   {{> head}}
   <body>
-
     {{> top}}
     {{> nav}}
-    
-    {{> menu}}
-
-<div class="container-fluid bg-light big-container" style="position: relative; padding: 0 !important;">
-  <div class="car-bg container-fluid">
-    <div class="picCar container" style="padding-top:100px;">
-      <br>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="8000">
-      
-        <ol class="carousel-indicators">
-          {{# each pic}}
-            <li data-target="#myCarousel" data-slide-to="{{this.num}}" class="{{this.active}}"></li>
-          {{/each}}
-        </ol>
-        <div class="carousel-inner" role="listbox">
-
-        {{# each pic}}
-
-          <div class="item {{this.active}}" style="">
-            <img src="{{this.picture}}" alt="{{this.alt}}" class="w-100 img-fluid">
-            <div class="carousel-caption">
-              <h3>{{this.h3}}</h3>
-              <p>{{this.p}}</p>
-            </div>
-          </div>
-
-        {{/each}}
-
-        </div>
-
-        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </div>
-
+    {{> title}}
   <br>
 </div>
   <div class="container-fluid bg-white h-about">

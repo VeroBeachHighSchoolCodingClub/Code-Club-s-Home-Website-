@@ -14,7 +14,7 @@ module.exports = (app) => {
   app.get('/', (req, res) => {
     ContentH.find({}, (err, content) => {
       Picture.find({}, (err, pic) => {
-        res.render('home', {location: 'Home', cont: content, pic: pic})
+        res.render('home', {location: 'Home', cont: content, pic: pic, tag: 'The VBHS Coding Club'})
       })
     });
   });

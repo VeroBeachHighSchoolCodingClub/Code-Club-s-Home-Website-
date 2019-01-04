@@ -2,6 +2,10 @@ $(document).ready(function(){
 
 var windowWidth = $(window).width();
 var nav = document.getElementById("navBar");
+// var navInd = [$('#navHome'), $('#navAbout'), $('#projects')];
+var home = document.getElementById("navHome")
+var about = document.getElementById("navAbout")
+var projects = document.getElementById("projects")
 var navStick = nav.offsetTop;
 var pic = $('.box');
 var height = window.innerHeight;
@@ -167,16 +171,24 @@ window.onload = function() {
 
 // Nav Bar function
 
-  // if (windowWidth > 575) {
-  //   window.onscroll = function() {stickyNav()};
+  if (windowWidth > 575) {
+    window.onscroll = function() {stickyNav()};
 
-  //   function stickyNav() {
-  //     if (window.pageYOffset > navStick) {
-  //       nav.classList.add("stickyNav")
-  //     } else {
-  //       nav.classList.remove("stickyNav");
-  //     }
-  //   }
-  // }
+    function stickyNav() {
+      if (window.pageYOffset > navStick) {
+        nav.classList.add("stickyNav")
+        // navInd.classList.add("stickyInd")
+        home.classList.add("stickyInd")
+        about.classList.add("stickyInd")
+        projects.classList.add("stickyInd")
+      } else {
+        nav.classList.remove("stickyNav");
+        // navInd.classList.remove("stickyInd");
+        home.classList.remove("stickyInd")
+        about.classList.remove("stickyInd")
+        projects.classList.remove("stickyInd")
+      }
+    }
+  }
 
 });
