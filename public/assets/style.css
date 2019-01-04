@@ -339,20 +339,28 @@ a:hover {
   text-align: center;
   z-index: 10;
   width: 100%;
+  padding: 20px 0;
 }
 .fList {
   text-align: center;
 }
-.fList2 {
-  list-style: none;
-  float: right;
-  clear: left;
-}
 .fItem {
   display: inline-block;
-  font-size: 11px;
-  padding: 30px 65px 12px 65px;
+  font-size: 12px;
+  padding: 100px 65px 12px 65px;
   color: rgba(129, 129, 129, 1);
+}
+.f-middle {
+  margin: 10% 0 0 0;
+}
+.f-middle h2 {
+  position: relative;
+  font-size: 30px;
+}
+.f-middle h3 {
+  position: relative;
+  font-size: 20px;
+  padding-top: 20px;
 }
 
 /** Projects Page **/
