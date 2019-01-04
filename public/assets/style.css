@@ -615,97 +615,31 @@ a:hover {
   padding-top: 30px;
 }
 
-.a-web {
+.a-divs {
   position: relative;
-  z-index: 2;
-  background-color: white;
-  padding-top: 50px;
-  height: 350px;
-  max-height: 350px;
+  background-color: #636363;
+  color: white;
+  padding: 20px;
+  margin: 40px 0;
 }
-.a-web button {
-  position: absolute;
-  margin: 200px 0 0 30px;
-  font-size: 10px;
-  padding: 5px;
-}
-.a-web h1 {
-  position: relative;
-  display: block;
-  text-align: left;
-  border-bottom: 2px solid grey;
-  width: 51%;
-  margin-left: 30px;
-}
-.a-web img {
-  position: relative;
-  width: 200px;
-  display: block;
-  margin: 45px auto 0 auto;
-}
-.a-web img:hover {
-  width: 205px;
-}
-.web-cont {
-  position: relative;
-  font-size: 20px;
-  width: 80%;
-  margin-left: 15px;
-}
-.web-box {
-  float: right !important;
-}
-.web-caption {
+.a-divs h1 {
   position: relative;
   display: block;
   text-align: center;
-  margin-top: 5px;
+  font-size: 40px;
 }
-
-.a-hard {
+.div-box {
+  height: 167px;
+  text-align: center;
+}
+.div-box h2 {
   position: relative;
-  z-index: 2;
-  background-color: white;
-  padding-top: 80px;
-  height: 350px;
-  max-height: 350px;
 }
-.a-hard button {
-  position: absolute;
-  float: right;
-  margin: 200px 0 0 85%;
-  font-size: 10px;
-  padding: 5px;
-}
-.a-hard h1 {
+.div-box p {
   position: relative;
-  display: block;
-  text-align: right;
-  border-bottom: 2px solid grey;
-  width: 60%;
-  margin-right: 175px;
-  float: right;
 }
-.hard-pic {
-  float: right !important;
-}
-.a-hard img {
-  position: relative;
-  width: 95px;
-  margin: 0 auto 20px auto;
-  display: block;
-}
-.a-hard img:hover {
-  width: 100px;
-}
-.hard-cont {
-  position: relative;
-  font-size: 20px;
-  width: 80%;
-  float: right;
-}
-.hard-box {
-  float: left !important;
+#left-box {
+  border-right: 2px solid white;
 }
 
 .a-mem {
