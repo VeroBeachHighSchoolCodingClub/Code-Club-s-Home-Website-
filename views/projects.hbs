@@ -4,10 +4,10 @@
   <body>
     {{> top}}
     {{> nav}}
-  
-  <div class="container-fluid bg-light big-container">
-    <br>
     {{> title}}
+  
+  <div class="container-fluid bg-white big-container">
+    <br>
     <div class="p-intro container-fluid">
       <h1 class="titles">What are club projects?</h1>
       <div class="lb" style="width: 25%"></div>
@@ -16,7 +16,7 @@
     <h1 class="p-title titles">Completed Projects</h1>
     <div class="row box-container container-fluid">
       {{#each projects}}
-        <div class="bg-white bigBox co-lg-6">
+        <div class="bg-white bigBox co-xl-6">
           <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
             <img id="ip{{this.id}}" class="ip{{this.margin}}" src="{{this.picture}}" alt="{{this.alt}}">
             <div id="p{{this.id}}Content" class="clearE">
