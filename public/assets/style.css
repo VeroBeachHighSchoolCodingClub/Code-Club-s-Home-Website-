@@ -157,6 +157,7 @@ a:hover {
   margin: 0;
   width: 100%;
   padding: 30px;
+  padding-right: 0 !important;
 }
 
 .au-title {
@@ -179,14 +180,15 @@ a:hover {
 }
 
 .logo {
-  width: 220px;
-  color: rgb(94, 94, 94);
-  z-index: 100;
+  width: 220px !important;
+  /* color: rgb(94, 94, 94); */
+  z-index: 0;
   position: relative;
   border-radius: 15%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
 }
 .logo:hover {
   width: 225px;
@@ -203,16 +205,16 @@ a:hover {
   position: relative;
   display: block;
   text-align: center;
-  padding: 10px;
+  padding: 35px;
   background-color: rgba(251, 81, 81, 1);
   color: white;
-  height: 160px;
+  /* height: 160px; */
   margin: 25px 0;
 }
 .h-times h1 {
   display: inline-block;
   margin: 0 auto;
-  padding: 15px 0;
+  padding: 0 0 15px 0;
 }
 .tim-box {
   font-size: 20px;
@@ -224,8 +226,6 @@ a:hover {
   position: relative;
   background-color: white;
   padding: 30px;
-  height: 425px;
-  max-height: 425px;
 }
 .lead-box h1 {
   position: relative;
@@ -265,8 +265,8 @@ a:hover {
 .h-con {
   position: relative;
   display: block;
-  font-size: 30px;
-  padding: 10px;
+  /* font-size: 30px; */
+  padding: 1% 0 !important;
   /* background-color: #1f1f1f; */
   background-color: white;
   border-top: 5px solid #4e9204;
@@ -274,26 +274,24 @@ a:hover {
   color: #71d800 !important;
   font-family: 'Roboto Mono', monospace;
   overflow: auto;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 .con-tri {
-  display: inline-block;
+  display: inline;
   letter-spacing: .1em;
   margin: 10px 1px 10px 0 !important;
   padding-left: 0 !important;
   padding-right: 0px !important;
-  width: 15% !important;
+  font-size: 2.5vw;
 }
 .typewrite {
-  display: inline-block;
-  margin: 0 0 0 3px!important;
+  display: inline;
   position: relative;
   text-decoration: none;
   color: #71d800 !important;
   letter-spacing: .1em;
-  width: 150% !important;
   padding: 0 !important;
-  font-size: 30px;
+  font-size: 2vw;
 }
 .h-con a:link a:visited a:hover a:active {
   text-decoration: none;
@@ -321,12 +319,11 @@ a:hover {
 }
 .mis-cont {
   position: relative;
-    display: block;
-    text-align: center;
-    margin-left: 10%;
-    margin-right: 10%;
-    font-size: 20px;
-    height: 90px;
+  display: block;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 20px;
 }
 
 
@@ -812,21 +809,6 @@ a:hover {
 } 
 
 @media screen and (max-width: 992px) {
-  #name {
-    background-color: #f8f9fa;
-    float: right;
-    font-size: 170%;
-  }
-  #modo {
-    display: none;
-  }
-  .logo{
-    width: 30%;
-    background-color: #f8f9fa;
-    display: block;
-    float: left;
-    margin-left: 15%;
-  }
 
 .mopic{
   width: 100%;
@@ -880,6 +862,12 @@ a:hover {
     display: block;
     width: 35%;
   }
+  .au-title {
+    text-align: center;
+  }
+  .au-cont {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 576px) {
   .top-right {
@@ -887,6 +875,12 @@ a:hover {
   }
   .logo-slim {
     width: 65%;
+  }
+  #tim-right {
+    border-right: none;
+    border-bottom: 2px solid white;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
   }
 }
 
