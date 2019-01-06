@@ -171,19 +171,21 @@ window.onload = function() {
 
 // Nav Bar function
 
-  if (windowWidth > 575) {
+  if (windowWidth > 0) {
     window.onscroll = function() {stickyNav()};
 
     function stickyNav() {
       if (window.pageYOffset > navStick) {
         nav.classList.add("stickyNav")
-        // navInd.classList.add("stickyInd")
+        nav.classList.remove('navbar-dark')
+        nav.classList.add('navbar-light')
         home.classList.add("stickyInd")
         about.classList.add("stickyInd")
         projects.classList.add("stickyInd")
       } else {
         nav.classList.remove("stickyNav");
-        // navInd.classList.remove("stickyInd");
+        nav.classList.remove("navbar-light")
+        nav.classList.add("navbar-dark")
         home.classList.remove("stickyInd")
         about.classList.remove("stickyInd")
         projects.classList.remove("stickyInd")

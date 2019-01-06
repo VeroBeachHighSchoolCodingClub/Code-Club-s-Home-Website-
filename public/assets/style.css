@@ -48,38 +48,22 @@ a {
 
 .topBar {
   background-color: rgba(251, 81, 81, 1); 
-  position: absolute;
+  position: relative;
   width: 100%;
   z-index: 99;
   color: white;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
-  /* margin-left: 116px; */
-  /* border-radius: 5px 0 0 5px; */
 }
-
-#clubName {
-  float: left;
-  clear: right;
-  padding: 12px;
-  /* margin-left: 120px; */
+.topBar .row {
+  padding: 10px;
 }
-
-.topRight {
-  /* float: left; */
-  position: relative;
-}
-
-#contact {
-  padding: 12px;
-  position: relative;
+.topBar .row .col-md-2 {
   float: right;
 }
-
-#memberLogin {
-  padding: 12px;
+.top-right {
   position: relative;
-  float: right;
+  margin-left: auto;
 }
 
 /** Nav Bar **/
@@ -133,8 +117,8 @@ a {
 }
 
 .navbar {
-  margin-top: 40px;
-  position: absolute !important;
+  /* margin-top: 40px; */
+  /* position: absolute !important; */
   z-index: 10;
   width: 100%;
   background-color: rgba(74, 62, 62, 0.83);
@@ -142,7 +126,7 @@ a {
 }
 
 .stickyInd {
-  color: #717171;
+  color: #717171 !important;
   transition: color 1s;
 }
 
@@ -574,10 +558,11 @@ a:hover {
 
 .a-title {
   position: relative;
-  background-image: url("/pics/code-img-white.jpg");
+  background-image: url(/pics/code-img-white.jpg);
   background-attachment: fixed;
-  height: 400px;
+  height: 425px;
   padding: 0 !important;
+  margin-top: -88px;
 }
 .a-title h1 {
   position: absolute;
@@ -855,6 +840,28 @@ a:hover {
   }
 }
 
+@media screen and (max-width: 768px) {
+  .a-title {
+    margin-top: -310px;
+    height: 600px;
+  }
+  .a-title h1 {
+    margin-top: 385px;
+  }
+  .logo-slim {
+    margin: 0 auto;
+    display: block;
+    width: 35%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .top-right {
+    margin-left: 0;
+  }
+  .logo-slim {
+    width: 65%;
+  }
+}
 
 
 
