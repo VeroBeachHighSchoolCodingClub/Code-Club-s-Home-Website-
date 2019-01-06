@@ -661,7 +661,7 @@ a:hover {
   font-size: 40px;
 }
 .div-box {
-  height: 167px;
+  /* height: 167px; */
   text-align: center;
 }
 .div-box h2 {
@@ -669,6 +669,7 @@ a:hover {
 }
 .div-box p {
   position: relative;
+  padding-top: 15px; 
 }
 #left-box {
   border-right: 2px solid white;
@@ -867,6 +868,12 @@ a:hover {
   }
   .au-cont {
     text-align: center;
+  }
+  .a-divs h1 {
+    padding-bottom: 30px;
+  }
+  #left-box {
+    border-right: none;
   }
 }
 @media screen and (max-width: 576px) {
