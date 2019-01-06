@@ -586,13 +586,16 @@ a:hover {
   position: relative;
   background-image: url(/pics/code-img-white.jpg);
   background-attachment: fixed;
+  background-size: cover;
   height: 425px;
+  background-repeat: no-repeat;
   padding: 0 !important;
-  margin-top: -88px;
+  /* margin-top: -88px; */
+  margin-top: -10%;
 }
 .a-title h1 {
   position: absolute;
-  margin-top: 180px;
+  margin-top: 16%;
   z-index: 1;
   color: #ffffff;
   display: inline-block;
@@ -740,12 +743,15 @@ a:hover {
 
 } 
 
-@media screen and (min-width: 2700px) {
+@media screen and (min-width: 1500px) {
   .boxPic {
     width: inherit;
   }
-  .container-fluid {
+  /* .container-fluid {
     height: 45vw;
+  } */
+  .a-title {
+    height: 580px;
   }
 }
 
