@@ -4,6 +4,7 @@ body {
   min-height: 100px;
   height: 100%;
   background-color: #f8f9fa;
+  max-width: 100% !important;
 }
 
 .big-container {
@@ -54,6 +55,7 @@ a {
   color: white;
   font-family: 'Nunito Sans', sans-serif;
   font-size: 15px;
+  max-width: 100% !important;
 }
 .topBar .row {
   padding: 10px;
@@ -87,6 +89,7 @@ a {
   margin-top: 44px;
   transition: background-color 1s;
   position: absolute !important;
+  max-width: 100% !important;
   /* margin-left: 116px; */
   /* border-radius: 5px 0 0 5px; */
 }
@@ -192,14 +195,30 @@ a:hover {
   position: relative;
   font-size: 18px;
 }
+.au-sm {
+  display: inline-block;
+}
 
-.h-lead {
+.h-times {
   position: relative;
   display: block;
   text-align: center;
   padding: 10px;
   background-color: rgba(251, 81, 81, 1);
   color: white;
+  height: 160px;
+  margin: 25px 0;
+}
+.h-times h1 {
+  display: inline-block;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+.tim-box {
+  font-size: 20px;
+}
+#tim-right {
+  border-right: 2px solid white;
 }
 .lead-box {
   position: relative;
@@ -207,6 +226,10 @@ a:hover {
   padding: 30px;
   height: 425px;
   max-height: 425px;
+}
+.lead-box h1 {
+  position: relative;
+  text-align: center;
 }
 .lead-p {
   position: relative;
@@ -251,6 +274,7 @@ a:hover {
   color: #71d800 !important;
   font-family: 'Roboto Mono', monospace;
   overflow: auto;
+  margin-top: 40px;
 }
 .con-tri {
   display: inline-block;
@@ -261,14 +285,15 @@ a:hover {
   width: 15% !important;
 }
 .typewrite {
-  display: block;
-  margin: 10px 0 10px 0px !important;
+  display: inline-block;
+  margin: 0 0 0 3px!important;
   position: relative;
   text-decoration: none;
   color: #71d800 !important;
   letter-spacing: .1em;
   width: 150% !important;
   padding: 0 !important;
+  font-size: 30px;
 }
 .h-con a:link a:visited a:hover a:active {
   text-decoration: none;
@@ -335,8 +360,7 @@ a:hover {
   border-top: 2px solid rgba(255, 135, 135, 0.8);
   position: absolute;
   text-align: center;
-  z-index: 10;
-  width: 100%;
+  z-index: 0;
   padding: 20px 0;
 }
 .fList {
@@ -359,6 +383,9 @@ a:hover {
   position: relative;
   font-size: 20px;
   padding-top: 20px;
+}
+.ft-form h1 {
+  font-size: 25px;
 }
 
 /** Projects Page **/
