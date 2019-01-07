@@ -9,7 +9,6 @@
 <div class="container-fluid bg-white big-container">
   <br>
   <div class="a-over container-fluid">
-      {{!-- <span class="a-tri col-sm-1">><span id="a-tri-el"></span></span> --}}
     <h1 class="titles">What is the VBHS Coding Club?</h1>
     <div class="lb" style="width: 35%;"></div>
     {{#each cont}}
@@ -46,36 +45,13 @@
     <div class="a-glaze container-fluid">
     <h1 class="titles">Coding Club Leadership Team</h1>
     <div class="mem-box row">
+      {{#each mem}}
       <div class="mem-ind col-sm-4">
         <img src="/pics/person.png" alt="" class="mem-pic">
-        <h2>John Doe</h2>
-        <h3>President</h3>
+        <h2>{{this.name}}</h2>
+        <h3>{{this.rank}}</h3>
       </div>
-      <div class="mem-ind col-sm-4">
-        <img src="/pics/person.png" alt="" class="mem-pic">
-        <h2>Jane Doe</h2>
-        <h3>Vice-President</h3>
-      </div>
-      <div class="mem-ind col-sm-4">
-        <img src="/pics/person.png" alt="" class="mem-pic">
-        <h2>Sam Doe</h2>
-        <h3>Officer</h3>
-      </div>
-      <div class="mem-ind col-sm-4">
-        <img src="/pics/person.png" alt="" class="mem-pic">
-        <h2>Billy Doe</h2>
-        <h3>Janitor</h3>
-      </div>
-      <div class="mem-ind col-sm-4">
-        <img src="/pics/person.png" alt="" class="mem-pic">
-        <h2>Zach Doe</h2>
-        <h3>Vice-Janitor</h3>
-      </div>
-      <div class="mem-ind col-sm-4">
-        <img src="/pics/person.png" alt="" class="mem-pic">
-        <h2>Howard Doe</h2>
-        <h3>Sith Lord</h3>
-      </div>
+      {{/each}}
     </div>
     </div>
   </div>

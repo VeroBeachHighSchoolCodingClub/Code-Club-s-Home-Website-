@@ -44,16 +44,20 @@
   <div class="lead-box container-fluid">
     <h1 class="col-sm-12 titles">Club Leadership</h1>
     <div class="row">
-      <div class="lead-p col-sm-6">
-        <img src="/pics/person.png" alt="person" class="lead-pic">
-        <div class="lead-name">John Doe</div>
-        <div class="lead-rank">President</div>
-      </div>
-      <div class="lead-p col-sm-6">
+      {{# each mem}}
+        {{# if_eq leader true}}
+          <div class="lead-p col-sm-6">
+            <img src="/pics/person.png" alt="person" class="lead-pic">
+            <div class="lead-name">{{this.name}}</div>
+            <div class="lead-rank">{{this.rank}}</div>
+          </div>
+        {{/if_eq}}
+      {{/each}}
+      {{!-- <div class="lead-p col-sm-6">
         <img src="/pics/person.png" alt="person" class="lead-pic">
         <div class="lead-name">Jane Doe</div>
         <div class="lead-rank">Vice-President</div>
-      </div>
+      </div> --}}
     </div>
     
   </div>
