@@ -10,11 +10,13 @@
   <br>
   <div class="a-over container-fluid">
       {{!-- <span class="a-tri col-sm-1">><span id="a-tri-el"></span></span> --}}
-      <h1 class="titles">What is the VBHS Coding Club?</h1>
-      <div class="lb" style="width: 35%;"></div>
-      <div class="over-cont">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde delectus quasi nostrum ad quisquam nisi autem hic possimus recusandae dolore, suscipit quaerat sed corrupti. Deleniti architecto doloribus amet recusandae fugiat! Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt corporis in alias, dicta consequuntur necessitatibus iste, adipisci temporibus nemo inventore quae ex voluptates a ratione facilis magnam, laudantium minus. Quidem? Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur error aliquam dolores debitis ea accusantium, quasi sed doloribus, consectetur, ullam eum! Animi possimus voluptate officiis harum vero atque praesentium mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, placeat et quod nobis deleniti voluptates ratione eveniet quam quis sit consequatur, doloremque sed expedita beatae, veniam eum quasi ab. Velit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore ad molestiae consequatur, asperiores reiciendis est necessitatibus expedita earum soluta possimus corrupti voluptas, tempora quam tenetur iusto cumque. Eum, ex pariatur?
-    </div>
-    
+    <h1 class="titles">What is the VBHS Coding Club?</h1>
+    <div class="lb" style="width: 35%;"></div>
+    {{#each cont}}
+      {{#if_eq title 'What is the VBHS Coding Club'}}
+        <div class="over-cont">{{this.content}}</div>
+      {{/if_eq}}
+    {{/each}}
   </div>
 
   <div class="container-fluid a-divs">
@@ -22,11 +24,19 @@
     <div class="row">
       <div class="col-md-6 div-box" id="left-box">
         <h2>Web Development and Design</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe enim esse cum, fugiat consectetur eaque voluptatem provident praesentium deserunt dolorum et libero doloremque iusto sapiente veniam, maxime deleniti perspiciatis ratione.</p>
+        {{#each cont}}
+          {{#if_eq title 'Divisions 1'}}
+            <p>{{this.content}}</p>
+          {{/if_eq}}
+        {{/each}}
       </div>
       <div class="col-md-6 div-box" id="right-box">
         <h2>Hardware and Robotics</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt repellendus earum magni accusantium perspiciatis? Cumque commodi odit dolor sed voluptatum accusantium voluptatem hic repudiandae! Maxime veniam vitae voluptatibus tenetur dolorum!</p>
+        {{#each cont}}
+          {{#if_eq title 'Divisions 2'}}
+            <p>{{this.content}}</p>
+          {{/if_eq}}
+        {{/each}}
       </div>
     </div>
     

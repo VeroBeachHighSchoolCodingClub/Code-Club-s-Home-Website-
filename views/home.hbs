@@ -10,20 +10,34 @@
   <div class="bg-white h-about row">
     <div class="au-sm col-md-4">
       <img class="logo" src="/pics/logo.png" alt="Our Logo">
-      <div class="au-time">
-        Creating a programming enviornment at VBHS since 2018
-      </div>
+      {{# each cont}}
+        {{# if_eq title 'Home Since'}}
+        <div class="au-time">
+          {{this.content}}
+        </div>
+        {{/if_eq}}
+      {{/each}}
     </div>
     <div class="au-box col-md-8">
       <div class="au-title titles">Who are we?</div>
-      <div class="au-cont">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat omnis, reprehenderit, molestiae impedit saepe autem recusandae voluptas commodi quasi quae ea ut porro at aperiam praesentium fugiat architecto quis voluptates? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi rerum officiis exercitationem. Veniam ipsum magnam porro saepe amet obcaecati. Tenetur, repellendus? Ducimus ratione culpa quam natus asperiores animi recusandae aspernatur.</div>
+      {{# each cont}}
+        {{#if_eq title 'Who Are We'}}
+          <div class="au-cont">{{this.content}}</div>
+        {{/if_eq}}
+      {{/each}}
     </div>
   </div>
   <div class="h-times container-fluid">
     <h1 class="col-sm-12 titles">Metting Times</h1>
     <div class="row">
-      <span class="col-sm-6 tim-box" id="tim-right">Lorem   ipsum dolor sit amet consectetur adipisicing     elit.</span>
-      <span class="col-sm-6 tim-box">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</span>
+      {{#each cont}}
+        {{#if_eq title 'Meeting Times 1'}}
+          <span class="col-sm-6 tim-box" id="tim-right">{{this.content}}</span>
+        {{/if_eq}}
+        {{#if_eq title 'Meeting Times 2'}}
+          <span class="col-sm-6 tim-box">{{this.content}}</span>
+        {{/if_eq}}
+      {{/each}}
     </div>
     
   </div>
@@ -54,7 +68,11 @@
   <div class="h-mission container-fluid">
     <div class="mis-title titles">What is Our Mission?</div>
     <div class="lb"></div>
-    <div class="mis-cont">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione corporis necessitatibus accusantium voluptas illum, delectus vero consequuntur deserunt fugiat repellat pariatur quia expedita natus odio nesciunt enim et culpa labore.</div>
+    {{#each cont}}
+      {{#if_eq title 'What is Our Mission'}}
+        <div class="mis-cont">{{this.content}}</div>
+      {{/if_eq}}
+    {{/each}}
   </div>
 </div>
     {{> footer}}

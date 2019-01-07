@@ -28,7 +28,7 @@ module.exports = (app) => {
   app.get('/projects', (req, res) => {
     Content.find({}, (err, contents) => {
       Project.find({}, (err, projects) => {
-        res.render('projects', {location: 'Our Projects', cont: contents, projects: pro, tag: 'Club Projects'})
+        res.render('projects', {location: 'Our Projects', cont: contents, pro: projects, tag: 'Club Projects'})
       });
     });
   });
