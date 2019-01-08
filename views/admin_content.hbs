@@ -1,0 +1,41 @@
+<html lang="en">
+{{> head}}
+<style>
+
+.sBox {
+   width: 40%;
+   margin-top: 100px;
+}
+
+.bigBox {
+   min-height: 90%;
+   position: relative;
+   {{!-- padding-bottom: 50px; --}}
+}
+
+</style>
+<body>
+    {{> top}}
+    {{> admin_nav}}
+    <div class="container-fluid">
+        <div class="jumbotron sBox row border rounded mx-auto shadow-lg"  style="margin: 50px 50%; position: relative; display: block;">
+            <legend for="all" class="text-center">Enter the content</legend>
+            <div class="col-sm-12">
+                <form action="/admin/content/edit" method="post">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" placeholder="Place title here" name="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea cols="30" rows="10" class="form-control" name="content"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>

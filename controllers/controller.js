@@ -72,13 +72,32 @@ module.exports = (app) => {
 
 /** Protected Routes **/
 
+  // get
   app.get('/admin/dashboard', authenticate, (req, res) => {
     res.render('admin_dashboard');
   })
+
+  app.get('/admin/content', authenticate, (req, res) => {
+    res.render('admin_content');
+  });
+
+  // post
+  app.post('/admin/content/edit', authenticate, async (req, res) => {
+    const body = _.pick(req.body, ['title', 'content']);
+    const cont = new Content(body);
+    try {
+      await cont.save()
+      res.redirect('/admin/content');
+    } catch (e) {
+      if (e) throw e;
+      res.status(400).send(e);
+    }
+  });
+
+
 
 
   app.get('*', (req, res) => {
     res.status(404).send("404 -- Sorry, we couldn't find your request.");
   });
-
 }
