@@ -8,11 +8,15 @@ const Controller      = require('./controllers/controller.js');
 const hbs             = require('hbs');
 const fs              = require('fs');
 const _               = require('lodash');
+const jwt             = require('jsonwebtoken');
+const bcrypt          = require('bcryptjs');
+const cookieParser    = require('cookie-parser');
 
 var {mongoose} = require('./db/mongodb');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cookieParser());
 
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
