@@ -96,6 +96,9 @@ module.exports = (app) => {
   });
   app.get('/admin/members', authenticate, (req, res) => {
     res.render('admin_members');
+  });
+  app.get('/admin/project', authenticate, (req, res) => {
+    res.render('admin_project');
   })
 
   // post
@@ -104,7 +107,7 @@ module.exports = (app) => {
     const cont = new Content(body);
     try {
       await cont.save()
-      res.redirect('/admin/content');
+      res.redirect('/admin/dashboard');
     } catch (e) {
       if (e) throw e;
       res.status(400).send(e);
@@ -134,14 +137,46 @@ module.exports = (app) => {
 
     try {
       await mem.save();
-      res.send(file)
-      // res.redirect('/about/edits');
+      res.redirect('/admin/dashboard');
     } catch (e) {
       if (e) throw e;
       res.status(400).send(e);
     }
   });
 
+  app.post('/admin/project/edit', authenticate, upload.single('picture'), async (req, res) => {
+    const body = req.body;
+    const file = req.file;
+    
+    const pro = new Project({
+      name: body.name,
+      year: body.year,
+      url: body.url,
+      dis: body.dis,
+      source: body.source,
+      picture: {
+        fieldname: file.fieldname,
+        originalname: file.originalname,
+        destination: file.destination,
+        filename: file.filename,
+        path: file.path,
+      },
+      alt: body.alt,
+      margin: body.margin,
+      id: body.id
+    });
+
+    try {
+      await pro.save();
+      res.redirect('/admin/dashboard');
+    } catch (e) {
+      res.status(400).json({
+        "bodyVar": body,
+        "fileVar": file,
+        "error": e
+      });
+    }
+  })
 
 
 

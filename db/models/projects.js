@@ -9,7 +9,6 @@ var Project = mongoose.model('projects', {
     },
     year: {
         type: String,
-        maxlength: 4,
         required: true,
         trim: true
     },
@@ -19,22 +18,10 @@ var Project = mongoose.model('projects', {
         required: true,
         maxlength: 50
     },
-    dis1: {
+    dis: {
         type: String,
         trim: false,
         required: true,
-        maxlength: 200 
-    },
-    dis2: {
-        type: String,
-        trim: false,
-        required: false,
-        maxlength: 200 
-    },
-    dis3: {
-        type: String,
-        trim: false,
-        required: false,
         maxlength: 200 
     },
     source: {
@@ -42,12 +29,28 @@ var Project = mongoose.model('projects', {
         required: true,
         maxlength: 100
     },
-    picture: {
-        type: String,
-        trim: false,
-        required: true,
-        maxlength: 30
-    },
+    picture: [{
+        fieldname: {
+            type: String,
+            required: true
+        },
+        originalname: {
+            type: String,
+            required: true
+        },
+        destination: {
+            type: String,
+            required: true
+        },
+        filename: {
+            type: String,
+            required: true
+        },
+        path: {
+            type: String,
+            required: true
+        }
+    }],
     alt: {
         type: String,
         required: false,
