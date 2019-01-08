@@ -34,7 +34,8 @@
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.11",
     "mongodb": "^3.1.10",
-    "mongoose": "^5.3.13"
+    "mongoose": "^5.3.13",
+    "multer": "^1.4.1"
   },
   "devDependencies": {
     "expect": "^23.6.0",

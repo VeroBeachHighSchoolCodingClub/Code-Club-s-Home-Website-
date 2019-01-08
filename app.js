@@ -11,12 +11,16 @@ const _               = require('lodash');
 const jwt             = require('jsonwebtoken');
 const bcrypt          = require('bcryptjs');
 const cookieParser    = require('cookie-parser');
+const multer          = require('multer');
+const port            = process.env.PORT;
 
 var {mongoose} = require('./db/mongodb');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use(express.static('./public'));
+app.use('/uploads', express.static('uploads'));
 
 hbs.registerPartials(__dirname + '/views/partials')
 app.set('view engine', 'hbs');
@@ -32,10 +36,6 @@ hbs.registerHelper('if_eq', function(a, b, opts) {
       return opts.inverse(this);
   }
 });
-
-const port = process.env.PORT;
-
-app.use(express.static('./public'));
 
 Controller(app);
 

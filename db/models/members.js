@@ -31,7 +31,7 @@ var Member = mongoose.model('member', {
         maxlength: 30
     },
     leader: {
-        type: Boolean,
+        type: String,
         required: true
     },
     picture: [{

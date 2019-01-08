@@ -1,11 +1,25 @@
-const {Member} = require('../db/models/members');
-const {Project} = require('../db/models/projects');
-const {Content} = require('../db/models/content');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const _ = require('lodash');
-const {authenticate} = require('../db/middleware/authenticate');
-const {User} = require('../db/models/user');
+const mongoose        = require('mongoose');
+const bodyParser      = require('body-parser');
+const _               = require('lodash');
+const multer          = require('multer');
+const fs              = require('fs');
+
+const {Member}        = require('../db/models/members');
+const {Project}       = require('../db/models/projects');
+const {Content}       = require('../db/models/content');
+const {authenticate}  = require('../db/middleware/authenticate');
+const {User}          = require('../db/models/user');
+
+const storage = multer.diskStorage({
+  destination: function (request, file, callback) {
+      callback(null, './uploads/');
+  },
+  filename: function (request, file, callback) {
+      callback(null, new Date().toISOString().replace(/:/g, '-') + '.' + file.originalname);
+  }
+});
+
+var upload = multer({ storage: storage });
 
 module.exports = (app) => {
 
@@ -80,6 +94,9 @@ module.exports = (app) => {
   app.get('/admin/content', authenticate, (req, res) => {
     res.render('admin_content');
   });
+  app.get('/admin/members', authenticate, (req, res) => {
+    res.render('admin_members');
+  })
 
   // post
   app.post('/admin/content/edit', authenticate, async (req, res) => {
@@ -88,6 +105,37 @@ module.exports = (app) => {
     try {
       await cont.save()
       res.redirect('/admin/content');
+    } catch (e) {
+      if (e) throw e;
+      res.status(400).send(e);
+    }
+  });
+
+  app.post('/admin/members/edit', authenticate, upload.single('picture'), async (req, res) => {
+    const body = req.body;
+    const file = req.file;
+
+    const mem = new Member ({
+      name: body.name,
+      rank: body.rank,
+      leader: body.leader,
+      picture: {
+        fieldname: file.fieldname,
+        originalname: file.originalname,
+        encoding: file.encoding,
+        mimetype: file.mimetype,
+        destination: file.destination,
+        filename: file.filename,
+        path: file.path,
+        size: file.size,
+        data: fs.readFileSync(file.path)
+      }
+    })
+
+    try {
+      await mem.save();
+      res.send(file)
+      // res.redirect('/about/edits');
     } catch (e) {
       if (e) throw e;
       res.status(400).send(e);
