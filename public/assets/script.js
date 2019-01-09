@@ -2,7 +2,6 @@ $(document).ready(function(){
 
 var windowWidth = $(window).width();
 var nav = document.getElementById("navBar");
-// var navInd = [$('#navHome'), $('#navAbout'), $('#projects')];
 var home = document.getElementById("navHome")
 var about = document.getElementById("navAbout")
 var projects = document.getElementById("projects")
@@ -162,7 +161,7 @@ window.onload = function() {
           new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
+    // Inject CSS
     var css = document.createElement("style");
     css.type = "text/css";
     css.innerHTML = ".typewrite > .wrap { border-right: 0.25em solid #fff}";
