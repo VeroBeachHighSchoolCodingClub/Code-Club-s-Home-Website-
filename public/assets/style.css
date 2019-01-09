@@ -166,6 +166,7 @@ a:hover {
   position: relative;
   background-color: white;
   padding: 30px;
+  max-height: 465px;
 }
 .lead-box h1 {
   position: relative;
@@ -763,6 +764,10 @@ a:hover {
     border-bottom: 2px solid white;
     padding-bottom: 15px;
     margin-bottom: 10px;
+  }
+  .lead-box {
+    max-height: 820px;
+
   }
 }
 
