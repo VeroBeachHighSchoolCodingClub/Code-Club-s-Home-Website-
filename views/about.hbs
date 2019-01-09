@@ -38,7 +38,16 @@
         {{/each}}
       </div>
     </div>
-    
+  </div>
+
+  <div class="a-join container-fluid">
+    <h1 class="titles">Wanting to Join?</h1>
+    <div class="lb" style="width: 18%;"></div>
+    {{#each cont}}
+      {{#if_eq title 'Wanting to Join'}}
+        <div class="join-cont">{{this.content}}</div>
+      {{/if_eq}}
+    {{/each}}
   </div>
 
   <div class="a-mem container-fluid">
