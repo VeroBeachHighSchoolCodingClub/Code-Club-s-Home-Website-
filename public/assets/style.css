@@ -27,6 +27,10 @@ a {
   font-family: 'Nunito', sans-serif;
 }
 
+.admin-form {
+  width: 55%;
+}
+
 /** Carousel **/
 .car-bg {
   background-image: url("/pics/code-img-white.jpg");

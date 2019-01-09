@@ -1,25 +1,11 @@
 <html lang="en">
 {{> head}}
-<style>
-
-.sBox {
-   width: 40%;
-   margin-top: 100px;
-}
-
-.bigBox {
-   min-height: 90%;
-   position: relative;
-   {{!-- padding-bottom: 50px; --}}
-}
-
-</style>
 <body>
-    {{> top}}
+    {{> admin_top}}
     {{> admin_nav}}
     <div class="container-fluid">
-        <div class="jumbotron sBox row border rounded mx-auto shadow-lg"  style="margin: 50px 50%; position: relative; display: block;">
-            <legend for="all" class="text-center">Enter the Project</legend>
+        <div class="jumbotron row border rounded mx-auto shadow-lg admin-form">
+            <legend for="all">Enter the Project</legend>
             <div class="col-sm-12">
                 <form action="/admin/project/edit" method="post" enctype="multipart/form-data">
                     <div class="form-group">

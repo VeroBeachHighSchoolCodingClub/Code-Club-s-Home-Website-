@@ -21,6 +21,8 @@ const storage = multer.diskStorage({
 
 var upload = multer({ storage: storage });
 
+var cookieOpts = {maxAge: 18000000} // 5 Hour until cookie expires
+
 module.exports = (app) => {
 
   app.use(bodyParser.json());
@@ -63,7 +65,7 @@ module.exports = (app) => {
     try {
       await user.save()
       const token = await user.generateAuthToken();
-      res.header('x-auth', token).send(user);
+      res.cookie('logged_in', token, cookieOpts).redirect('/admin/dashboard');
     } catch (e) {
       if (e) throw e;
       res.status(400).send(e);
@@ -71,14 +73,12 @@ module.exports = (app) => {
   
   });
   
-
-  
   app.post('/users/login', async (req, res) => {
     try {
       const body = _.pick(req.body, ['username', 'password']);
       const user = await User.findByCredentials(body.username, body.password);
       const token = await user.generateAuthToken();
-      res.cookie('logged_in', token).redirect('/admin/dashboard');
+      res.cookie('logged_in', token, cookieOpts).redirect('/admin/dashboard');
     } catch (e) {
       res.status(400).send(e);
     }
@@ -94,11 +94,22 @@ module.exports = (app) => {
   app.get('/admin/content', authenticate, (req, res) => {
     res.render('admin_content');
   });
+
   app.get('/admin/members', authenticate, (req, res) => {
     res.render('admin_members');
   });
+
   app.get('/admin/project', authenticate, (req, res) => {
     res.render('admin_project');
+  });
+
+  app.get('/admin/logout', authenticate, async (req, res) => {
+    try {
+      await res.clearCookie('logged_in');
+      res.status(200).redirect('/index');
+    } catch (e) {
+      res.status(400);
+    }
   })
 
   // post
