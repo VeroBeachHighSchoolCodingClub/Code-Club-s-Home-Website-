@@ -28,7 +28,7 @@ module.exports = (app) => {
   app.use(bodyParser.json());
 
   /** Public Routes **/
-
+  
   app.get('/', (req, res) => {
     Content.find({}, (err, contents) => {
       Member.find({}, (err, members) => {
@@ -56,7 +56,7 @@ module.exports = (app) => {
 /** Admin Routes **/
 
   app.get('/index', (req, res) => {
-    res.render('index');
+    res.render('index', {location: 'Login'});
   })
 
   app.post('/users', async (req, res) => {
@@ -68,7 +68,10 @@ module.exports = (app) => {
       res.cookie('logged_in', token, cookieOpts).redirect('/admin/dashboard');
     } catch (e) {
       if (e) throw e;
-      res.status(400).send(e);
+      res.status(400).json({
+        "message": "Sorry, that didn't work.",
+        "error": e
+      });
     }
   
   });
@@ -80,27 +83,30 @@ module.exports = (app) => {
       const token = await user.generateAuthToken();
       res.cookie('logged_in', token, cookieOpts).redirect('/admin/dashboard');
     } catch (e) {
-      res.status(400).send(e);
+      res.status(400).redirect('/index');
     }
   });
 
 /** Protected Routes **/
 
   // get
+  app.get('/admin', authenticate, (req, res) => {
+    res.redirect('/admin/dashboard');
+  })
   app.get('/admin/dashboard', authenticate, (req, res) => {
-    res.render('admin_dashboard');
+    res.render('admin_dashboard', {location: 'Admin'});
   })
 
   app.get('/admin/content', authenticate, (req, res) => {
-    res.render('admin_content');
+    res.render('admin_content', {location: 'Admin'});
   });
 
   app.get('/admin/members', authenticate, (req, res) => {
-    res.render('admin_members');
+    res.render('admin_members', {location: 'Admin'});
   });
 
   app.get('/admin/project', authenticate, (req, res) => {
-    res.render('admin_project');
+    res.render('admin_project', {location: 'Admin'});
   });
 
   app.get('/admin/logout', authenticate, async (req, res) => {
@@ -108,7 +114,10 @@ module.exports = (app) => {
       await res.clearCookie('logged_in');
       res.status(200).redirect('/index');
     } catch (e) {
-      res.status(400);
+      res.status(400).json({
+        "message": "Sorry, that didn't work.",
+        "error": e
+      });
     }
   })
 
@@ -120,8 +129,10 @@ module.exports = (app) => {
       await cont.save()
       res.redirect('/admin/dashboard');
     } catch (e) {
-      if (e) throw e;
-      res.status(400).send(e);
+      res.status(400).json({
+        "message": "Sorry, that didn't work.",
+        "error": e
+      });
     }
   });
 
@@ -150,8 +161,10 @@ module.exports = (app) => {
       await mem.save();
       res.redirect('/admin/dashboard');
     } catch (e) {
-      if (e) throw e;
-      res.status(400).send(e);
+      res.status(400).json({
+        "message": "Sorry, that didn't work.",
+        "error": e
+      });
     }
   });
 
@@ -182,12 +195,11 @@ module.exports = (app) => {
       res.redirect('/admin/dashboard');
     } catch (e) {
       res.status(400).json({
-        "bodyVar": body,
-        "fileVar": file,
+        "message": "Sorry, that didn't work.",
         "error": e
       });
     }
-  })
+  });
 
 
 
