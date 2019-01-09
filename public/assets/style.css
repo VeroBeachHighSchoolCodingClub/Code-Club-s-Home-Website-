@@ -746,6 +746,10 @@ a:hover {
 @media screen and (max-width: 768px) {
   /* md */
 
+  .a-mem {
+    background-position: center;
+  }
+
   .a-title {
     margin-top: -310px;
     height: 600px;
@@ -771,6 +775,9 @@ a:hover {
     border-right: none;
   }
 
+  .ti-grad{
+    background-image: linear-gradient(to right, rgba(4, 4, 4, 0.7), rgba(128, 128, 128, 0.44));
+  }
   
 }
 @media screen and (max-width: 576px) {
