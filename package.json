@@ -29,13 +29,14 @@
     "cookie-parser": "^1.4.3",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
     "fs": "0.0.1-security",
-    "hbs": "^4.0.1",
     "jsonwebtoken": "^8.4.0",
     "lodash": "^4.17.11",
     "mongodb": "^3.1.10",
     "mongoose": "^5.3.13",
-    "multer": "^1.4.1"
+    "multer": "^1.4.1",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "expect": "^23.6.0",
