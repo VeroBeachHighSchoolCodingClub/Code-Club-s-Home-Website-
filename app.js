@@ -45,6 +45,8 @@ app.set('views', path.join(__dirname, "views"));
 
 Controller(app);
 
+module.exports = {app};
+
 app.listen(port, () => {
   console.log(`Starting on port ${port}`);
 });
