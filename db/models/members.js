@@ -37,39 +37,39 @@ var Member = mongoose.model('member', {
     picture: [{
         fieldname: {
             type: String,
-            required: true
+            required: false
         },
         originalname: {
             type: String,
-            required: true
+            required: false
         },
         encoding: {
             type: String,
-            required: true
+            required: false
         },
         mimetype: {
             type: String,
-            required: true
+            required: false
         },
         destination: {
             type: String,
-            required: true
+            required: false
         },
         filename: {
             type: String,
-            required: true
+            required: false
         },
         path: {
             type: String,
-            required: true
+            required: false
         },
         size: {
             type: Number,
-            required: true
+            required: false
         },
         data: {
             type: Buffer,
-            required: true
+            required: false
         }
     }]
 });

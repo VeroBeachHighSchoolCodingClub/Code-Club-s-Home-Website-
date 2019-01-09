@@ -381,6 +381,9 @@ a:hover {
   font-size: 20px;
   padding-top: 20px;
 }
+.ft-form {
+  padding-top: 40px;
+}
 .ft-form h1 {
   font-size: 25px;
 }

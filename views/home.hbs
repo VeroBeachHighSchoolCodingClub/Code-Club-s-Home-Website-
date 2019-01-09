@@ -1,80 +1,84 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   {{> head}}
-  <body>
+<body data-spy="scroll" data-target="#contact">
     {{> top}}
     {{> nav}}
     {{> title}}
   <br>
-<div class="container-fluid bg-white big-container">
-  <div class="bg-white h-about row">
-    <div class="au-sm col-md-4">
-      <img class="logo" src="/pics/logo.png" alt="Our Logo">
-      {{# each cont}}
-        {{# if_eq title 'Home Since'}}
-        <div class="au-time">
-          {{this.content}}
-        </div>
-        {{/if_eq}}
-      {{/each}}
-    </div>
-    <div class="au-box col-md-8">
-      <div class="au-title titles">Who are we?</div>
-      {{# each cont}}
-        {{#if_eq title 'Who Are We'}}
-          <div class="au-cont">{{this.content}}</div>
-        {{/if_eq}}
-      {{/each}}
-    </div>
-  </div>
-  <div class="h-times container-fluid">
-    <h1 class="col-sm-12 titles">Metting Times</h1>
-    <div class="row">
-      {{#each cont}}
-        {{#if_eq title 'Meeting Times 1'}}
-          <span class="col-sm-6 tim-box" id="tim-right">{{this.content}}</span>
-        {{/if_eq}}
-        {{#if_eq title 'Meeting Times 2'}}
-          <span class="col-sm-6 tim-box">{{this.content}}</span>
-        {{/if_eq}}
-      {{/each}}
-    </div>
-    
-  </div>
-  <div class="lead-box container-fluid">
-    <h1 class="col-sm-12 titles">Club Leadership</h1>
-    <div class="row">
-      {{# each mem}}
-        {{# if_eq leader 'true'}}
-          <div class="lead-p col-sm-6">
-            <img src="/pics/person.png" alt="person" class="lead-pic">
-            <div class="lead-name">{{this.name}}</div>
-            <div class="lead-rank">{{this.rank}}</div>
+  <div class="container-fluid bg-white big-container">
+    <div class="bg-white h-about row">
+      <div class="au-sm col-md-4">
+        <img class="logo" src="/pics/logo.png" alt="Our Logo">
+        {{# each cont}}
+          {{# if_eq title 'Home Since'}}
+          <div class="au-time">
+            {{this.content}}
           </div>
+          {{/if_eq}}
+        {{/each}}
+      </div>
+      <div class="au-box col-md-8">
+        <div class="au-title titles">Who are we?</div>
+        {{# each cont}}
+          {{#if_eq title 'Who Are We'}}
+            <div class="au-cont">{{this.content}}</div>
+          {{/if_eq}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="h-times container-fluid">
+      <h1 class="col-sm-12 titles">Metting Times</h1>
+      <div class="row">
+        {{#each cont}}
+          {{#if_eq title 'Meeting Times 1'}}
+            <span class="col-sm-6 tim-box" id="tim-right">{{this.content}}</span>
+          {{/if_eq}}
+          {{#if_eq title 'Meeting Times 2'}}
+            <span class="col-sm-6 tim-box">{{this.content}}</span>
+          {{/if_eq}}
+        {{/each}}
+      </div>
+      
+    </div>
+    <div class="lead-box container-fluid">
+      <h1 class="col-sm-12 titles">Club Leadership</h1>
+      <div class="row">
+        {{# each mem}}
+          {{# if_eq leader 'true'}}
+            <div class="lead-p col-sm-6">
+              {{#if this.picture.0.path}}
+                <img src="/{{this.picture.0.path}}" alt="{{this.name}}" class="lead-pic">
+              {{else}}
+                <img src="/pics/person.png" alt="{{this.name}}" class="lead-pic">
+              {{/if}}
+              <div class="lead-name">{{this.name}}</div>
+              <div class="lead-rank">{{this.rank}}</div>
+            </div>
+          {{/if_eq}}
+        {{/each}}
+      </div>
+      
+    </div>
+
+    <div class="h-con container-fluid">
+      <h1 class="con-tri">C:\root></h1>
+      <div class="typewrite" data-period="2000" data-type='[ "Welcome to the Vero Beach High School Coding Club", "This is Our Official Website" ]'>
+        <span class="wrap"></span>
+      </div>
+    </div>
+  
+    <div class="h-mission container-fluid">
+      <div class="mis-title titles">What is Our Mission?</div>
+      <div class="lb"></div>
+      {{#each cont}}
+        {{#if_eq title 'What is Our Mission'}}
+          <div class="mis-cont">{{this.content}}</div>
         {{/if_eq}}
       {{/each}}
     </div>
-    
   </div>
-
-  <div class="h-con container-fluid">
-    <h1 class="con-tri">C:\root></h1>
-    <div class="typewrite" data-period="2000" data-type='[ "Welcome to the Vero Beach High School Coding Club", "This is Our Official Website" ]'>
-      <span class="wrap"></span>
-    </div>
-  </div>
- 
-  <div class="h-mission container-fluid">
-    <div class="mis-title titles">What is Our Mission?</div>
-    <div class="lb"></div>
-    {{#each cont}}
-      {{#if_eq title 'What is Our Mission'}}
-        <div class="mis-cont">{{this.content}}</div>
-      {{/if_eq}}
-    {{/each}}
-  </div>
-</div>
     {{> footer}}
     {{> jsConnect}}
-  </body>
+</body>
 </html>

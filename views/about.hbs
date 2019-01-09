@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   {{> head}}
-  <body>
+  <body data-spy="scroll" data-target="#contact">
     {{> top}}
     {{> nav}}
     {{> title}}
@@ -47,7 +47,11 @@
     <div class="mem-box row">
       {{#each mem}}
       <div class="mem-ind col-sm-4">
-        <img src="/{{this.picture.0.path}}" alt="" class="mem-pic">
+        {{#if this.picture.0.path}}
+          <img src="/{{this.picture.0.path}}" alt="{{this.name}}" class="mem-pic">
+        {{else}}
+          <img src="/pics/person.png" alt="{{this.name}}" class="mem-pic">
+        {{/if}}
         <h2>{{this.name}}</h2>
         <h3>{{this.rank}}</h3>
       </div>
