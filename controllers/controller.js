@@ -94,8 +94,10 @@ module.exports = (app) => {
     res.redirect('/admin/dashboard');
   })
   app.get('/admin/dashboard', authenticate, (req, res) => {
-    res.render('admin_dashboard', {location: 'Admin'});
-  })
+    User.find({}, (err, user) => {
+      res.render('admin_dashboard', {location: 'Admin', ad: user});
+    });
+  });
 
   app.get('/admin/content', authenticate, (req, res) => {
     res.render('admin_content', {location: 'Admin'});
@@ -107,6 +109,10 @@ module.exports = (app) => {
 
   app.get('/admin/project', authenticate, (req, res) => {
     res.render('admin_project', {location: 'Admin'});
+  });
+
+  app.get('/admin/user', (req, res) => {
+      res.render('admin_create');
   });
 
   app.get('/admin/logout', authenticate, async (req, res) => {

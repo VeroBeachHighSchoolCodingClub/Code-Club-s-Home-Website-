@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body>
+    {{> admin_top}}
+    {{> admin_nav}}
+    <div class="container-fluid">
+        <div class="jumbotron row border rounded mx-auto shadow-lg admin-form">
+            <legend for="all">Enter the new admin</legend>
+            <div class="col-sm-12">
+                <form action="/users" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="username" class="form-control" placeholder="Place username here" name="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter the password" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
