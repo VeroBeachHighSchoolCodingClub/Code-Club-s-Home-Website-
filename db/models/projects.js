@@ -32,23 +32,23 @@ var Project = mongoose.model('projects', {
     picture: [{
         fieldname: {
             type: String,
-            required: true
+            required: false
         },
         originalname: {
             type: String,
-            required: true
+            required: false
         },
         destination: {
             type: String,
-            required: true
+            required: false
         },
         filename: {
             type: String,
-            required: true
+            required: false
         },
         path: {
             type: String,
-            required: true
+            required: false
         }
     }],
     alt: {

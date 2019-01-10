@@ -56,11 +56,7 @@
     <div class="mem-box row">
       {{#each mem}}
       <div class="mem-ind col-sm-4">
-        {{#if this.picture.0.path}}
-          <img src="/{{this.picture.0.path}}" alt="{{this.name}}" class="mem-pic">
-        {{else}}
-          <img src="/pics/person.png" alt="{{this.name}}" class="mem-pic">
-        {{/if}}
+        <img src="/pics/person.png" alt="{{this.name}}" class="mem-pic">
         <h2>{{this.name}}</h2>
         <h3>{{this.rank}}</h3>
       </div>
