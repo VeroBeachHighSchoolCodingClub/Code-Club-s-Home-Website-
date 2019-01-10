@@ -1,0 +1,12 @@
+{
+    "test": {
+      "PORT": 3000,
+      "MONGODB_URI": "mongodb://127.0.0.1:27017/VBHS-Test",
+      "JWT_SECRET": "s2df3sdf54sdfsa3d6f54sd2f4as3df543"
+    },
+    "development": {
+      "PORT": 3000,
+      "MONGODB_URI": "mongodb://localhost:27017/VBHS",
+      "JWT_SECRET": "asds3df6456s3d4f6a3df51asdf654as5d"
+    }
+}
