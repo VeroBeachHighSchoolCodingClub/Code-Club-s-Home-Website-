@@ -1,97 +1,80 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   {{> head}}
-  <body>
-
+<body data-spy="scroll" data-target="#contact">
     {{> top}}
     {{> nav}}
-    
-    {{> menu}}
-
-<div class="container-fluid bg-light" style="position: relative;">
+    {{> title}}
   <br>
-  <div class="picCar container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    
-      <ol class="carousel-indicators">
-        {{# each pic}}
-          <li data-target="#myCarousel" data-slide-to="{{this.num}}" class="{{this.active}}"></li>
-        {{/each}}
-      </ol>
-      <div class="carousel-inner" role="listbox">
-
-      {{# each pic}}
-
-        <div class="item {{this.active}}">
-          <img src="{{this.picture}}" alt="{{this.alt}}" width="{{this.width}}" height="{{this.height}}">
-          <div class="carousel-caption">
-            <h3>{{this.h3}}</h3>
-            <p>{{this.p}}</p>
+  <div class="container-fluid bg-white big-container">
+    <div class="bg-white h-about row">
+      <div class="au-sm col-md-4">
+        <img class="logo" src="/pics/logo.png" alt="Our Logo">
+        {{# each cont}}
+          {{# if_eq title 'Home Since'}}
+          <div class="au-time">
+            {{this.content}}
           </div>
-        </div>
-
-      {{/each}}
-
+          {{/if_eq}}
+        {{/each}}
       </div>
+      <div class="au-box col-md-8">
+        <div class="au-title titles">Who are we?</div>
+        {{# each cont}}
+          {{#if_eq title 'Who are we'}}
+            <div class="au-cont">{{this.content}}</div>
+          {{/if_eq}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="h-times container-fluid">
+      <h1 class="col-sm-12 titles">Meeting Times</h1>
+      <div class="row">
+        {{#each cont}}
+          {{#if_eq title 'Meeting Times 1'}}
+            <span class="col-sm-6 tim-box" id="tim-right">{{this.content}}</span>
+          {{/if_eq}}
+          {{#if_eq title 'Meeting Times 2'}}
+            <span class="col-sm-6 tim-box">{{this.content}}</span>
+          {{/if_eq}}
+        {{/each}}
+      </div>
+      
+    </div>
+    <div class="lead-box container-fluid">
+      <h1 class="col-sm-12 titles">Club Leadership</h1>
+      <div class="row">
+        {{# each mem}}
+          {{# if_eq leader 'true'}}
+            <div class="lead-p col-sm-6">
+              <img src="/pics/person.png" alt="{{this.name}}" class="lead-pic">
+              <div class="lead-name">{{this.name}}</div>
+              <div class="lead-rank">{{this.rank}}</div>
+            </div>
+          {{/if_eq}}
+        {{/each}}
+      </div>
+      
+    </div>
 
-      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+    <div class="h-con container-fluid">
+      <h1 class="con-tri">C:\root></h1>
+      <div class="typewrite" data-period="2000" data-type='[ "Welcome to the Vero Beach High School Coding Club", "This is Our Official Website" ]'>
+        <span class="wrap"></span>
+      </div>
+    </div>
+  
+    <div class="h-mission container-fluid">
+      <div class="mis-title titles">What is Our Mission?</div>
+      <div class="lb"></div>
+      {{#each cont}}
+        {{#if_eq title 'What is Our Mission'}}
+          <div class="mis-cont">{{this.content}}</div>
+        {{/if_eq}}
+      {{/each}}
     </div>
   </div>
-
-  {{!-- <div class="container mEl">
-    <h3 class="hTitle">
-    Meeting Times
-  </h3>
-        <p class="hSub">
-              {{#each mt}}
-                {{this.content}}
-              {{/each}}
-        </p>
-  </div>
-
-  <div class="container mEl">
-    <h3 class="hTitle" href="/about">Our Mission Statement</h3>
-
-        <p class="hSub">
-          {{# each mission}}
-          {{this.content}}
-          {{/each}}
-        </p>
-  </div>
-
-  <div class="container mEl" style="margin-bottom: 2vw;">
-    <h3 class="hTitle">
-      Contact Us
-    </h3>
-
-        <p class="hSub">
-          {{# each hc}}
-          {{this.content}}
-          {{/each}}
-        </p>
-  </div> --}}
-
-{{# each cont}}
-  <div class="container mEl" style="margin-bottom: 2vw;">
-    <h3 class="hTitle">
-      {{this.title}}
-    </h3>
-
-        <p class="hSub">
-          {{this.content}}
-        </p>
-  </div>
-{{/each}}
-
-</div>
     {{> footer}}
     {{> jsConnect}}
-  </body>
+</body>
 </html>

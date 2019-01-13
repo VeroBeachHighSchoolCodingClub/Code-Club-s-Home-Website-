@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body>
+    {{> admin_top}}
+
+    <h1>Welcome Admin!</h1>
+    {{> admin_nav}}
+
+<h3>Current Admins: </h3>
+    <ul>
+        {{# each ad}}
+        <li>{{this.username}}</li>
+        {{/each}}
+    </ul>
+    
+
+
+    {{> jsConnect}}
+</body>
+</html>

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-var ContentH = mongoose.model('hcontent', {
+var Content = mongoose.model('content', {
     title: {
         type: String,
         trim: false,
@@ -13,4 +13,4 @@ var ContentH = mongoose.model('hcontent', {
     }
 });
 
-module.exports = {ContentH};
+module.exports = {Content};

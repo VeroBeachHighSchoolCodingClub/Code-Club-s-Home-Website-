@@ -16,25 +16,62 @@ var Member = mongoose.model('member', {
     quote: {
         type: String,
         trim: false,
-        required: true,
+        required: false,
         maxlength: 200 
     },
     type: {
         type: String,
-        required: true,
+        required: false,
         maxlength: 10
     },
     career: {
         type: String,
         trim: false,
-        required: true,
+        required: false,
         maxlength: 30
     },
-    picture: {
+    leader: {
         type: String,
-        trim: true,
-        required: false
-    }
+        required: true
+    },
+    picture: [{
+        fieldname: {
+            type: String,
+            required: false
+        },
+        originalname: {
+            type: String,
+            required: false
+        },
+        encoding: {
+            type: String,
+            required: false
+        },
+        mimetype: {
+            type: String,
+            required: false
+        },
+        destination: {
+            type: String,
+            required: false
+        },
+        filename: {
+            type: String,
+            required: false
+        },
+        path: {
+            type: String,
+            required: false
+        },
+        size: {
+            type: Number,
+            required: false
+        },
+        data: {
+            type: Buffer,
+            required: false
+        }
+    }]
 });
 
 module.exports = {Member};

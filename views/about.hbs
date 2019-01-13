@@ -1,64 +1,70 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   {{> head}}
-  <body>
+  <body data-spy="scroll" data-target="#contact">
     {{> top}}
     {{> nav}}
+    {{> title}}
 
-<div class="container-fluid bg-light">
-
+<div class="container-fluid bg-white big-container">
   <br>
-
-<div class="container mEl">
-    <h3 class="hTitle" href="/about">About Us</h3>
-
-        <p class="hSub">
-          {{# each about}}
-          {{this.content}}
-          {{/each}}
-        </p>
-  </div>
-
-  <h1 class="hTitle">Club Leaders</h1>
-
-  <div class="">
-    {{# each members}}
-    <div class="col-xs-6">
-      <div id="box" class="box box">
-        <div class="boxTop boxE">
-          
-          <h1 class="boxName boxE">
-            {{this.name}}
-            <small class="boxSmall">{{this.rank}}</small>
-          </h1>
-          <img src="{{this.picture}}" alt="Chania" class="boxPic" >
-          
-        </div>
-        <div class="boxQuote boxE font-italic">
-          "{{this.quote}}"
-        </div>
-        <br>
-        <div class="boxCareer">
-          <div class="boxCareerT">Future {{this.type}} - </div><div class="boxCareerE">{{this.career}}</div>
-        </div>
-        
-      </div>
-    </div>
-    {{/each}}
-
-  <div class="">
-    {{# each members}}
-    <div class="">
-      <div class="momem">
-        <img src="{{this.picture}}" alt="Chania" class="mopic" >
-        <p class="mocaption">{{this.name}} - {{this.rank}}</p>
-      </div>
-    </div>
+  <div class="a-over container-fluid">
+    <h1 class="titles">What is the VBHS Coding Club?</h1>
+    <div class="lb" style="width: 35%;"></div>
+    {{#each cont}}
+      {{#if_eq title 'What is the VBHS Coding Club'}}
+        <div class="over-cont">{{this.content}}</div>
+      {{/if_eq}}
     {{/each}}
   </div>
 
+  <div class="container-fluid a-divs">
+    <h1>Divisions</h1>
+    <div class="row">
+      <div class="col-md-6 div-box" id="left-box">
+        <h2>Web Development and Design</h2>
+        {{#each cont}}
+          {{#if_eq title 'Divisions 1'}}
+            <p>{{this.content}}</p>
+          {{/if_eq}}
+        {{/each}}
+      </div>
+      <div class="col-md-6 div-box" id="right-box">
+        <h2>Hardware and Robotics</h2>
+        {{#each cont}}
+          {{#if_eq title 'Divisions 2'}}
+            <p>{{this.content}}</p>
+          {{/if_eq}}
+        {{/each}}
+      </div>
     </div>
   </div>
+
+  <div class="a-join container-fluid">
+    <h1 class="titles">Wanting to Join?</h1>
+    <div class="lb" style="width: 18%;"></div>
+    {{#each cont}}
+      {{#if_eq title 'Wanting to Join'}}
+        <div class="join-cont">{{this.content}}</div>
+      {{/if_eq}}
+    {{/each}}
+  </div>
+
+  <div class="a-mem container-fluid">
+    <div class="a-glaze container-fluid">
+    <h1 class="titles">Coding Club Leadership Team</h1>
+    <div class="mem-box row">
+      {{#each mem}}
+      <div class="mem-ind col-sm-4">
+        <img src="/pics/person.png" alt="{{this.name}}" class="mem-pic">
+        <h2>{{this.name}}</h2>
+        <h3>{{this.rank}}</h3>
+      </div>
+      {{/each}}
+    </div>
+    </div>
+  </div>
+</div>
     {{> footer}}
     {{> jsConnect}}
   </body>

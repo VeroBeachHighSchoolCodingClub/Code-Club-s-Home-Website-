@@ -1,0 +1,45 @@
+<html lang="en">
+{{> head}}
+
+<style>
+
+.sBox {
+   width: 40%;
+   margin-top:130px;
+}
+
+.navBar {
+    margin-top: 0 !important;
+}
+
+</style>
+<body>
+ 
+{{> top}}
+{{> nav}}
+
+<div class="container-fluid">
+   <div class="jumbotron sBox row border rounded mx-auto shadow-lg bg-light">
+       <label for="title" class="mx-auto">VBHS Website Admin Login</label>
+       <div class="col-sm-12">
+           <form action="/users/login" method="post">
+               <div class="form-group">
+                   <label for="username">Username</label>
+                   <input type="username" name="username" class="form-control" placeholder="Username">
+               </div>
+               <div class="form-group">
+                   <label for="password">Password</label>
+                   <input type="password" name="password" class="form-control" placeholder="Password">
+               </div>
+               <div class="form-group">
+                   <input type="submit" value="Login">
+               </div>
+           </form>
+       </div>
+   </div>
+</div>
+
+   {{> jsConnect}}
+</body>
+</html>
+
