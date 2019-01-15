@@ -20,7 +20,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(express.static('./public'));
-app.use('/uploads', express.static('uploads'));
 
 var hbs = require('express-handlebars').create({
   extname: 'hbs',

@@ -66,10 +66,6 @@ var Member = mongoose.model('member', {
         size: {
             type: Number,
             required: false
-        },
-        data: {
-            type: Buffer,
-            required: false
         }
     }]
 });
