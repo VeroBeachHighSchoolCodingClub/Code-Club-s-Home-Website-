@@ -10,12 +10,12 @@ const {Content}       = require('../db/models/content');
 const {authenticate}  = require('../db/middleware/authenticate');
 const {User}          = require('../db/models/user');
 
-const storage = multer.diskStorage({
-  destination: function (request, file, callback) {
-      callback(null, './uploads/');
+var storage = multer.diskStorage({
+  destination: function (request, file, cb) {
+      cb(null, './public/uploads/');
   },
-  filename: function (request, file, callback) {
-      callback(null, new Date().toISOString().replace(/:/g, '-') + '.' + file.originalname);
+  filename: function (request, file, cb) {
+      cb(null, new Date().toISOString().replace(/:/g, '-') + '.' + file.originalname);
   }
 });
 
@@ -158,8 +158,7 @@ module.exports = (app) => {
         destination: file.destination,
         filename: file.filename,
         path: file.path,
-        size: file.size,
-        data: fs.readFileSync(file.path)
+        size: file.size
       }
     })
 
