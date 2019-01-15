@@ -12,7 +12,7 @@ const {User}          = require('../db/models/user');
 
 var storage = multer.diskStorage({
   destination: function (request, file, cb) {
-      cb(null, './public/uploads/');
+      cb(null, './uploads/');
   },
   filename: function (request, file, cb) {
       cb(null, new Date().toISOString().replace(/:/g, '-') + '.' + file.originalname);
