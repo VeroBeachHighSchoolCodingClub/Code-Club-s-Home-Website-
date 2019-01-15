@@ -4,8 +4,7 @@ var Member = mongoose.model('member', {
     name: {
         type: String,
         trim: false,
-        required: true,
-        maxlength: 15
+        required: true
     },
     rank: {
         type: String,
