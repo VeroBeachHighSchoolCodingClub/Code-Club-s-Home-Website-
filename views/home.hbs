@@ -47,12 +47,11 @@
         {{# each mem}}
           {{# if_eq leader 'true'}}
             <div class="lead-p col-sm-6">
-              {{!-- {{#if this.picture.0.filename}} --}}
-                {{!-- <img src="/uploads/{{this.picture.0.filename}}" alt="{{this.name}}" class="lead-pic"> --}}
+              {{#if this.picture}}
+                <img src="/{{this.picture}}" alt="{{this.name}}" class="lead-pic">
+              {{else}}
                 <img src="/pics/person.png" alt="{{this.name}}" class="lead-pic">
-              {{!-- {{else}} --}}
-                {{!-- <img src="/pics/person.png" alt="{{this.name}}" class="lead-pic"> --}}
-              {{!-- {{/if}} --}}
+              {{/if}}
               <div class="lead-name">{{this.name}}</div>
               <div class="lead-rank">{{this.rank}}</div>
             </div>

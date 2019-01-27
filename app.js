@@ -19,8 +19,8 @@ var {mongoose} = require('./db/mongodb');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use('/uploads', express.static('./uploads'));
 app.use(express.static('./public'));
-app.use(express.static('./uploads'));
 
 var hbs = require('express-handlebars').create({
   extname: 'hbs',

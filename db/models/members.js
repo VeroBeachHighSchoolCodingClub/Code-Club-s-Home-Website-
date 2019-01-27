@@ -33,40 +33,9 @@ var Member = mongoose.model('member', {
         type: String,
         required: true
     },
-    picture: [{
-        fieldname: {
-            type: String,
-            required: false
-        },
-        originalname: {
-            type: String,
-            required: false
-        },
-        encoding: {
-            type: String,
-            required: false
-        },
-        mimetype: {
-            type: String,
-            required: false
-        },
-        destination: {
-            type: String,
-            required: false
-        },
-        filename: {
-            type: String,
-            required: false
-        },
-        path: {
-            type: String,
-            required: false
-        },
-        size: {
-            type: Number,
-            required: false
-        }
-    }]
+    picture: {
+        type: String
+    }
 });
 
 module.exports = {Member};

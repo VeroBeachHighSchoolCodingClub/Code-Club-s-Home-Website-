@@ -59,7 +59,7 @@ module.exports = (app) => {
     res.render('index', {location: 'Login'});
   })
 
-  app.post('/users', async (req, res) => {
+  app.post('/users', authenticate, async (req, res) => {
     const body = _.pick(req.body, ['username', 'password']);
     const user = new User(body);
     try {
@@ -111,7 +111,7 @@ module.exports = (app) => {
     res.render('admin_project', {location: 'Admin'});
   });
 
-  app.get('/admin/user', (req, res) => {
+  app.get('/admin/user', authenticate, (req, res) => {
       res.render('admin_create');
   });
 
@@ -150,21 +150,13 @@ module.exports = (app) => {
       name: body.name,
       rank: body.rank,
       leader: body.leader,
-      picture: {
-        fieldname: file.fieldname,
-        originalname: file.originalname,
-        encoding: file.encoding,
-        mimetype: file.mimetype,
-        destination: file.destination,
-        filename: file.filename,
-        path: file.path,
-        size: file.size
-      }
+      picture: file.path
     })
 
     try {
       await mem.save();
-      res.redirect('/admin/dashboard');
+      // res.redirect('/admin/dashboard');
+      res.send('That worked!')
     } catch (e) {
       res.status(400).json({
         "message": "Sorry, that didn't work.",
