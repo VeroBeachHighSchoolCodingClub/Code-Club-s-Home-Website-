@@ -3,6 +3,7 @@ const bodyParser      = require('body-parser');
 const _               = require('lodash');
 const multer          = require('multer');
 const fs              = require('fs');
+const path            = require('path');
 
 const {Member}        = require('../db/models/members');
 const {Project}       = require('../db/models/projects');
@@ -22,6 +23,8 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 var cookieOpts = {maxAge: 18000000} // 5 Hour until cookie expires
+
+fs.mkdirSync(path.join(__dirname, '../uploads/'));
 
 module.exports = (app) => {
 
@@ -154,6 +157,7 @@ module.exports = (app) => {
     })
 
     try {
+      await 
       await mem.save();
       res.redirect('/admin/dashboard');
     } catch (e) {
