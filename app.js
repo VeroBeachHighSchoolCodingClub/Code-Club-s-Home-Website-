@@ -5,7 +5,7 @@ const express         = require('express');
 const app             = express();
 const bodyParser      = require('body-parser');
 const Controller      = require('./controllers/controller.js');
-const fs              = require('fs');
+const fs              = require('fs-extra');
 const _               = require('lodash');
 const jwt             = require('jsonwebtoken');
 const bcrypt          = require('bcryptjs');
@@ -38,6 +38,18 @@ var hbs = require('express-handlebars').create({
     }
   }
 })
+
+var filePath = '../uploads/' 
+
+async function (directory) {
+  try {
+    await fs.ensureDir(directory)
+    console.log('success!')
+  } catch (err) {
+    console.error(err)
+  }
+}
+example(filePath);
 
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');

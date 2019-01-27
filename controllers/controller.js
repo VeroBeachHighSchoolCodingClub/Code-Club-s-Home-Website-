@@ -2,7 +2,7 @@ const mongoose        = require('mongoose');
 const bodyParser      = require('body-parser');
 const _               = require('lodash');
 const multer          = require('multer');
-const fs              = require('fs');
+const fs              = require('fs-extra');
 const path            = require('path');
 
 const {Member}        = require('../db/models/members');
@@ -24,7 +24,16 @@ var upload = multer({ storage: storage });
 
 var cookieOpts = {maxAge: 18000000} // 5 Hour until cookie expires
 
-fs.mkdirSync(path.join(__dirname, '../uploads/'));
+
+
+// console.log(fs.existsSync(filePath));
+
+
+// fs.ensureDir(filePath, err => {
+//   if (err) throw err;
+// })
+
+
 
 module.exports = (app) => {
 
