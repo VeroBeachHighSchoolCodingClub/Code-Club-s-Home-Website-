@@ -39,17 +39,8 @@ var hbs = require('express-handlebars').create({
   }
 })
 
-var filePath = '../uploads/' 
-
-async function (directory) {
-  try {
-    await fs.ensureDir(directory)
-    console.log('success!')
-  } catch (err) {
-    console.error(err)
-  }
-}
-example(filePath);
+var filePath = './uploads/'
+fs.mkdir(filePath, err => err);
 
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');

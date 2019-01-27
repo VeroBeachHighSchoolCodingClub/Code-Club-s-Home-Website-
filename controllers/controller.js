@@ -9,11 +9,12 @@ const {Member}        = require('../db/models/members');
 const {Project}       = require('../db/models/projects');
 const {Content}       = require('../db/models/content');
 const {authenticate}  = require('../db/middleware/authenticate');
-const {User}          = require('../db/models/user');
+const {User}          = require('../db/models/user'); 
 
+var filePath = './uploads/';
 var storage = multer.diskStorage({
   destination: function (request, file, cb) {
-      cb(null, './uploads/');
+    cb(null, filePath)
   },
   filename: function (request, file, cb) {
       cb(null, new Date().toISOString().replace(/:/g, '-') + '.' + file.originalname);
@@ -23,17 +24,6 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 
 var cookieOpts = {maxAge: 18000000} // 5 Hour until cookie expires
-
-
-
-// console.log(fs.existsSync(filePath));
-
-
-// fs.ensureDir(filePath, err => {
-//   if (err) throw err;
-// })
-
-
 
 module.exports = (app) => {
 
