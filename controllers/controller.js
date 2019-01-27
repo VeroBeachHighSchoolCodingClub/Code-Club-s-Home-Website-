@@ -155,8 +155,7 @@ module.exports = (app) => {
 
     try {
       await mem.save();
-      // res.redirect('/admin/dashboard');
-      res.send('That worked!')
+      res.redirect('/admin/dashboard');
     } catch (e) {
       res.status(400).json({
         "message": "Sorry, that didn't work.",
