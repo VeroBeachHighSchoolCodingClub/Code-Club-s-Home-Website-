@@ -24,8 +24,6 @@ var upload = multer({ storage: storage });
 
 var cookieOpts = {maxAge: 18000000} // 5 Hour until cookie expires
 
-fs.mkdirSync(path.join(__dirname, '../uploads/'));
-
 module.exports = (app) => {
 
   app.use(bodyParser.json());
@@ -145,7 +143,18 @@ module.exports = (app) => {
     }
   });
 
-  app.post('/admin/members/edit', authenticate, upload.single('picture'), async (req, res) => {
+  app.get('/pics', (req, res) => {
+    Member.find({}, (err, pics) => {
+      console.log(pics[0].picture);
+      console.log(pics[0].picture.data.buffer);
+      
+      // res.contentType(pics[0].picture.contentType);
+      res.setHeader('content-type', pics[0].picture.contentType);
+      res.send(pics[0].picture.data.Binary)
+    });
+  });
+
+  app.post('/admin/members/edit', upload.single('picture'), async (req, res) => {
     const body = req.body;
     const file = req.file;
 
@@ -153,11 +162,15 @@ module.exports = (app) => {
       name: body.name,
       rank: body.rank,
       leader: body.leader,
-      picture: file.path
+      // picture: {
+      //   data: fs.readFileSync(file.path),
+      //   contentType: file.mimetype 
+      // }
     })
+    mem.picture.data = new Buffer.from(fs.readFileSync(file.path)).toString("base64");
+    mem.picture.contentType = file.mimetype;
 
-    try {
-      await 
+    try { 
       await mem.save();
       res.redirect('/admin/dashboard');
     } catch (e) {

@@ -57,7 +57,7 @@
       {{#each mem}}
       <div class="mem-ind col-sm-4">
         {{#if this.picture}}
-          <img src="/{{this.picture}}" alt="{{this.name}}" class="mem-pic">
+          <img src="data:{{this.picture.contentType}};base64,{{this.picture.data}}" alt="{{this.name}}" class="mem-pic">
         {{else}}
           <img src="/pics/person.png" alt="{{this.name}}" class="mem-pic">
         {{/if}}
