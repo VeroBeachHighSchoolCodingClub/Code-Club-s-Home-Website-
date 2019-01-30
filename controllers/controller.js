@@ -143,32 +143,18 @@ module.exports = (app) => {
     }
   });
 
-  app.get('/pics', (req, res) => {
-    Member.find({}, (err, pics) => {
-      console.log(pics[0].picture);
-      console.log(pics[0].picture.data.buffer);
-      
-      // res.contentType(pics[0].picture.contentType);
-      res.setHeader('content-type', pics[0].picture.contentType);
-      res.send(pics[0].picture.data.Binary)
-    });
-  });
-
-  app.post('/admin/members/edit', upload.single('picture'), async (req, res) => {
+  app.post('/admin/members/edit', authenticate, upload.single('picture'), async (req, res) => {
     const body = req.body;
     const file = req.file;
 
     const mem = new Member ({
       name: body.name,
       rank: body.rank,
-      leader: body.leader,
-      // picture: {
-      //   data: fs.readFileSync(file.path),
-      //   contentType: file.mimetype 
-      // }
+      leader: body.leader
     })
     mem.picture.data = new Buffer.from(fs.readFileSync(file.path)).toString("base64");
     mem.picture.contentType = file.mimetype;
+    mem.picture.picName = file.filename;
 
     try { 
       await mem.save();
@@ -191,17 +177,14 @@ module.exports = (app) => {
       url: body.url,
       dis: body.dis,
       source: body.source,
-      picture: {
-        fieldname: file.fieldname,
-        originalname: file.originalname,
-        destination: file.destination,
-        filename: file.filename,
-        path: file.path,
-      },
       alt: body.alt,
       margin: body.margin,
       id: body.id
     });
+
+    pro.picture.data = new Buffer.from(fs.readFileSync(file.path)).toString("base64");
+    pro.picture.contentType = file.mimetype;
+    pro.picture.picName = file.filename;
 
     try {
       await pro.save();

@@ -29,28 +29,10 @@ var Project = mongoose.model('projects', {
         required: true,
         maxlength: 100
     },
-    picture: [{
-        fieldname: {
-            type: String,
-            required: false
-        },
-        originalname: {
-            type: String,
-            required: false
-        },
-        destination: {
-            type: String,
-            required: false
-        },
-        filename: {
-            type: String,
-            required: false
-        },
-        path: {
-            type: String,
-            required: false
-        }
-    }],
+    picture: {
+        data: Buffer,
+        contentType: String
+    },
     alt: {
         type: String,
         required: false,
