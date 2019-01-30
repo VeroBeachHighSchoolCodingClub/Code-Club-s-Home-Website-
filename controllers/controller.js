@@ -198,6 +198,39 @@ module.exports = (app) => {
     }
   });
 
+  //Update
+
+  app.patch('/admin/members/update', upload.single('picture'), async (req, res) => {
+    const body = _.pick(req.body, ['name', 'rank', 'leader', 'picture']);
+    fileObject = {
+      data: new Buffer.from(fs.readFileSync(req.file.path)).toString("base64"),
+      contentType: req.file.mimetype,
+      picName: req.file.filename
+    }
+    const file = _.pick(req.file, ['path', 'mimetype', 'filename']);
+    const pictureVar = {
+      picture: {
+        data: new Buffer.from(fs.readFileSync(file.path)).toString("base64"),
+        contentType: file.mimetype,
+        picName: file.filename
+      }
+    }
+    // 
+    // const file = req.file;
+    //
+    Member.updateOne({name: req.body.name}, {$set: body, $set: pictureVar}).then((mem) => {
+      console.log(pictureVar);
+      // console.log(fileEl);
+      console.log(body);
+      if (!mem) {
+        res.status(404).send();
+      }
+
+      res.send({mem})
+    }).catch((e) => {
+      res.status(400).send(e);
+    })
+  })
 
 
   app.get('*', (req, res) => {
