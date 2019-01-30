@@ -22,7 +22,7 @@
       {{#each pro}}
         <div class="bg-white bigBox co-xl-6">
           <div class="pics{{this.margin}} pics" id="ePics{{this.id}}">
-            <img id="ip{{this.id}}" class="ip{{this.margin}}" src="/pics/logo.png" alt="{{this.alt}}">
+            <img id="ip{{this.id}}" class="ip{{this.margin}}" src="data:{{this.picture.contentType}};base64,{{this.picture.data}}" alt="{{this.alt}}">
             <div id="p{{this.id}}Content" class="clearE">
               <h3 id="p1title" class="iTitle"><a href="{{this.url}}" target="_blank">{{this.name}} {{this.year}}</a></h3>
               <h5 class="iContent">{{this.dis}}</h5>

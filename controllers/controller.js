@@ -151,12 +151,13 @@ module.exports = (app) => {
     const mem = new Member ({
       name: body.name,
       rank: body.rank,
-      leader: body.leader,
-      picture: file.path
+      leader: body.leader
     })
+    mem.picture.data = new Buffer.from(fs.readFileSync(file.path)).toString("base64");
+    mem.picture.contentType = file.mimetype;
+    mem.picture.picName = file.filename;
 
-    try {
-      await 
+    try { 
       await mem.save();
       res.redirect('/admin/dashboard');
     } catch (e) {
@@ -177,17 +178,14 @@ module.exports = (app) => {
       url: body.url,
       dis: body.dis,
       source: body.source,
-      picture: {
-        fieldname: file.fieldname,
-        originalname: file.originalname,
-        destination: file.destination,
-        filename: file.filename,
-        path: file.path,
-      },
       alt: body.alt,
       margin: body.margin,
       id: body.id
     });
+
+    pro.picture.data = new Buffer.from(fs.readFileSync(file.path)).toString("base64");
+    pro.picture.contentType = file.mimetype;
+    pro.picture.picName = file.filename;
 
     try {
       await pro.save();
