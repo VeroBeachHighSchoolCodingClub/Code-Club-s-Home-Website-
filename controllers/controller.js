@@ -114,8 +114,12 @@ module.exports = (app) => {
   });
 
   app.get('/admin/user', authenticate, (req, res) => {
-      res.render('admin_create');
+      res.render('admin_create', {location: 'Admin'});
   });
+
+  app.get('/admin/members/update', authenticate, (req, res) => {
+    res.render('admin_cont_update', {location: 'Admin'})
+  })
 
   app.get('/admin/logout', authenticate, async (req, res) => {
     try {
@@ -200,37 +204,45 @@ module.exports = (app) => {
 
   //Update
 
-  app.patch('/admin/members/update', upload.single('picture'), async (req, res) => {
-    const body = _.pick(req.body, ['name', 'rank', 'leader', 'picture']);
-    fileObject = {
-      data: new Buffer.from(fs.readFileSync(req.file.path)).toString("base64"),
-      contentType: req.file.mimetype,
-      picName: req.file.filename
-    }
-    const file = _.pick(req.file, ['path', 'mimetype', 'filename']);
-    const pictureVar = {
-      picture: {
-        data: new Buffer.from(fs.readFileSync(file.path)).toString("base64"),
-        contentType: file.mimetype,
-        picName: file.filename
+  app.post('/admin/members/update/edit', upload.single('picture'), (req, res) => {
+    var body = _.pick(req.body, ['name', 'rank', 'leader', 'picture']);
+    var pictureVar = null;
+    if (req.file) {
+      const file = _.pick(req.file, ['path', 'mimetype', 'filename']);
+      pictureVar = {
+        picture: {
+          data: new Buffer.from(fs.readFileSync(file.path)).toString("base64"),
+          contentType: file.mimetype,
+          picName: file.filename
+        }
       }
-    }
-    // 
-    // const file = req.file;
-    //
-    Member.updateOne({name: req.body.name}, {$set: body, $set: pictureVar}).then((mem) => {
-      console.log(pictureVar);
-      // console.log(fileEl);
-      console.log(body);
-      if (!mem) {
-        res.status(404).send();
+      // Defines new variable with all the content in it - so mongodb can pick what updates
+      var bodyContent = {
+        name: body.name,
+        rank: body.rank,
+        leader: body.leader,
+        picture: pictureVar.picture
       }
-
-      res.send({mem})
+      // Gets rid of objects with value 'null' or 'undefined'
+      function clean(obj) {
+        for (var propName in obj) { 
+          if (obj[propName] === null || obj[propName] === undefined) {
+            delete obj[propName];
+          }
+        }
+      }
+      
+      clean(bodyContent);
+    } else {
+      var allBody = body;
+    }
+    
+    Member.updateOne({name: req.body.name}, {$set: bodyContent}).then((mem) => {  
+      res.send('It Worked!');
     }).catch((e) => {
       res.status(400).send(e);
     })
-  })
+  });
 
 
   app.get('*', (req, res) => {
