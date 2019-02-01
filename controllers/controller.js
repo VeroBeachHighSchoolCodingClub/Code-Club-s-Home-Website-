@@ -25,6 +25,14 @@ var upload = multer({ storage: storage });
 
 var cookieOpts = {maxAge: 18000000} // 5 Hour until cookie expires
 
+function clean(obj) {
+  for (var propName in obj) { 
+    if (obj[propName] === null || obj[propName] === undefined || obj[propName] === '') {
+      delete obj[propName];
+    }
+  }
+}
+
 module.exports = (app) => {
 
   app.use(bodyParser.json());
@@ -238,23 +246,17 @@ module.exports = (app) => {
         picture: pictureVar.picture
       }
       
+      clean(bodyContent);
     } else {
       var bodyContent = body;
-    }
 
-    // Gets rid of objects with value 'null' or 'undefined'
-    function clean(obj) {
-      for (var propName in obj) { 
-        if (obj[propName] === null || obj[propName] === undefined) {
-          delete obj[propName];
-        }
-      }
+      clean(bodyContent);
     }
     
-    clean(bodyContent);
+    
     
     Member.updateOne({name: req.body.name}, {$set: bodyContent}).then((mem) => {  
-      res.send('It Worked!');
+      res.redirect('/admin/dashboard');
     }).catch((e) => {
       res.status(400).send(e);
     })
@@ -263,14 +265,6 @@ module.exports = (app) => {
   app.post('/admin/project/update/edit', upload.single('picture'), (req, res) => {
     var body = _.pick(req.body, ['name', 'year', 'url', 'dis', 'source', 'picture', 'alt', 'margin', 'id']);
     var pictureVar = null;
-    
-    function clean(obj) {
-      for (var propName in obj) { 
-        if (obj[propName] === null || obj[propName] === undefined) {
-          delete obj[propName];
-        }
-      }
-    }
 
     if (req.file) {
       const file = _.pick(req.file, ['path', 'mimetype', 'filename']);
@@ -301,12 +295,9 @@ module.exports = (app) => {
       
       clean(bodyContent);
     }
-
-    // Gets rid of objects with value 'null' or 'undefined'
     
-    
-    Project.updateOne({name: req.body.name}, {$set: bodyContent}).then((pro) => {  
-      res.send('It Worked!');
+    Project.updateOne({name: req.body.name}, {$set: bodyContent}).then((pro) => {
+      res.redirect('/admin/dashboard');
     }).catch((e) => {
       res.status(400).send(e);
     })
@@ -316,7 +307,7 @@ module.exports = (app) => {
     var body = _.pick(req.body, ['title', 'content']);
     
     Content.updateOne({title: req.body.title}, {$set: body}).then((cont) => {  
-      res.send('It Worked!');
+      res.redirect('/admin/dashboard');
     }).catch((e) => {
       res.status(400).send(e);
     })
