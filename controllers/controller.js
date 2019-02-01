@@ -256,7 +256,7 @@ module.exports = (app) => {
     
     
     Member.updateOne({name: req.body.name}, {$set: bodyContent}).then((mem) => {  
-      res.send('It Worked!');
+      res.redirect('/admin/dashboard');
     }).catch((e) => {
       res.status(400).send(e);
     })
@@ -297,7 +297,7 @@ module.exports = (app) => {
     }
     
     Project.updateOne({name: req.body.name}, {$set: bodyContent}).then((pro) => {
-      res.send('It Worked!');
+      res.redirect('/admin/dashboard');
     }).catch((e) => {
       res.status(400).send(e);
     })
@@ -307,7 +307,7 @@ module.exports = (app) => {
     var body = _.pick(req.body, ['title', 'content']);
     
     Content.updateOne({title: req.body.title}, {$set: body}).then((cont) => {  
-      res.send('It Worked!');
+      res.redirect('/admin/dashboard');
     }).catch((e) => {
       res.status(400).send(e);
     })
