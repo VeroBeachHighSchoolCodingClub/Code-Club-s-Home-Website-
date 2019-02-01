@@ -31,7 +31,8 @@ var Project = mongoose.model('projects', {
     },
     picture: {
         data: Buffer,
-        contentType: String
+        contentType: String,
+        picName: String
     },
     alt: {
         type: String,

@@ -118,8 +118,22 @@ module.exports = (app) => {
   });
 
   app.get('/admin/members/update', authenticate, (req, res) => {
-    res.render('admin_cont_update', {location: 'Admin'})
-  })
+    Member.find({}, (err, member) => {
+      res.render('admin_mem_update', {location: 'Admin', mem: member})
+    });
+  });
+
+  app.get('/admin/content/update', authenticate, (req, res) => {
+    Content.find({}, (err, content) => {
+      res.render('admin_cont_update', {location: 'Admin', cont: content})
+    });
+  });
+
+  app.get('/admin/project/update', authenticate, (req, res) => {
+    Project.find({}, (err, project) => {
+      res.render('admin_proj_update', {location: 'Admin', pro: project})
+    });
+  });
 
   app.get('/admin/logout', authenticate, async (req, res) => {
     try {
@@ -223,21 +237,85 @@ module.exports = (app) => {
         leader: body.leader,
         picture: pictureVar.picture
       }
-      // Gets rid of objects with value 'null' or 'undefined'
-      function clean(obj) {
-        for (var propName in obj) { 
-          if (obj[propName] === null || obj[propName] === undefined) {
-            delete obj[propName];
-          }
+      
+    } else {
+      var bodyContent = body;
+    }
+
+    // Gets rid of objects with value 'null' or 'undefined'
+    function clean(obj) {
+      for (var propName in obj) { 
+        if (obj[propName] === null || obj[propName] === undefined) {
+          delete obj[propName];
         }
       }
-      
-      clean(bodyContent);
-    } else {
-      var allBody = body;
     }
     
+    clean(bodyContent);
+    
     Member.updateOne({name: req.body.name}, {$set: bodyContent}).then((mem) => {  
+      res.send('It Worked!');
+    }).catch((e) => {
+      res.status(400).send(e);
+    })
+  });
+
+  app.post('/admin/project/update/edit', upload.single('picture'), (req, res) => {
+    var body = _.pick(req.body, ['name', 'year', 'url', 'dis', 'source', 'picture', 'alt', 'margin', 'id']);
+    var pictureVar = null;
+    
+    function clean(obj) {
+      for (var propName in obj) { 
+        if (obj[propName] === null || obj[propName] === undefined) {
+          delete obj[propName];
+        }
+      }
+    }
+
+    if (req.file) {
+      const file = _.pick(req.file, ['path', 'mimetype', 'filename']);
+      pictureVar = {
+        picture: {
+          data: new Buffer.from(fs.readFileSync(file.path)).toString("base64"),
+          contentType: file.mimetype,
+          picName: file.filename
+        }
+      }
+      // Defines new variable with all the content in it - so mongodb can pick what updates
+      var bodyContent = {
+        name: body.name,
+        year: body.year,
+        url: body.url,
+        dis: body.dis,
+        source: body.source,
+        alt: body.alt,
+        margin: body.margin,
+        id: body.id,
+        picture: pictureVar.picture
+      }
+
+      clean(bodyContent);
+    } else {
+      var bodyContent = body;
+
+      
+      clean(bodyContent);
+    }
+
+    // Gets rid of objects with value 'null' or 'undefined'
+    
+    
+    Project.updateOne({name: req.body.name}, {$set: bodyContent}).then((pro) => {  
+      res.send('It Worked!');
+    }).catch((e) => {
+      res.status(400).send(e);
+    })
+  });
+
+  app.post('/admin/content/update/edit', (req, res) => {
+    var body = _.pick(req.body, ['title', 'content']);
+    
+    Content.updateOne({title: req.body.title}, {$set: body}).then((cont) => {  
       res.send('It Worked!');
     }).catch((e) => {
       res.status(400).send(e);

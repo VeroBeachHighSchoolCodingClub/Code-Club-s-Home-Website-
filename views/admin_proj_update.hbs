@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body>
+    {{> admin_top}}
+    {{> admin_nav}}
+    <div class="container-fluid">
+        <div class="jumbotron row border rounded mx-auto shadow-lg admin-form">
+            <legend for="all">Update the Project</legend>
+            <div class="col-sm-12">
+                <form action="/admin/project/update/edit" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter the Name" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="text" class="form-control" placeholder="Enter the current year" name="year">
+                    </div>
+                    <div class="form-group">
+                        <label for="content">URL</label>
+                        <input type="text" class="form-control" placeholder="Enter the URL" name="url">
+                    </div>
+                    <div class="form-group">
+                        <label for="discription">Discription</label>
+                        <input type="text" class="form-control" placeholder="Enter the Short Discription" name="dis">
+                    </div>
+                    <div class="form-group">
+                        <label for="source">GitHub Source URL</label>
+                        <input type="text" class="form-control" placeholder="Enter the URL from GitHub" name="source">
+                    </div>
+                    <div class="form-group">
+                        <label for="picture">Picture/Logo</label>
+                        <input type="file" class="form-control-file" name="picture" name="picture">
+                    </div>
+                    <div class="form-group">
+                        <label for="alt">Alt Text</label>
+                        <input type="text" class="form-control" placeholder="Enter the Alt Text" name="alt">
+                    </div>
+                    <div class="form-group">
+                        <label for="margin">Margin (Left or Right)</label>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="margin" value="1">
+                                Left
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="margin" value="2">
+                                Right
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id">ID (number only)</label>
+                        <input type="text" class="form-control" placeholder="Enter the ID" name="id">
+                    </div>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </div>
+        </div>
+        <center>
+            <h3>Projects</h3>
+            <ul>
+                {{# each pro}}
+                    <li style="list-style: none;">{{this.name}}</li>
+                {{/each}}
+            </ul>
+        </center>
+    </div>
+
+    
+</body>
+</html>

@@ -35,7 +35,8 @@ var Member = mongoose.model('member', {
     },
     picture: {
         data: Buffer,
-        contentType: String
+        contentType: String,
+        picName: String
     }
 });
 

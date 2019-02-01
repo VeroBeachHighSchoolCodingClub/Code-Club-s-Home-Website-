@@ -4,7 +4,8 @@ var Content = mongoose.model('content', {
     title: {
         type: String,
         trim: false,
-        required: true
+        required: true,
+        unique: true
     },
     content: {
         type: String,

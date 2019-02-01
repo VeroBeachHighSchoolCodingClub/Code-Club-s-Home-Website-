@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body>
+    {{> admin_top}}
+    {{> admin_nav}}
+
+    <div class="container-fluid">
+        <div class="jumbotron row border rounded mx-auto shadow-lg admin-form">
+            <legend for="all" class="mx-auto">Enter the member</legend>
+            <div class="col-sm-12">
+                <form action="/admin/members/update/edit" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" placeholder="Place title here" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="rank">Rank</label>
+                        <input type="text" class="form-control" placeholder="Member rank" name="rank">
+                    </div>
+                    <div class="form-group">
+                        <label for="leader">Is a Leader</label>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="leader" value="true">
+                                True
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="leader" value="false">
+                                False
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="picture">Picture</label>
+                        <input type="file" class="form-control-file" name="picture">
+                    </div>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </div>
+        </div>
+        <center>
+            <h3>Members</h3>
+            <ul>
+                {{# each mem}}
+                    <li style="list-style: none;">{{this.name}}</li>
+                {{/each}}
+            </ul>
+        </center>
+        
+    </div>
+
+    
+</body>
+</html>

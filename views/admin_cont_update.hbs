@@ -4,45 +4,32 @@
 <body>
     {{> admin_top}}
     {{> admin_nav}}
-
     <div class="container-fluid">
         <div class="jumbotron row border rounded mx-auto shadow-lg admin-form">
-            <legend for="all" class="mx-auto">Enter the member</legend>
+            <legend for="all">Update the content</legend>
             <div class="col-sm-12">
-                <form action="/admin/members/update/edit" method="post" enctype="multipart/form-data">
+                <form action="/admin/content/update/edit" method="post">
                     <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" placeholder="Place title here" name="name">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" placeholder="Place title here" name="title">
                     </div>
                     <div class="form-group">
-                        <label for="rank">Rank</label>
-                        <input type="text" class="form-control" placeholder="Member rank" name="rank">
-                    </div>
-                    <div class="form-group">
-                        <label for="leader">Is a Leader</label>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="leader" value="true">
-                                True
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                <input type="radio" class="form-check-input" name="leader" value="false">
-                                False
-                            </label>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="picture">Picture</label>
-                        <input type="file" class="form-control-file" name="picture">
+                        <label for="content">Content</label>
+                        <textarea cols="30" rows="10" class="form-control" name="content"></textarea>
                     </div>
                     <button type="submit" class="btn btn-success">Update</button>
                 </form>
             </div>
         </div>
+        <center>
+            <h3>Content</h3>
+            <ul>
+                {{# each cont}}
+                    <li style="list-style: none;">{{this.title}}</li>
+                {{/each}}
+            </ul>
+        </center>
     </div>
-
     
 </body>
 </html>
