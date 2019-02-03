@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+{{> head}}
+<body>
+    {{> admin_top}}
+    {{> admin_nav}}
+    <div class="container-fluid">
+        <div class="jumbotron row border rounded mx-auto shadow-lg admin-form">
+            <legend for="all">Update the content</legend>
+            <div class="col-sm-12">
+                <form action="/admin/content/update/edit" method="post">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <select name="name" class="form-control">
+                            {{#each cont}}
+                                <option value="{{this.title}}">{{this.title}}</option>
+                            {{/each}}
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="content">Content</label>
+                        <textarea cols="30" rows="10" class="form-control" name="content"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success">Update</button>
+                </form>
+            </div>
+        </div>
+        <center>
+            <h3>Content</h3>
+            <ul>
+                {{# each cont}}
+                    <li style="list-style: none;">{{this.title}}</li>
+                {{/each}}
+            </ul>
+        </center>
+    </div>
+    
+</body>
+</html>

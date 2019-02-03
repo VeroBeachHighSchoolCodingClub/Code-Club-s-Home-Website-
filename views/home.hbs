@@ -47,7 +47,11 @@
         {{# each mem}}
           {{# if_eq leader 'true'}}
             <div class="lead-p col-sm-6">
+            {{#if this.picture}}
+              <img src="data:{{this.picture.contentType}};base64,{{this.picture.data}}" alt="{{this.name}}" class="lead-pic">
+            {{else}}
               <img src="/pics/person.png" alt="{{this.name}}" class="lead-pic">
+            {{/if}}
               <div class="lead-name">{{this.name}}</div>
               <div class="lead-rank">{{this.rank}}</div>
             </div>

@@ -5,7 +5,7 @@ const express         = require('express');
 const app             = express();
 const bodyParser      = require('body-parser');
 const Controller      = require('./controllers/controller.js');
-const fs              = require('fs');
+const fs              = require('fs-extra');
 const _               = require('lodash');
 const jwt             = require('jsonwebtoken');
 const bcrypt          = require('bcryptjs');
@@ -19,8 +19,8 @@ var {mongoose} = require('./db/mongodb');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cookieParser());
+app.use('/uploads', express.static('./uploads'));
 app.use(express.static('./public'));
-app.use('/uploads', express.static('uploads'));
 
 var hbs = require('express-handlebars').create({
   extname: 'hbs',
@@ -38,6 +38,9 @@ var hbs = require('express-handlebars').create({
     }
   }
 })
+
+var filePath = './uploads/'
+fs.mkdir(filePath, err => err);
 
 app.engine('hbs', hbs.engine);
 app.set('view engine', 'hbs');

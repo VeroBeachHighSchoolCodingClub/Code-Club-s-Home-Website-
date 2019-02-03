@@ -4,8 +4,7 @@ var Member = mongoose.model('member', {
     name: {
         type: String,
         trim: false,
-        required: true,
-        maxlength: 15
+        required: true
     },
     rank: {
         type: String,
@@ -34,44 +33,15 @@ var Member = mongoose.model('member', {
         type: String,
         required: true
     },
-    picture: [{
-        fieldname: {
-            type: String,
-            required: false
-        },
-        originalname: {
-            type: String,
-            required: false
-        },
-        encoding: {
-            type: String,
-            required: false
-        },
-        mimetype: {
-            type: String,
-            required: false
-        },
-        destination: {
-            type: String,
-            required: false
-        },
-        filename: {
-            type: String,
-            required: false
-        },
-        path: {
-            type: String,
-            required: false
-        },
-        size: {
-            type: Number,
-            required: false
-        },
-        data: {
-            type: Buffer,
-            required: false
-        }
-    }]
+    picture: {
+        data: Buffer,
+        contentType: String,
+        picName: String
+    },
+    index: {
+        type: Number,
+        required: true
+    }
 });
 
 module.exports = {Member};

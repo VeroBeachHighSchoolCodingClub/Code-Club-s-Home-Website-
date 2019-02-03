@@ -56,7 +56,11 @@
     <div class="mem-box row">
       {{#each mem}}
       <div class="mem-ind col-sm-4">
-        <img src="/pics/person.png" alt="{{this.name}}" class="mem-pic">
+        {{#if this.picture}}
+          <img src="data:{{this.picture.contentType}};base64,{{this.picture.data}}" alt="{{this.name}}" class="mem-pic">
+        {{else}}
+          <img src="/pics/person.png" alt="{{this.name}}" class="mem-pic">
+        {{/if}}
         <h2>{{this.name}}</h2>
         <h3>{{this.rank}}</h3>
       </div>
