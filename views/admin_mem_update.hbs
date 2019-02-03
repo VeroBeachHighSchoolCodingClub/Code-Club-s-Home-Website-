@@ -7,12 +7,16 @@
 
     <div class="container-fluid">
         <div class="jumbotron row border rounded mx-auto shadow-lg admin-form">
-            <legend for="all" class="mx-auto">Enter the member</legend>
+            <legend for="all" class="mx-auto">Update the member</legend>
             <div class="col-sm-12">
                 <form action="/admin/members/update/edit" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" placeholder="Place title here" name="name">
+                        <select name="name" class="form-control">
+                            {{#each mem}}
+                                <option value="{{this.name}}">{{this.name}}</option>
+                            {{/each}}
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="rank">Rank</label>
@@ -34,6 +38,10 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label for="index">Index Number</label>
+                        <input type="number" style="display: block;" name="index">
+                    </div>
+                    <div class="form-group">
                         <label for="picture">Picture</label>
                         <input type="file" class="form-control-file" name="picture">
                     </div>
@@ -45,7 +53,7 @@
             <h3>Members</h3>
             <ul>
                 {{# each mem}}
-                    <li style="list-style: none;">{{this.name}}</li>
+                    <li style="list-style: none;">{{this.name}}: {{this.index}}</li>
                 {{/each}}
             </ul>
         </center>
