@@ -11,7 +11,11 @@
                 <form action="/admin/content/update/edit" method="post">
                     <div class="form-group">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" placeholder="Place title here" name="title">
+                        <select name="name" class="form-control">
+                            {{#each cont}}
+                                <option value="{{this.title}}">{{this.title}}</option>
+                            {{/each}}
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="content">Content</label>

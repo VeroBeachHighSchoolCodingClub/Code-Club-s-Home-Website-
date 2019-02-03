@@ -43,7 +43,7 @@ module.exports = (app) => {
     Content.find({}, (err, contents) => {
       Member.find({}, (err, members) => {
         res.render('home', {location: 'Home', cont: contents, mem: members, tag: 'The VBHS Coding Club'})
-      });
+      }).sort({index:1});
     });
   });
 
@@ -51,7 +51,7 @@ module.exports = (app) => {
     Content.find({}, (err, contents) => {
       Member.find({}, (err, members) => {
         res.render('about', {location: 'About', cont: contents, mem: members, tag: 'About the VBHS Coding Club'})
-      });
+      }).sort({index:1});
     });
   });
 
@@ -128,7 +128,7 @@ module.exports = (app) => {
   app.get('/admin/members/update', authenticate, (req, res) => {
     Member.find({}, (err, member) => {
       res.render('admin_mem_update', {location: 'Admin', mem: member})
-    });
+    }).sort({index:1});
   });
 
   app.get('/admin/content/update', authenticate, (req, res) => {
@@ -177,6 +177,7 @@ module.exports = (app) => {
     const mem = new Member ({
       name: body.name,
       rank: body.rank,
+      index: body.index,
       leader: body.leader
     })
     mem.picture.data = new Buffer.from(fs.readFileSync(file.path)).toString("base64");
@@ -227,7 +228,7 @@ module.exports = (app) => {
   //Update
 
   app.post('/admin/members/update/edit', upload.single('picture'), (req, res) => {
-    var body = _.pick(req.body, ['name', 'rank', 'leader', 'picture']);
+    var body = _.pick(req.body, ['name', 'rank', 'leader', 'index', 'picture']);
     var pictureVar = null;
     if (req.file) {
       const file = _.pick(req.file, ['path', 'mimetype', 'filename']);
@@ -243,6 +244,7 @@ module.exports = (app) => {
         name: body.name,
         rank: body.rank,
         leader: body.leader,
+        index: body.index,
         picture: pictureVar.picture
       }
       
